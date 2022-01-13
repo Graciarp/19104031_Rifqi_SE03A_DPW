@@ -1,0 +1,68 @@
+/* Prestasi */
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container-fluid.prestasi {
+    background-color: #E82329;
+    padding-bottom: 1%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.title-prestasi {
+    text-align: center;
+    color: white;
+    padding-top: 1%;
+}
+
+.item-title-prestasi {
+    font-weight: 700;
+}
+
+.desc-prestasi {
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+.img-fluid {
+    border-radius: 10px;
+}
+
+.container-fluid.prestasi-pertama {
+    width: 100%;
+    padding: 16px 0px 15px 0px;
+}
+
+.gallery {
+    background-color: #E82329;
+    padding: 68px 0;
+    margin-bottom: 3%;
+}
+
+.gallery-item {
+    border-radius: 10px;
+}
+
+.gallery img {
+    background-color: #ffffff;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#gallery-modal {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.t-prestasi {
+    padding-top: 2px;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,402 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F9FAFE;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar {
+    background-color: #B7292D;
+}
+
+.skansika {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+}
+
+.name-skansika {
+    margin-top: 13px;
+    color: white;
+    font-weight: 700;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    color: white;
+}
+
+.navbar-brand {
+    border: 2px solid;
+}
+
+.logo {
+    width: 50px;
+}
+
+.caption-carousel {
+    position: absolute;
+    left: 17%;
+    top: 25%;
+    width: 40%;
+    color: white;
+}
+
+.caption-carousel h3 {
+    font-weight: 700;
+}
+
+p.nama-smk {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+p.desc {
+    text-align: justify;
+}
+
+/* visi misi */
+.seksi-visi-misi {
+    background-color: #E82329;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* height: 554px; */
+}
+
+.vismis {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.baris-vismis {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.isi-visi {
+    padding-top: 60px;
+}
+
+.isi-vismis {
+    text-align: center;
+    color: white;
+}
+
+.list-isi-vismis {
+    color: white;
+    text-align: justify;
+}
+
+/* visi misi */
+
+
+/* program keahlian */
+.card-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .card-carousel .my-card {
+    height: 10rem;
+    width: 12rem;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: scale(0.6) translateY(-2rem);
+    transform: scale(0.6) translateY(-2rem);
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    background: #2e5266;
+    background: linear-gradient(to top, #2e5266, #6e8898);
+    transition: 1s;
+  }
+  
+  .card-carousel .my-card:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.3);
+    bottom: -5rem;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+  }
+  
+  
+  .card-carousel .my-card:nth-child(1):before {
+    content: url('Bahan/tbscv-1.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+  }
+  
+  .card-carousel .my-card:nth-child(2):before {
+    content: url('Bahan/tkjcv-1.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+  }
+  
+  .card-carousel .my-card:nth-child(3):before {
+    content: url('Bahan/tkrocv-1.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+  }
+  
+  .card-carousel .my-card:nth-child(4):before {
+    content: url('Bahan/dpibcv-1.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+  }
+  
+  .card-carousel .my-card:nth-child(5):before {
+    content: url('Bahan/mmcv-1.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+  }
+  
+  .card-carousel .my-card.active {
+    z-index: 3;
+    -webkit-transform: scale(1) translateY(0) translateX(0);
+    transform: scale(1) translateY(0) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    transition: 1s;
+  }
+  
+  .card-carousel .my-card.prev, .card-carousel .my-card.next {
+    z-index: 2;
+    -webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+    transform: scale(0.8) translateY(-1rem) translateX(0);
+    opacity: 0.6;
+    pointer-events: auto;
+    transition: 1s;
+  }
+/* program keahlian */
+
+
+
+/* guru dan karyawan */
+.box-guru-karyawan {
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 25px;
+    border: 2px red solid;
+    padding: 25px;
+    text-align: center;
+}
+
+.box-guru-karyawan:hover {
+    background-color: #E82329;
+    color: white;
+    transition: 0.5s ease-in;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.fa-chevron-circle-right {
+    margin-top: 5px;
+}
+
+.fa-chevron-circle-right:hover {
+    color: #E82329;
+}
+
+.tombol-guru-karyawan:hover {
+    background-color: white;
+    color: red;
+    transition: 0.25s ease-in;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.title-guru-karyawan {
+    border-bottom-width: 3px;
+    border-bottom-color: red;
+}
+
+.border-1 {
+    border-bottom: 2px #DB292F solid;
+}
+
+.judul-tengah {
+    font-size: 1.7rem;
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-bottom: solid 5px#DB292F;
+    padding: 0 7px 6px;
+}
+
+.nama-pekerjaan {
+    position: relative;
+    top: 50px;
+}
+
+.profile-p {
+    background-color: grey;
+    width: 180px;
+    height: 240px;
+    border-radius: 50%;
+    align-items: stretch;
+    justify-content: center;
+    object-fit: cover;
+    margin-top: 10px;
+    border: 0.5px rgb(105, 102, 102) solid;
+}
+
+.tombol-guru-karyawan {
+    margin-top: 100px;
+    color: #fff;
+    background-color: #ce1c22;
+    border-color: #E82329;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* guru dan karyawan */
+
+
+/* kata alumni */
+.kataalumni {
+    border-bottom-width: 3px;
+    border-bottom-color: red;
+}
+
+.border-1 {
+    border-bottom: 2px #DB292F solid;
+}
+
+.judul {
+    font-size: 1.7rem;
+    margin: auto;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    width: fit-content;
+    border-bottom: solid 5px#DB292F;
+    padding: 0 7px 6px;
+}
+
+.display {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    justify-items: center;
+}
+
+.testi {
+    background-color: #ce1c22;
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    justify-items: center;
+    display: grid;
+
+}
+
+.nama {
+    margin-top: 10px;
+    justify-content: center;
+    justify-items: center;
+    width: 220px;
+    height: 50px;
+}
+
+.nama img {
+    margin-top: 15px;
+    margin-left: 60px;
+    width: 100px;
+    height: 100px;
+    border-radius: 90PX;
+}
+
+.nama h3 {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.nama h4 {
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.nama p {
+    margin-top: 12px;
+    text-align: justify;
+    font-size: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+}
+
+/* kata alumni */
+
+/* Footer */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffc400;
+}
+
+/* CSS link hover (green) */
+
+/* footer full of width */
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+

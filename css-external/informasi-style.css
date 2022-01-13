@@ -1,0 +1,19 @@
+.rectangle-1 {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0em !important;
+  padding-bottom: 0 !important;
+}
+
+/* Footer */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffc400;
+}
