@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-sm">
         <div class="container">
             <div class="skansika">
-                <img src="img/Logo SMK.png" alt="" class="logo">
+                <img src="/img_jurusan/Logo SMK.png" alt="" class="logo">
                 <div class="name-skansika">
                     SKANSIKA
                 </div>
@@ -93,7 +93,7 @@
         <div class="banner-prodi">
             <div class="linear-gradient"></div>
 
-            <img class="img-prodi" src="img/Jurusan/DPIB/Banner/Banner DPIB.jpg" alt="">
+            <img class="img-prodi" src="/img_jurusan/Jurusan/DPIB/Banner/Banner DPIB.jpg" alt="">
 
             <div class="prodi-title">
                 <h3>Program Keahlian</h3>
@@ -110,7 +110,7 @@
 
     <div class="container section-sejarah">
         <h3 class="judul-logo mb-5">Sejarah Singkat</h3>
-        <img src="img/Jurusan/DPIB/(Fake) Logo.png" align="left"
+        <img src="/img_jurusan/Jurusan/DPIB/(Fake) Logo.png" align="left"
             style="margin-left: 40px; margin-right: 40px; margin-bottom: 40px; width: 200px;">
 
         <div class="text-justify">
@@ -158,7 +158,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-12 col-sm-12 mb-5">
                 <div class="ui-card">
-                    <img id="image" src="img/Jurusan/DPIB/Menggambar 2d.jpg">
+                    <img id="image" src="/img_jurusan/Jurusan/DPIB/Menggambar 2d.jpg">
                     <div class="desc">
                         <h5><strong>Menggambar 2d</strong></h5>
                         <p>Siswa mahir menggunakan Autocad 2D untuk membuat gambar kerja rumah, gedung, jembatan, dan
@@ -169,7 +169,7 @@
 
             <div class="col-lg-3 col-md-12 col-sm-12 mb-5">
                 <div class="ui-card">
-                    <img id="image" src="img/Jurusan/DPIB/Modeling 3d.jpg">
+                    <img id="image" src="/img_jurusan/Jurusan/DPIB/Modeling 3d.jpg">
                     <div class="desc">
                         <h5><strong>Modeling 3d</strong></h5>
                         <p>Siswa mahir membuat dan merender model 3d bangunan rumah, gedung, jembatan, dan jalan
@@ -180,7 +180,7 @@
 
             <div class="col-lg-3 col-md-12 col-sm-12 mb-5">
                 <div class="ui-card">
-                    <img id="image" src="img/Jurusan/DPIB/Survey Pemetaan.jpg">
+                    <img id="image" src="/img_jurusan/Jurusan/DPIB/Survey Pemetaan.jpg">
                     <div class="desc">
                         <h5><strong>Survey Pemetaan</strong></h5>
                         <p>Siswa mahir menggunakan alat Pesawat Sipat Datar dan Theodolite dan mengolah data hasil
@@ -191,7 +191,7 @@
 
             <div class="col-lg-3 col-md-12 col-sm-12 mb-5">
                 <div class="ui-card">
-                    <img id="image" src="img/Jurusan/DPIB/Menghitung RAB.jpg">
+                    <img id="image" src="/img_jurusan/Jurusan/DPIB/Menghitung RAB.jpg">
                     <div class="desc">
                         <h5><strong>Menghitung RAB</strong></h5>
                         <p>Siswa mahir menghitung Rancangan Anggaran Biaya dari gambar kerja bangunan yang ada.</p>
@@ -238,43 +238,43 @@
         <div class="js-carousel owl-carousel owl-theme">
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/DPIB/Galery Kegiatan/Kegiatan 1.png" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/DPIB/Galery Kegiatan/Kegiatan 1.png" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/DPIB/Galery Kegiatan/Kegiatan 2.jpg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/DPIB/Galery Kegiatan/Kegiatan 2.jpg" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/DPIB/Galery Kegiatan/Kegiatan 3.jpg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/DPIB/Galery Kegiatan/Kegiatan 3.jpg" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/DPIB/Galery Kegiatan/Kegiatan 4.jpg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/DPIB/Galery Kegiatan/Kegiatan 4.jpg" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/DPIB/Galery Kegiatan/Kegiatan 5.jpg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/DPIB/Galery Kegiatan/Kegiatan 5.jpg" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/DPIB/Galery Kegiatan/Kegiatan 6.jpg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/DPIB/Galery Kegiatan/Kegiatan 6.jpg" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/DPIB/Galery Kegiatan/Kegiatan 7.jpg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/DPIB/Galery Kegiatan/Kegiatan 7.jpg" class="card-img-top">
                 </div>
             </div>
         </div>
@@ -290,7 +290,7 @@
             <div class=" container pt-2 pb-2">
             <div class="row text-white">
                 <div class="col-lg-1 col-sm-12 col-md-3 p-lg-4">
-                    <img src="img/Logo SMK.png" height="50px" alt="">
+                    <img src="/img_jurusan/Logo SMK.png" height="50px" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-12 col-md-3 p-3">
                     <div class="row">

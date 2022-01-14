@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-sm">
         <div class="container">
             <div class="skansika">
-                <img src="img/Logo SMK.png" alt="" class="logo">
+                <img src="/img_jurusan/Logo SMK.png" alt="" class="logo">
                 <div class="name-skansika">
                     SKANSIKA
                 </div>
@@ -94,7 +94,7 @@
             <div class="linear-gradient"></div>
 
             <img class="img-prodi"
-                src="img/Jurusan/RPL/Banner/Banner RPL.jpg"
+                src="/img_jurusan/Jurusan/RPL/Banner/Banner RPL.jpg"
                 alt="">
 
             <div class="prodi-title">
@@ -112,7 +112,7 @@
 
     <div class="container section-sejarah">
         <h3 class="judul-logo mb-5">Sejarah Singkat</h3>
-        <img src="img/Jurusan/RPL/(Fake) Logo.png" align="left" style="margin-left: 40px; margin-right: 40px; margin-bottom: 40px; width: 250px;">
+        <img src="/img_jurusan/Jurusan/RPL/(Fake) Logo.png" align="left" style="margin-left: 40px; margin-right: 40px; margin-bottom: 40px; width: 250px;">
 
         <div class="text-justify">
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
@@ -159,7 +159,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
                 <div class="ui-card">
-                    <img id="image" src="img/Jurusan/RPL/Buat aplikasi.jpg">
+                    <img id="image" src="/img_jurusan/Jurusan/RPL/Buat aplikasi.jpg">
                     <div class="desc">
                         <h5><strong>Membuat Aplikasi</strong></h5>
                         <p>Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum
@@ -170,7 +170,7 @@
 
             <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
                 <div class="ui-card">
-                    <img id="image" src="img/Jurusan/RPL/Database.jpg">
+                    <img id="image" src="/img_jurusan/Jurusan/RPL/Database.jpg">
                     <div class="desc">
                         <h5><strong>Database</strong></h5>
                         <p>Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum
@@ -181,7 +181,7 @@
 
             <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
                 <div class="ui-card">
-                    <img id="image" src="img/Jurusan/RPL/Desain Website.jpg">
+                    <img id="image" src="/img_jurusan/Jurusan/RPL/Desain Website.jpg">
                     <div class="desc">
                         <h5><strong>Desain Website</strong></h5>
                         <p>Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum
@@ -229,31 +229,31 @@
         <div class="js-carousel owl-carousel owl-theme">
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/RPL/Galery Kegiatan/Kegiatan 1.jpg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/RPL/Galery Kegiatan/Kegiatan 1.jpg" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/RPL/Galery Kegiatan/Kegiatan 2.jpg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/RPL/Galery Kegiatan/Kegiatan 2.jpg" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/RPL/Galery Kegiatan/Kegiatan 3.jpeg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/RPL/Galery Kegiatan/Kegiatan 3.jpeg" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/RPL/Galery Kegiatan/Kegiatan 4.jpeg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/RPL/Galery Kegiatan/Kegiatan 4.jpeg" class="card-img-top">
                 </div>
             </div>
 
             <div class="ms-2 me-2">
                 <div class="card">
-                    <img src="img/Jurusan/RPL/Galery Kegiatan/Kegiatan 5.jpg" class="card-img-top">
+                    <img src="/img_jurusan/Jurusan/RPL/Galery Kegiatan/Kegiatan 5.jpg" class="card-img-top">
                 </div>
             </div>
         </div>
@@ -269,7 +269,7 @@
             <div class="container pt-2 pb-2">
                 <div class="row text-white">
                     <div class="col-lg-1 col-sm-12 col-md-3 p-lg-4">
-                        <img src="img/Logo SMK.png" height="50px" alt="">
+                        <img src="/img_jurusan/Logo SMK.png" height="50px" alt="">
                     </div>
                     <div class="col-lg-4 col-sm-12 col-md-3 p-3">
                         <div class="row">
