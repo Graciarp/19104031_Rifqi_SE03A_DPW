@@ -9,3 +9,10 @@
 6. Matikan debug mode laravelnya seperti ini
     ![image](https://user-images.githubusercontent.com/62453385/149340877-47e1eac6-2ffe-47e1-b424-1d7c372e1a98.png)
 7. Selesai
+
+# Cara kontribusi
+1. Hubungi saya untuk menambah kolaborator
+2. Pull repository ini
+3. Buat perubahan pada kode projek ini
+4. Push ulang ke repository ini
+5. Jika ada perubahan pada database, jangan lupa dibackup dari phpmyadmin dan disimpan pada repository ini
