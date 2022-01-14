@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program Keahlian - Multimedia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="/css_jurusan/style.css">
+    <link rel="stylesheet" href="/css_jurusan/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css_jurusan/owl.theme.default.min.css">
+    <script src="/js_jurusan/jquery.js"></script>
+    <script src="/js_jurusan/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <!--------------- Navbar Start --------------->
-    
+
     <nav class="navbar navbar-expand-sm">
         <div class="container">
             <div class="skansika">
@@ -96,7 +96,7 @@
             <img class="img-prodi"
             src="img/Jurusan/MM/Banner/Banner MM.jpg"
             alt="">
-            
+
             <div class="prodi-title">
                 <h3>Program Keahlian</h3>
                 <p>Multimedia</p>
@@ -115,7 +115,7 @@
         <img src="img/Jurusan/MM/MM Logo.png" align="left" style="margin-left: 40px; margin-right: 40px; margin-bottom: 40px; width: 250px;">
 
         <div class="text-justify">
-            <p> 
+            <p>
                 Multimedia merupakan jurusan ke 5 di SMK N 1 Bukateja
             </p>
 
@@ -310,7 +310,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Copyright -->
         <div class="d-flex justify-content-center text-white" style="background-color: #B7292D;">
             <div class="p-2">Copyright © 2021 SMKN 1 BUKATEJA | Powered by Team Romusha</div>
@@ -320,7 +320,7 @@
 
     <!--------------- Footer End --------------->
 
-    <script src="js/script.js"></script>
+    <script src="/js_jurusan/script.js"></script>
 </body>
 
 </html>

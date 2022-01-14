@@ -18,7 +18,7 @@
 
 <body>
     <!--------------- Navbar Start --------------->
-    
+
     <nav class="navbar navbar-expand-sm">
         <div class="container">
             <div class="skansika">
@@ -96,7 +96,7 @@
             <img class="img-prodi"
                 src="img/Jurusan/RPL/Banner/Banner RPL.jpg"
                 alt="">
-                
+
             <div class="prodi-title">
                 <h3>Program Keahlian</h3>
                 <p>Rekayasa Perangkat Lunak</p>
@@ -324,7 +324,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Copyright -->
         <div class="d-flex justify-content-center text-white" style="background-color: #B7292D;">
             <div class="p-2">Copyright © 2021 SMKN 1 BUKATEJA | Powered by Team Romusha</div>
@@ -334,7 +334,7 @@
 
     <!--------------- Footer End --------------->
 
-    <script src="js/script.js"></script>
+    <script src="/js_jurusan/script.js"></script>
 </body>
 
 </html>
