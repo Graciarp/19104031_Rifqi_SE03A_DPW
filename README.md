@@ -1,3 +1,5 @@
+# Tubes DPW SMK 1 Bukateja
+Preview projek ini bisa dilihat disini https://smkn1bukateja.barker-corp.my.id
 # Cara instalasi
 1. Download repository ini menjadi zip 
 2. Unggah berkas zip ke root direktori hosting dan ekstrak seperti ini
