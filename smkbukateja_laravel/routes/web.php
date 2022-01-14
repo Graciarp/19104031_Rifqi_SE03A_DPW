@@ -49,11 +49,11 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('prestasi', prestasi::class, ['except' => ['index']]);
 });
 
-Route::view('DPIB', 'jurusan.DPIB');
-Route::view('Multimedia', 'jurusan.Multimedia');
-Route::view('RPL', 'jurusan.RPL');
-Route::view('TB', 'jurusan.TB');
-Route::view('TBO', 'jurusan.TBO');
-Route::view('TKJ', 'jurusan.TKJ');
-Route::view('TKRO', 'jurusan.TKRO');
+Route::view('/jurusan/DPIB', 'jurusan.DPIB');
+Route::view('/jurusan/Multimedia', 'jurusan.Multimedia');
+Route::view('/jurusan/RPL', 'jurusan.RPL');
+Route::view('/jurusan/TB', 'jurusan.TB');
+Route::view('/jurusan/TBO', 'jurusan.TBO');
+Route::view('/jurusan/TKJ', 'jurusan.TKJ');
+Route::view('/jurusan/TKRO', 'jurusan.TKRO');
 
