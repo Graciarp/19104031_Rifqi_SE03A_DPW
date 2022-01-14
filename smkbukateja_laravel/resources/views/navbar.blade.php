@@ -2,7 +2,7 @@
  <nav class="navbar navbar-expand-sm">
     <div class="container">
         <div class="skansika">
-            <img src="img/Logo SMK.png" alt="" class="logo">
+            <img src="/img/Logo SMK.png" alt="" class="logo">
             <div class="name-skansika">
                 SKANSIKA
             </div>
@@ -23,13 +23,13 @@
                         Program Keahlian
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="jurusan/DPIB.html">Desain Permodelan Bangunan</a></li>
-                        <li><a class="dropdown-item" href="jurusan/TB.html">Tata Busana</a></li>
-                        <li><a class="dropdown-item" href="jurusan/TKRO.html">TKR</a></li>
-                        <li><a class="dropdown-item" href="jurusan/TKJ.html">TKJ</a></li>
-                        <li><a class="dropdown-item" href="jurusan/Multimedia.html">Multimedia</a></li>
-                        <li><a class="dropdown-item" href="jurusan/RPL.html">RPL</a></li>
-                        <li><a class="dropdown-item" href="jurusan/TBO.html">Teknik Body Otomotif</a></li>
+                        <li><a class="dropdown-item" href="/jurusan/DPIB">Desain Permodelan Bangunan</a></li>
+                        <li><a class="dropdown-item" href="/jurusan/TB">Tata Busana</a></li>
+                        <li><a class="dropdown-item" href="/jurusan/TKRO">TKR</a></li>
+                        <li><a class="dropdown-item" href="/jurusan/TKJ">TKJ</a></li>
+                        <li><a class="dropdown-item" href="/jurusan/Multimedia">Multimedia</a></li>
+                        <li><a class="dropdown-item" href="/jurusan/RPL">RPL</a></li>
+                        <li><a class="dropdown-item" href="/jurusan/TBO">Teknik Body Otomotif</a></li>
                     </ul>
                 </li>
                 <li class="guru-karyawan"><a href="">Guru dan Karyawan</a></li>
