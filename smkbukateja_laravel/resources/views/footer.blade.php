@@ -4,7 +4,7 @@
         <div class=" container pt-2 pb-2">
         <div class="row text-white">
             <div class="col-lg-1 col-sm-12 col-md-3 p-lg-4">
-                <img src="img/Logo SMK.png" height="50px" alt="">
+                <img src="/img/Logo SMK.png" height="50px" alt="">
             </div>
             <div class="col-lg-4 col-sm-12 col-md-3 p-3">
                 <div class="row">
@@ -30,10 +30,10 @@
                     <h5 class="section-title"><b>Menu</b></h5>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="index.html">Beranda</a>
+                            <a href="/">Beranda</a>
                         </li>
                         <li>
-                            <a href="profil">Profil Sekolah</a>
+                            <a href="/profil">Profil Sekolah</a>
                         </li>
                         <li>
                             <a href="#">Program Keahlian</a>
@@ -42,10 +42,10 @@
                             <a href="#">Guru dan Karyawan</a>
                         </li>
                         <li>
-                            <a href="prestasi">Prestasi</a>
+                            <a href="/prestasi">Prestasi</a>
                         </li>
                         <li>
-                            <a href="informasi">Informasi</a>
+                            <a href="/informasi">Informasi</a>
                         </li>
                         <li>
                             <a href="/login">Login</a>
@@ -66,7 +66,7 @@
 
     <!-- Copyright -->
     <div class="d-flex justify-content-center text-white" style="background-color: #B7292D;">
-        <div class="p-2">Copyright © 2021 SMKN 1 BUKATEJA | Powered by Team Romusha</div>
+        <div class="p-2">Copyright © {{date('Y')}} SMKN 1 BUKATEJA | Powered by Team Romusha</div>
     </div>
     <!-- Copyright -->
 </footer>
