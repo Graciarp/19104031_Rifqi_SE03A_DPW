@@ -49,3 +49,11 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('prestasi', prestasi::class, ['except' => ['index']]);
 });
 
+Route::view('DPIB', 'jurusan.DPIB');
+Route::view('Multimedia', 'jurusan.Multimedia');
+Route::view('RPL', 'jurusan.RPL');
+Route::view('TB', 'jurusan.TB');
+Route::view('TBO', 'jurusan.TBO');
+Route::view('TKJ', 'jurusan.TKJ');
+Route::view('TKRO', 'jurusan.TKRO');
+
