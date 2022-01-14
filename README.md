@@ -15,7 +15,7 @@ Preview projek ini bisa dilihat disini https://smkn1bukateja.barker-corp.my.id
 # Cara kontribusi
 1. Hubungi saya untuk menambah kolaborator
 2. Pull repository ini
-3. Buat perubahan pada kode projek ini
+3. Buat perubahan pada kode projek ini sesuai pembagian kanban pada trello dibawah ini
 4. Push ulang ke repository ini
 5. Jika ada perubahan pada database, jangan lupa dibackup dari phpmyadmin dan disimpan pada repository ini
 
