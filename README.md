@@ -21,3 +21,4 @@ Preview projek ini bisa dilihat disini https://smkn1bukateja.barker-corp.my.id
 
 # Link Trello
 - https://trello.com/b/d2t5Ic4E/todo-website
+- http
