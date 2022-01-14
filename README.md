@@ -18,3 +18,6 @@ Preview projek ini bisa dilihat disini https://smkn1bukateja.barker-corp.my.id
 3. Buat perubahan pada kode projek ini
 4. Push ulang ke repository ini
 5. Jika ada perubahan pada database, jangan lupa dibackup dari phpmyadmin dan disimpan pada repository ini
+
+# Link Trello
+- https://trello.com/b/d2t5Ic4E/todo-website
