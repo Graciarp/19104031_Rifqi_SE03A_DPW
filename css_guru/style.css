@@ -1,0 +1,120 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #B7292D;
+}
+
+.skansika {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+}
+
+.name-skansika {
+    margin-top: 13px;
+    color: white;
+    font-weight: 700;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    color: white;
+}
+
+.navbar-brand {
+    border: 2px solid;
+}
+
+.logo {
+    width: 50px;
+}
+
+.part {
+    margin: 79px 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 407;
+}
+
+.tag {
+    position: absolute;
+    top: 410px;
+}
+
+.tag p.judul {
+    font-size: 1.3rem;
+    background-color: #fff;
+    padding: 13px 105px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 10%);
+    border-radius: 7px;
+}
+
+.kepala-sekolah {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.kepala-sekolah .photo img.img-kepala-sekolah {
+    width: 320px;
+}
+
+.kepala-sekolah .photo figcaption.jabatan {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 88px;
+}
+
+.kepala-sekolah .photo figcaption.nama {
+    font-size: 1.2rem;
+    margin-left: 70px;
+}
+
+.kepala-sekolah .sambutan {
+    width: 600px;
+}
+
+.kepala-tu .card {
+    display: grid;
+    margin: 0 auto;
+    padding: 32px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 10%);
+}
+
+.kepala-tu .items {
+    display: flex;
+    padding: 20px;
+}
+
+.kepala-tu .items .card {
+    margin: 0 15px;
+}
+
+.subKonten .row .col-2 {
+    margin: 0 19px;
+}
+
+.subKonten .row .card {
+    display: grid;
+    padding: 25px;
+    margin: 12px;
+    border-radius: 20px;
+}
+
+.subKonten .row .card:hover {
+    box-shadow: 3px 2px 15px rgba(0, 0, 0, 20%);
+}
+
+.subKonten .row .card img {
+    width: 100px;
+    display: grid;
+    margin: 0 auto;
+}

@@ -57,3 +57,7 @@ Route::view('/jurusan/TBO', 'jurusan.TBO');
 Route::view('/jurusan/TKJ', 'jurusan.TKJ');
 Route::view('/jurusan/TKRO', 'jurusan.TKRO');
 
+Route::view('/guru/kepsek', 'guru.kepala');
+Route::view('/guru/karyawan', 'guru.karyawan');
+Route::view('/guru/guruMapel', 'guru.guru_matapelajaran');
+
