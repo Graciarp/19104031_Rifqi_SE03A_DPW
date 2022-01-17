@@ -21,7 +21,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col">
-                            {{ __('Artikel') }}
+                            {{ __('Berita') }}
                         </div>
                         <div class="col">
                             <a href="{{ route('informasi.create') }}" class="btn btn-sm btn-primary float-right">{{ __('Tambah') }}</a>
@@ -85,7 +85,7 @@
                                             </form>
                                         </td>
                                     </tr>
-                                @endforeach                                
+                                @endforeach
                             </tbody>
 
                             <tfoot>
@@ -182,7 +182,7 @@
                                         </form>
                                     </td>
                                 </tr>
-                            @endforeach                                
+                            @endforeach
                         </tbody>
 
                         <tfoot>

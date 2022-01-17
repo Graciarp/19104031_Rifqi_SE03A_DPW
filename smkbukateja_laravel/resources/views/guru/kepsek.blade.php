@@ -22,7 +22,7 @@
 
     <!-- Hero -->
     <div class="hero">
-        <img src="img/hero.png" alt="hero">
+        <img src="/img_guru/hero.png" alt="hero">
     </div>
     <!-- Hero -->
 

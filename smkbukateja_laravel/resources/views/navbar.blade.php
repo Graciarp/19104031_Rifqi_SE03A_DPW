@@ -32,7 +32,7 @@
                         <li><a class="dropdown-item" href="/jurusan/TBO">Teknik Body Otomotif</a></li>
                     </ul>
                 </li>
-                <li class="guru-karyawan"><a href="">Guru dan Karyawan</a></li>
+                <li class="guru-karyawan"><a href="/guru/kepsek">Guru dan Karyawan</a></li>
                 <li class="prestasi"><a href="prestasi">Prestasi</a></li>
                 <!-- dropdown navbar -->
                 <li class="informasi dropdown">

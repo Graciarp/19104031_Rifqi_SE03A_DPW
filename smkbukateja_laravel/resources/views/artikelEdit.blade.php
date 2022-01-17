@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">{{ __('Edit Artikel') }}</div>
+                <div class="card-header">Edit Artikel</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('informasi.update', $informasi->id) }}" enctype="multipart/form-data">
@@ -22,14 +22,14 @@
 
                         <div class="form-group row">
                             <label for="isi" class="col-md-4 col-form-label text-md-right">{{ __('Isi') }}</label>
-                            <div class="col-md-6">     
+                            <div class="col-md-6">
                                 <textarea required name="isi" class="form-control" rows="5">{{$informasi->isi}}</textarea>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="gambar" class="col-md-4 col-form-label text-md-right">{{ __('Gambar') }}</label>
-                            <div class="col-md-6">     
+                            <div class="col-md-6">
                                 <input type="file" name="gambar" accept=".jpg, .png" id="">
                                 <br>
                                 <small>

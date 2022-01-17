@@ -173,8 +173,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `nowa`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin User', '089137253896', 'admin@admin.com', NULL, '$2b$10$Qjq4Uli3kWMhsPQkATD8h.ZH3pohGeUpwemBBkbuNSSxziF6vd8hS', NULL, NULL, NULL),
-(3, 'Teguh Rijanandi', '089655541804', 'teguhrijanandi02@gmail.com', NULL, '$2y$10$F8e4wfQvdjmxYoc/ILGBE.iGTDZvapEgVoIQlt4h28i/Fmr/ykhee', NULL, '2022-01-09 06:18:56', '2022-01-09 06:27:12');
+(1, 'Admin User', '089137253896', 'admin@admin.com', NULL, '$2b$10$Qjq4Uli3kWMhsPQkATD8h.ZH3pohGeUpwemBBkbuNSSxziF6vd8hS', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
