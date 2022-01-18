@@ -36,10 +36,10 @@
                             <a href="/profil">Profil Sekolah</a>
                         </li>
                         <li>
-                            <a href="#">Program Keahlian</a>
+                            <a href="/jurusan/DPIB">Program Keahlian</a>
                         </li>
                         <li>
-                            <a href="#">Guru dan Karyawan</a>
+                            <a href="/guru/kepsek">Guru dan Karyawan</a>
                         </li>
                         <li>
                             <a href="/prestasi">Prestasi</a>
