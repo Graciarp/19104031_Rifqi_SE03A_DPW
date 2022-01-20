@@ -15,7 +15,7 @@ class adminManagement extends Controller
     public function index()
     {
         $user = User::all();
-        return view('manajemenAdmin')
+        return view('admin.manajemenadmin.index')
             ->with('users', $user);
         ;
     }

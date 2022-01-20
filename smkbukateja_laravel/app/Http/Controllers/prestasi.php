@@ -15,7 +15,9 @@ class prestasi extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.prestasi.index')
+        ->with('prestasi', prestasiModel::all());
+        ;
     }
 
     /**
@@ -26,7 +28,7 @@ class prestasi extends Controller
     public function create()
     {
         // Menuju view prestasiBuat
-        return view('prestasiBuat');
+        return view('admin.prestasi.prestasiBuat');
     }
 
     /**
@@ -89,7 +91,7 @@ class prestasi extends Controller
      */
     public function edit($id)
     {
-        return view('prestasiEdit')
+        return view('admin.prestasi.prestasiEdit')
             -> with('prestasi', prestasiModel::find($id));
     }
 

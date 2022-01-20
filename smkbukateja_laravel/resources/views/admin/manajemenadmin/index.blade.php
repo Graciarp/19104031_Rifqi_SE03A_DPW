@@ -2,21 +2,20 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
+    <div class="">
+        <div class="">
             <div class="card">
                 <div class="card-header">
-                    <div class="row">
-                        <div class="col">
-                            {{ __('Dashboard') }}
-                        </div>
-                        <div class="col text-right">
-                            <button onclick="$('#addUser').modal('show')" class="btn btn-success btn-sm">
-                                Tambah
-                            </button>
-                        </div>
-                    </div>
+                  <h4 class="pull-left">
+                    Dashboard
+                  </h4>
+                  
+                  <button onclick="$('#addUser').modal('show')" class="btn pull-right btn-success btn-sm">
+                    Tambah
+                  </button>
                 </div>
+
+                <br><br>
 
                 <div class="card-body">
                     <table class="table">

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Str;
+use Illuminate\Support\Str;
 use App\Models\informasiModel;
 
 class informasi extends Controller
@@ -15,7 +15,8 @@ class informasi extends Controller
      */
     public function index()
     {
-        
+        return view('admin.berita.index')
+        ->with('data', informasiModel::all());
     }
 
     /**
@@ -25,7 +26,7 @@ class informasi extends Controller
      */
     public function create()
     {
-        return view('artikelBuat');
+        return view('admin.berita.artikelBuat');
     }
 
     /**
@@ -89,7 +90,7 @@ class informasi extends Controller
      */
     public function edit($id)
     {
-        return view('artikelEdit')
+        return view('admin.berita.artikelEdit')
 
         // Menampilkan data berdasarkan id
         ->with('informasi', informasiModel::find($id));

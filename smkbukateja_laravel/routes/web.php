@@ -50,7 +50,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/manajemenAdmin/infoUser/{id}', [adminManagement::class, 'show']);
     Route::resource('manajemenAdmin', adminManagement::class);
+
+    Route::get('informasi/index', [informasi::class, 'index']);
     Route::resource('informasi', informasi::class, ['except' => ['index']]);
+
+    Route::get('prestasi/index', [prestasi::class, 'index']);
     Route::resource('prestasi', prestasi::class, ['except' => ['index']]);
 });
 

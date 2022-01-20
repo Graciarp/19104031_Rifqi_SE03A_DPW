@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\informasiModel;
-use App\Models\prestasi;
 
 class HomeController extends Controller
 {
@@ -25,10 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home')
-            ->with('data', informasiModel::all())
-            ->with('prestasi', prestasi::all())
-            ;
-        ;
+        return view('home');
     }
 }
