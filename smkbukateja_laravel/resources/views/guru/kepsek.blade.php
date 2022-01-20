@@ -68,6 +68,9 @@
                 </figure>
             </div>
             <div class="sambutan">
+                <h5>
+                    Sambutan Kepala Sekolah
+                </h5>
                 <p>
                     {{$kepsek->sambutan}}
                 </p>
