@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{informasi, prestasi, adminManagement};
+use App\Http\Controllers\{informasi, prestasi, adminManagement, gurudankaryawanController};
 use App\Models\informasiModel;
 
 /*
@@ -56,6 +56,9 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('prestasi/index', [prestasi::class, 'index']);
     Route::resource('prestasi', prestasi::class, ['except' => ['index']]);
+
+    Route::get('gurukaryawan/index', [gurudankaryawanController::class, 'index']);
+    Route::post('gurukaryawan/save', [gurudankaryawanController::class, 'save']);
 });
 
 Route::view('/jurusan/DPIB', 'jurusan.DPIB');

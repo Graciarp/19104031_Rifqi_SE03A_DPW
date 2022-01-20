@@ -12,6 +12,8 @@
     <link href="{{url('/')}}/css/font-awesome.css" rel="stylesheet">
     <link href="{{url('/')}}/css/style.css" rel="stylesheet">
     <link href="{{url('/')}}/css/pages/dashboard.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{-- <script src="{{url('/')}}/js/jquery-1.7.2.min.js"></script> --}}
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,6 +22,10 @@
     <style>
         input, textarea {
             width: 100%
+        }
+
+        .main {
+            border-bottom: 0px !important
         }
     </style>
 </head>
@@ -52,11 +58,12 @@
         <div class="subnavbar-inner">
             <div class="container">
                 <ul class="mainnav">
-                    <li><a href="/home"><i class="icon-dashboard"></i><span>Dashboard</span> </a>
-                    </li>
+                    <li><a target="_blank" href="{{url('/')}}"><i class="icon-home"></i><span>Beranda</span> </a></li>
+                    <li><a href="/home"><i class="icon-dashboard"></i><span>Dashboard</span> </a></li>
                     <li><a href="/informasi/index"><i class="icon-list-alt"></i><span>Berita</span> </a> </li>
                     <li><a href="/prestasi/index"><i class="icon-bar-chart"></i><span>Prestasi</span> </a> </li>
                     <li><a href="/manajemenAdmin"><i class="icon-group"></i><span>Manajemen Admin</span> </a> </li>
+                    <li><a href="/gurukaryawan/index"><i class="icon-group"></i><span>Guru Karyawan</span> </a> </li>
                 </ul>
             </div>
             <!-- /container -->
@@ -85,7 +92,7 @@
         <!-- /main-inner -->
     </div>
     <!-- /extra -->
-    <div class="footer">
+    {{-- <div class="footer">
         <div class="footer-inner">
             <div class="container">
                 <div class="row">
@@ -97,12 +104,12 @@
             <!-- /container -->
         </div>
         <!-- /footer-inner -->
-    </div>
+    </div> --}}
     <!-- /footer -->
     <!-- Le javascript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{url('/')}}/js/jquery-1.7.2.min.js"></script>
+    
     <script src="{{url('/')}}/js/excanvas.min.js"></script>
     <script src="{{url('/')}}/js/chart.min.js" type="text/javascript"></script>
     <script src="{{url('/')}}/js/bootstrap.js"></script>
