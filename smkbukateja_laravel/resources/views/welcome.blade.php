@@ -1,10 +1,12 @@
 @php
     // import profilkolah
-    use App\Models\profilSekolah as profilsekolahmodel;
+    use App\Models\beranda as berandamodel;
     // memanggil data sejarah singkat
-    $sejarah=profilsekolahmodel::where('key', 'sejarah_singkat')->first();
-    $visi=profilsekolahmodel::where('key', 'visi')->first();
-    $misi=profilsekolahmodel::where('key', 'misi')->first();
+    $namaSekolah=berandamodel::where('key', 'nama_sekolah')->first();
+    $slogan=berandamodel::where('key', 'slogan')->first();
+    $visi=berandamodel::where('key', 'visi')->first();
+    $misi=berandamodel::where('key', 'misi')->first();
+    // $misi=profilsekolahmodel::where('key', 'misi')->first();
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +48,7 @@
             <div class="caption-carousel">
                 <h3>SELAMAT DATANG DI</h3>
                 <p class="nama-smk">SMK NEGERI 1 BUKATEJA</p>
-                <p class="desc">{{$sejarah->value}}</p>
+                <p class="desc">{{$namaSekolah->value}}</p>
 
                 <button type="button" class="btn btn-danger"
                     style="border-radius: 15px; background-color: #E82329; border: 0px;">

@@ -65,6 +65,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('profilsekolah/index', [profilsekolah::class, 'index']);
     Route::get('profilsekolah/edit/{id}', [profilsekolah::class, 'edit']);
     Route::post('profilsekolah/update/{id}', [profilsekolah::class, 'update']);
+
+    
 });
 
 Route::view('/jurusan/DPIB', 'jurusan.DPIB');
