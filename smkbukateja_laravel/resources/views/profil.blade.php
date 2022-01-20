@@ -1,3 +1,11 @@
+@php
+    // import profilkolah
+    use App\Models\profilSekolah as profilsekolahmodel;
+    // memanggil data sejarah singkat
+    $sejarah=profilsekolahmodel::where('key', 'sejarah_singkat')->first();
+    $visi=profilsekolahmodel::where('key', 'visi')->first();
+    $misi=profilsekolahmodel::where('key', 'misi')->first();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,12 +76,13 @@
         <br>
         <div class="row">
             <div class="col-lg-6" style="text-align: justify;">
-                SMK Negeri 1 Bukateja berdiri pada bulan maret pada tahun 2004 berdasar pada Keputusan Bupati
+                {{-- SMK Negeri 1 Bukateja berdiri pada bulan maret pada tahun 2004 berdasar pada Keputusan Bupati
                 Purbalingga No. 36 Tahun 2004 Tentang penyelenggaraan SMK dan Program SMK Kelas Jauh di Purbalingga
                 dengan Program Keahlian Teknik Perkayuan, Kemudian dikeluarkan Peraturan Bupati N0. 24 Tahun 2007 pada
                 tanggal 21 April 2007 tentang pembentukan Sekolah Menengah Kejuruan Negeri 1 Bukateja dengan perubahan
                 dan Penambahan Program Keahlian Teknik Gambar Bangunan dan Tata Busana. Pada Tahun 2008 pada bulan April
-                dibuka kembali Program Keahlian Teknik Mekanik Otomotif.
+                dibuka kembali Program Keahlian Teknik Mekanik Otomotif. --}}
+                {!!($sejarah->value)!!}
             </div>
             <div class="col-lg-6">
                 <img src="https://asset.kompas.com/crops/g772kCQ23eQxRvRPy_ioxawRfsg=/123x25:900x543/750x500/data/photo/2017/05/02/2972586768.jpg"
@@ -91,15 +100,15 @@
         <div class="row text-white" style="text-align: center;">
             <div class="col-lg-5 p-4" style="background-color: #E82329;">
                 <h1 class="isi-vismis">Visi</h1>
-                <p class="isi-vismis isi-visi">Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing,
-                    berwawasan lingkungan dan berakhlak mulia.</p>
+                <p class="isi-vismis isi-visi">{{$visi->value}}</p>
             </div>
             <div class="col-lg-2">
 
             </div>
             <div class="col-lg-5 p-4" style="background-color: #E82329;">
                 <h1>Misi</h1>
-                <ul style="text-align: justify;">
+                {!!($misi->value)!!}
+                {{-- <ul style="text-align: justify;">
                     <li>
                         Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif
                         berorientasi pada kompetensi pendidikan nasional.
@@ -112,7 +121,7 @@
                         Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan
                         berwawasan lingkungan sekolah.
                     </li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </div>
