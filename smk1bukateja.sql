@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 09, 2022 at 02:29 PM
+-- Generation Time: Jan 20, 2022 at 06:20 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -40,6 +40,35 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `gurudankaryawans`
+--
+
+CREATE TABLE `gurudankaryawans` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jabatan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sambutan` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `gurudankaryawans`
+--
+
+INSERT INTO `gurudankaryawans` (`id`, `nama`, `jabatan`, `foto`, `sambutan`, `created_at`, `updated_at`) VALUES
+(1, 'Rifqi Alfinnur', 'kepala_sekolah ', '1642653261_rifqiAlfinnur.png', 'Musuh kejahatan kekasih kebenaran. Merdeka!', '2022-01-19 21:34:21', '2022-01-19 21:34:21'),
+(2, 'Fauziyah', 'wakil_kepala_sekolah ', '1642653614_Ya.jpg', NULL, '2022-01-19 21:40:14', '2022-01-19 21:40:14'),
+(3, 'Petter Parker Ramadhan', 'kepala_tata_usaha ', '1642653966_profil1.jpeg', NULL, '2022-01-19 21:46:06', '2022-01-19 21:46:06'),
+(4, 'Tony Stark Sunarman', 'guru Olahraga', '1642654130_profil2.jpg', NULL, '2022-01-19 21:48:50', '2022-01-19 21:48:50'),
+(5, 'Bambang Suparman', 'guru Tata Boga', '1642654161_profil2.jpg', NULL, '2022-01-19 21:49:21', '2022-01-19 21:49:21'),
+(6, 'Bejo', 'karyawan ', '1642654423_man.png', NULL, '2022-01-19 21:53:43', '2022-01-19 21:53:43'),
+(7, 'Iqbal Ramadhan', 'karyawan', '1642655438_man.png', NULL, '2022-01-19 21:55:50', '2022-01-19 22:14:26');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `informasi`
 --
 
@@ -70,7 +99,6 @@ INSERT INTO `informasi` (`id`, `judul`, `slug`, `gambar`, `isi`, `created_at`, `
 (10, 'Dolore ratione dolorem ut itaque.', 'dolore-ratione-dolorem-ut-itaque', 'gerbang sekolah.jpg', 'Omnis qui sit at ea consequatur ipsa. Numquam fuga voluptatibus voluptatum. Qui beatae incidunt optio molestiae. Quod est nemo fugit beatae et harum cumque. Id velit consequuntur sapiente quia autem placeat. Dolores vel et quisquam nemo. Ratione nihil id vel sapiente odit est.', '2021-12-30 20:12:13', '2021-12-30 20:12:13'),
 (11, 'Totam vero aperiam ut.', 'totam-vero-aperiam-ut', 'gerbang sekolah.jpg', 'Consequatur aspernatur eaque officia distinctio ut. Deserunt quos consectetur optio. Optio qui temporibus quae dicta laborum quo vel. In soluta commodi doloremque dolorem. Suscipit libero voluptatum sit amet quibusdam qui. Distinctio atque sunt dolore assumenda et ad.', '2021-12-30 20:12:13', '2021-12-30 20:12:13'),
 (12, 'Artikel Voluptatibus iste aut iste mollitia corporis et.', 'artikel-voluptatibus-iste-aut-iste-mollitia-corporis-et', 'gerbang sekolah.jpg', 'Aliquam excepturi delectus neque nulla ipsam deleniti. Hic rem vel quia. Et nobis eius ipsa est nam non. Qui nostrum omnis rerum ut quisquam repellendus aut. Labore asperiores saepe est facere. Voluptate corrupti inventore excepturi hic.', '2021-12-30 20:12:13', '2021-12-30 20:26:19'),
-(13, 'Est officia deserunt delectus ut.', 'est-officia-deserunt-delectus-ut', 'gerbang sekolah.jpg', 'Exercitationem asperiores dolorem iusto quis quibusdam nisi et. Quidem ab quis et doloremque deserunt est. Eos aut ducimus non eveniet ullam dicta. Deleniti rerum beatae corporis harum. Aut accusantium modi minus adipisci.', '2021-12-30 20:12:13', '2021-12-30 20:12:13'),
 (15, 'Pengambilan Gambar Sinematografi', 'pengambilan-gambar-sinematografi', 'ns6oPW2eNph522xJnWC0zuco56ctsyHubVvaxrqR.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper ipsum eget vehicula mollis. Donec pharetra eu sem a ornare. Nulla facilisi. Nunc tristique, neque bibendum fringilla laoreet, quam elit ultrices erat, ut lobortis ante metus nec dolor. Cras elementum suscipit augue quis malesuada. Quisque lacus libero, tristique id suscipit id, congue ut nibh. Vivamus auctor ornare posuere. Morbi non scelerisque tortor, non volutpat ante. Vivamus vitae semper leo, sed mattis lacus. Donec et turpis quis dolor viverra pulvinar non ut lectus.\r\n\r\nEtiam ultrices sollicitudin diam, a congue odio cursus id. Quisque bibendum metus at placerat interdum. Pellentesque feugiat mattis ligula, molestie accumsan lacus congue sit amet. Proin sodales scelerisque neque, nec laoreet augue ultricies ac. Nulla facilisi. Maecenas commodo, nunc quis interdum auctor, lorem velit consectetur libero, sed sodales felis tellus in tortor. Mauris ullamcorper diam porttitor ultrices finibus.', '2021-12-30 20:29:07', '2021-12-30 20:29:07'),
 (16, 'Juara 1 Artikel Tingkat Provinsi', 'juara-1-artikel-tingkat-provinsi', 'ObLYkykiEdfWchpZ0xv995i8L0qNCIxGg8NimiuF.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper ipsum eget vehicula mollis. Donec pharetra eu sem a ornare. Nulla facilisi. Nunc tristique, neque bibendum fringilla laoreet, quam elit ultrices erat, ut lobortis ante metus nec dolor. Cras elementum suscipit augue quis malesuada. Quisque lacus libero, tristique id suscipit id, congue ut nibh. Vivamus auctor ornare posuere. Morbi non scelerisque tortor, non volutpat ante. Vivamus vitae semper leo, sed mattis lacus. Donec et turpis quis dolor viverra pulvinar non ut lectus.\r\n\r\nEtiam ultrices sollicitudin diam, a congue odio cursus id. Quisque bibendum metus at placerat interdum. Pellentesque feugiat mattis ligula, molestie accumsan lacus congue sit amet. Proin sodales scelerisque neque, nec laoreet augue ultricies ac. Nulla facilisi. Maecenas commodo, nunc quis interdum auctor, lorem velit consectetur libero, sed sodales felis tellus in tortor. Mauris ullamcorper diam porttitor ultrices finibus.', '2021-12-30 20:29:30', '2021-12-30 20:29:30');
 
@@ -96,7 +124,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2021_12_23_085402_informasi', 2),
-(6, '2021_12_31_063010_create_prestasis_table', 3);
+(6, '2021_12_31_063010_create_prestasis_table', 3),
+(7, '2022_01_19_055816_create_gurudankaryawans_table', 4);
 
 -- --------------------------------------------------------
 
@@ -173,7 +202,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `nowa`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin User', '089137253896', 'admin@admin.com', NULL, '$2b$10$Qjq4Uli3kWMhsPQkATD8h.ZH3pohGeUpwemBBkbuNSSxziF6vd8hS', NULL, NULL, NULL);
+(1, 'Admin User', '089137253896', 'admin@admin.com', NULL, '$2b$10$Qjq4Uli3kWMhsPQkATD8h.ZH3pohGeUpwemBBkbuNSSxziF6vd8hS', NULL, NULL, NULL),
+(3, 'Teguh Rijanandi', '089655541804', 'teguhrijanandi02@gmail.com', NULL, '$2y$10$F8e4wfQvdjmxYoc/ILGBE.iGTDZvapEgVoIQlt4h28i/Fmr/ykhee', NULL, '2022-01-09 06:18:56', '2022-01-09 06:27:12');
 
 --
 -- Indexes for dumped tables
@@ -185,6 +215,12 @@ INSERT INTO `users` (`id`, `name`, `nowa`, `email`, `email_verified_at`, `passwo
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `gurudankaryawans`
+--
+ALTER TABLE `gurudankaryawans`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `informasi`
@@ -236,6 +272,12 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `gurudankaryawans`
+--
+ALTER TABLE `gurudankaryawans`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `informasi`
 --
 ALTER TABLE `informasi`
@@ -245,7 +287,7 @@ ALTER TABLE `informasi`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
