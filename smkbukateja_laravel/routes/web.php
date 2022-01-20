@@ -58,7 +58,9 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('prestasi', prestasi::class, ['except' => ['index']]);
 
     Route::get('gurukaryawan/index', [gurudankaryawanController::class, 'index']);
+    Route::get('gurukaryawan/json/{id}', [gurudankaryawanController::class, 'showJson']);
     Route::post('gurukaryawan/save', [gurudankaryawanController::class, 'save']);
+    Route::put('gurukaryawan/update/{id}', [gurudankaryawanController::class, 'update']);
 });
 
 Route::view('/jurusan/DPIB', 'jurusan.DPIB');

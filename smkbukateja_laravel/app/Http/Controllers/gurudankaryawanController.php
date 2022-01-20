@@ -15,6 +15,14 @@ class gurudankaryawanController extends Controller
         ;
     }
 
+    public function showJson($id)
+    {
+        $data = gurudankaryawan::find($id);
+        $data->jabatan_only = explode(' ', $data->jabatan)[0];
+        $data->mengajar_apa = str_replace('guru ', '', $data->jabatan);
+        return response() -> json(['data' => $data]);
+    }
+
     public function save(Request $request)
     {
         $nama = $request->nama;
@@ -37,6 +45,32 @@ class gurudankaryawanController extends Controller
         }
 
         $data->save();
+        return redirect() -> back() -> with('success', 'Data berhasil disimpan');
+    }
+    public function update(Request $request, $id)
+    {
+        $nama = $request->nama;
+        $jabatan = $request->jabatan;
+        $ngajarMapelApa = $request->detailGuru ?? null;
+        $sambutan = $request->sambutan ?? null;
+        $foto = $request->file('foto');
+
+        $data = gurudankaryawan::find($id);
+        $data->nama = $nama;
+        $data->jabatan = $jabatan . ' ' . $ngajarMapelApa;
+        $data->sambutan = $sambutan;
+
+        if ($request->hasFile('foto')) {
+            $path = public_path('img/guru_karyawan');
+            $filename = time() . '_' . $foto->getClientOriginalName();
+            $foto->move($path, $filename);
+
+            $data->foto = $filename;
+        } else {
+            $data->foto = $data->foto;
+        }
+
+        $data->update();
         return redirect() -> back() -> with('success', 'Data berhasil disimpan');
     }
 }
