@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 20, 2022 at 08:48 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 20 Jan 2022 pada 14.45
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `beranda`
+-- Struktur dari tabel `beranda`
 --
 
 CREATE TABLE `beranda` (
@@ -36,17 +36,19 @@ CREATE TABLE `beranda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `beranda`
+-- Dumping data untuk tabel `beranda`
 --
 
 INSERT INTO `beranda` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (1, 'nama_sekolah', 'SMK NEGERI 1 BUKATEJA', '2022-01-20 07:37:38', '2022-01-20 07:37:38'),
-(2, 'slogan', 'SMK Negeri 1 Bukateja merupakan salah satu Sekolah Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah. SMK ini merupakan SMK rujukan yang menawakan 7 program kompetensi keahlian.', '2022-01-20 07:38:10', '2022-01-20 07:38:10');
+(2, 'slogan', 'SMK Negeri 1 Bukateja merupakan salah satu Sekolah Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah. SMK ini merupakan SMK rujukan yang menawakan 7 program kompetensi keahlian.', '2022-01-20 07:38:10', '2022-01-20 07:38:10'),
+(3, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 12:57:12', '2022-01-20 12:57:12'),
+(4, 'misi', '	<ul style=\"text-align: justify;\"> <li> Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif berorientasi pada kompetensi pendidikan nasional. </li> <li> Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia kerja. </li> <li> Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan berwawasan lingkungan sekolah. </li> </ul>', '2022-01-20 12:57:58', '2022-01-20 12:57:58');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -62,7 +64,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gurudankaryawans`
+-- Struktur dari tabel `gurudankaryawans`
 --
 
 CREATE TABLE `gurudankaryawans` (
@@ -76,7 +78,7 @@ CREATE TABLE `gurudankaryawans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gurudankaryawans`
+-- Dumping data untuk tabel `gurudankaryawans`
 --
 
 INSERT INTO `gurudankaryawans` (`id`, `nama`, `jabatan`, `foto`, `sambutan`, `created_at`, `updated_at`) VALUES
@@ -91,7 +93,7 @@ INSERT INTO `gurudankaryawans` (`id`, `nama`, `jabatan`, `foto`, `sambutan`, `cr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `informasi`
+-- Struktur dari tabel `informasi`
 --
 
 CREATE TABLE `informasi` (
@@ -105,7 +107,7 @@ CREATE TABLE `informasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `informasi`
+-- Dumping data untuk tabel `informasi`
 --
 
 INSERT INTO `informasi` (`id`, `judul`, `slug`, `gambar`, `isi`, `created_at`, `updated_at`) VALUES
@@ -127,7 +129,7 @@ INSERT INTO `informasi` (`id`, `judul`, `slug`, `gambar`, `isi`, `created_at`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -137,7 +139,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -152,7 +154,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Struktur dari tabel `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -164,7 +166,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `personal_access_tokens`
+-- Struktur dari tabel `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -182,7 +184,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prestasis`
+-- Struktur dari tabel `prestasis`
 --
 
 CREATE TABLE `prestasis` (
@@ -195,7 +197,7 @@ CREATE TABLE `prestasis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `prestasis`
+-- Dumping data untuk tabel `prestasis`
 --
 
 INSERT INTO `prestasis` (`id`, `judul`, `gambar`, `isi`, `created_at`, `updated_at`) VALUES
@@ -204,10 +206,10 @@ INSERT INTO `prestasis` (`id`, `judul`, `gambar`, `isi`, `created_at`, `updated_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profilSekolah`
+-- Struktur dari tabel `profilsekolah`
 --
 
-CREATE TABLE `profilSekolah` (
+CREATE TABLE `profilsekolah` (
   `id` int(11) NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text DEFAULT NULL,
@@ -216,11 +218,11 @@ CREATE TABLE `profilSekolah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `profilSekolah`
+-- Dumping data untuk tabel `profilsekolah`
 --
 
-INSERT INTO `profilSekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
-(1, 'sejarah_singkat', 'SMK Negeri 1 Bukateja berdiri pada bulan maret pada tahun 2004 berdasar pada Keputusan Bupati Purbalingga No. 36 Tahun 2004 Tentang penyelenggaraan SMK dan Program SMK Kelas Jauh di Purbalingga dengan Program Keahlian Teknik Perkayuan, Kemudian dikeluarkan Peraturan Bupati N0. 24 Tahun 2007 pada tanggal 21 April 2007 tentang pembentukan Sekolah Menengah Kejuruan Negeri 1 Bukateja dengan perubahan dan Penambahan Program Keahlian Teknik Gambar Bangunan dan Tata Busana. Pada Tahun 2008 pada bulan April dibuka kembali Program Keahlian Teknik Mekanik Otomotif.', '2022-01-20 07:22:54', '2022-01-20 07:22:54'),
+INSERT INTO `profilsekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
+(1, 'sejarah_singkat', 'SMK Negeri 1 Bukateja berdiri pada bulan maret pada tahun 2004 berdasar pada Keputusan Bupati Purbalingga No. 36 Tahun 2004 Tentang penyelenggaraan SMK dan Program SMK Kelas Jauh di Purbalingga dengan Program Keahlian Teknik Perkayuan, Kemudian dikeluarkan Peraturan Bupati N0. 24 Tahun 2007 pada tanggal 21 April 2007 tentang pembentukan Sekolah Menengah Kejuruan Negeri 1 Bukateja dengan perubahan dan Penambahan Program Keahlian Teknik Gambar Bangunan dan Tata Busana. Pada Tahun 2008 pada bulan April dibuka kembali Program Keahlian Teknik Mekanik Otomotif.', '2022-01-20 07:22:54', '2022-01-20 05:28:18'),
 (2, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 07:23:33', '2022-01-20 07:23:33'),
 (3, 'misi', '<ul style=\"text-align: justify;\">\r\n                    <li>\r\n                        Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif\r\n                        berorientasi pada kompetensi pendidikan nasional.\r\n                    </li>\r\n                    <li>\r\n                        Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia\r\n                        kerja.\r\n                    </li>\r\n                    <li>\r\n                        Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan\r\n                        berwawasan lingkungan sekolah.\r\n                    </li>\r\n                </ul>', '2022-01-20 07:24:16', '2022-01-20 07:24:16'),
 (4, 'struktur_organisasi', 'struktur-organisasi.png', '2022-01-20 07:24:47', '2022-01-20 07:24:47'),
@@ -229,7 +231,7 @@ INSERT INTO `profilSekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testimoni`
+-- Struktur dari tabel `testimoni`
 --
 
 CREATE TABLE `testimoni` (
@@ -243,7 +245,7 @@ CREATE TABLE `testimoni` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `testimoni`
+-- Dumping data untuk tabel `testimoni`
 --
 
 INSERT INTO `testimoni` (`id`, `nama`, `posisi`, `foto`, `teks`, `created_at`, `updated_at`) VALUES
@@ -252,7 +254,7 @@ INSERT INTO `testimoni` (`id`, `nama`, `posisi`, `foto`, `teks`, `created_at`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -268,7 +270,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `nowa`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -280,44 +282,44 @@ INSERT INTO `users` (`id`, `name`, `nowa`, `email`, `email_verified_at`, `passwo
 --
 
 --
--- Indexes for table `beranda`
+-- Indeks untuk tabel `beranda`
 --
 ALTER TABLE `beranda`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Indexes for table `gurudankaryawans`
+-- Indeks untuk tabel `gurudankaryawans`
 --
 ALTER TABLE `gurudankaryawans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `informasi`
+-- Indeks untuk tabel `informasi`
 --
 ALTER TABLE `informasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Indeks untuk tabel `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `personal_access_tokens`
+-- Indeks untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -325,90 +327,90 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indexes for table `prestasis`
+-- Indeks untuk tabel `prestasis`
 --
 ALTER TABLE `prestasis`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `profilSekolah`
+-- Indeks untuk tabel `profilsekolah`
 --
-ALTER TABLE `profilSekolah`
+ALTER TABLE `profilsekolah`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `testimoni`
+-- Indeks untuk tabel `testimoni`
 --
 ALTER TABLE `testimoni`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `beranda`
+-- AUTO_INCREMENT untuk tabel `beranda`
 --
 ALTER TABLE `beranda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `gurudankaryawans`
+-- AUTO_INCREMENT untuk tabel `gurudankaryawans`
 --
 ALTER TABLE `gurudankaryawans`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `informasi`
+-- AUTO_INCREMENT untuk tabel `informasi`
 --
 ALTER TABLE `informasi`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `personal_access_tokens`
+-- AUTO_INCREMENT untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `prestasis`
+-- AUTO_INCREMENT untuk tabel `prestasis`
 --
 ALTER TABLE `prestasis`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `profilSekolah`
+-- AUTO_INCREMENT untuk tabel `profilsekolah`
 --
-ALTER TABLE `profilSekolah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `profilsekolah`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `testimoni`
+-- AUTO_INCREMENT untuk tabel `testimoni`
 --
 ALTER TABLE `testimoni`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
