@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 20, 2022 at 08:27 AM
+-- Generation Time: Jan 20, 2022 at 08:48 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `smk1bukateja`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `beranda`
+--
+
+CREATE TABLE `beranda` (
+  `id` int(11) NOT NULL,
+  `key` varchar(255) NOT NULL,
+  `value` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `beranda`
+--
+
+INSERT INTO `beranda` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
+(1, 'nama_sekolah', 'SMK NEGERI 1 BUKATEJA', '2022-01-20 07:37:38', '2022-01-20 07:37:38'),
+(2, 'slogan', 'SMK Negeri 1 Bukateja merupakan salah satu Sekolah Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah. SMK ini merupakan SMK rujukan yang menawakan 7 program kompetensi keahlian.', '2022-01-20 07:38:10', '2022-01-20 07:38:10');
 
 -- --------------------------------------------------------
 
@@ -207,6 +229,29 @@ INSERT INTO `profilSekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) V
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `testimoni`
+--
+
+CREATE TABLE `testimoni` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `posisi` varchar(255) NOT NULL,
+  `foto` varchar(255) NOT NULL,
+  `teks` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `testimoni`
+--
+
+INSERT INTO `testimoni` (`id`, `nama`, `posisi`, `foto`, `teks`, `created_at`, `updated_at`) VALUES
+(1, 'Fauziyah', 'Kuliah di Universitas Telkom', 'Ya.jpg', 'Saya menemukan banyak pengalaman disini. Guru-guru yang menyenangkan, teman-teman yang seru, fasilitas lab yang lengkap.', '2022-01-20 07:41:47', '2022-01-20 07:41:47');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -233,6 +278,12 @@ INSERT INTO `users` (`id`, `name`, `nowa`, `email`, `email_verified_at`, `passwo
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `beranda`
+--
+ALTER TABLE `beranda`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -286,6 +337,12 @@ ALTER TABLE `profilSekolah`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `testimoni`
+--
+ALTER TABLE `testimoni`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -295,6 +352,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `beranda`
+--
+ALTER TABLE `beranda`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -337,6 +400,12 @@ ALTER TABLE `prestasis`
 --
 ALTER TABLE `profilSekolah`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `testimoni`
+--
+ALTER TABLE `testimoni`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
