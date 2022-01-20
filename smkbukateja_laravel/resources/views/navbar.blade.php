@@ -41,7 +41,7 @@
                         Informasi
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="informasi">Berita</a></li>
+                        <li><a class="dropdown-item" href="/informasi">Berita</a></li>
                         <li><a class="dropdown-item"
                                 href="https://lms.smkn1bukateja.sch.id/a94355711b3cbd91f699e926ef37da9db6e870866ca288b9b3d2d88d7058f04f6a76c1b95b497ea5030dd6b99de4dbdcf5bd94fa149a6828c9ad810bcae60d82/login">
                                 SEMAKIN
