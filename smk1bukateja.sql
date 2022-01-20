@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 20, 2022 at 06:20 AM
+-- Generation Time: Jan 20, 2022 at 08:27 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -182,6 +182,31 @@ INSERT INTO `prestasis` (`id`, `judul`, `gambar`, `isi`, `created_at`, `updated_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `profilSekolah`
+--
+
+CREATE TABLE `profilSekolah` (
+  `id` int(11) NOT NULL,
+  `key` varchar(255) NOT NULL,
+  `value` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `profilSekolah`
+--
+
+INSERT INTO `profilSekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
+(1, 'sejarah_singkat', 'SMK Negeri 1 Bukateja berdiri pada bulan maret pada tahun 2004 berdasar pada Keputusan Bupati Purbalingga No. 36 Tahun 2004 Tentang penyelenggaraan SMK dan Program SMK Kelas Jauh di Purbalingga dengan Program Keahlian Teknik Perkayuan, Kemudian dikeluarkan Peraturan Bupati N0. 24 Tahun 2007 pada tanggal 21 April 2007 tentang pembentukan Sekolah Menengah Kejuruan Negeri 1 Bukateja dengan perubahan dan Penambahan Program Keahlian Teknik Gambar Bangunan dan Tata Busana. Pada Tahun 2008 pada bulan April dibuka kembali Program Keahlian Teknik Mekanik Otomotif.', '2022-01-20 07:22:54', '2022-01-20 07:22:54'),
+(2, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 07:23:33', '2022-01-20 07:23:33'),
+(3, 'misi', '<ul style=\"text-align: justify;\">\r\n                    <li>\r\n                        Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif\r\n                        berorientasi pada kompetensi pendidikan nasional.\r\n                    </li>\r\n                    <li>\r\n                        Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia\r\n                        kerja.\r\n                    </li>\r\n                    <li>\r\n                        Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan\r\n                        berwawasan lingkungan sekolah.\r\n                    </li>\r\n                </ul>', '2022-01-20 07:24:16', '2022-01-20 07:24:16'),
+(4, 'struktur_organisasi', 'struktur-organisasi.png', '2022-01-20 07:24:47', '2022-01-20 07:24:47'),
+(5, 'peta_sekolah', '<iframe\r\n            src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15825.39092970486!2d109.42302!3d-7.426716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x578f1a3d93c545f6!2sSMK%20Negeri%201%20Bukateja!5e0!3m2!1sid!2sid!4v1637673631032!5m2!1sid!2sid\"\r\n            width=\"100%\" height=\"500px\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>', '2022-01-20 07:25:12', '2022-01-20 07:25:12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -255,6 +280,12 @@ ALTER TABLE `prestasis`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `profilSekolah`
+--
+ALTER TABLE `profilSekolah`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -300,6 +331,12 @@ ALTER TABLE `personal_access_tokens`
 --
 ALTER TABLE `prestasis`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `profilSekolah`
+--
+ALTER TABLE `profilSekolah`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
