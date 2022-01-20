@@ -1,3 +1,11 @@
+@php
+    // import profilkolah
+    use App\Models\profilSekolah as profilsekolahmodel;
+    // memanggil data sejarah singkat
+    $sejarah=profilsekolahmodel::where('key', 'sejarah_singkat')->first();
+    $visi=profilsekolahmodel::where('key', 'visi')->first();
+    $misi=profilsekolahmodel::where('key', 'misi')->first();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,9 +46,7 @@
             <div class="caption-carousel">
                 <h3>SELAMAT DATANG DI</h3>
                 <p class="nama-smk">SMK NEGERI 1 BUKATEJA</p>
-                <p class="desc"> SMK Negeri 1 Bukateja merupakan salah satu Sekolah
-                    Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah. SMK ini merupakan
-                    SMK rujukan yang menawakan 7 program kompetensi keahlian.</p>
+                <p class="desc">{{$sejarah->value}}</p>
 
                 <button type="button" class="btn btn-danger"
                     style="border-radius: 15px; background-color: #E82329; border: 0px;">
@@ -61,19 +67,20 @@
             <div class="row baris-vismis">
                 <div class="col-md-6 div-visi">
                     <h2 class="isi-vismis">VISI</h2>
-                    <p class="isi-vismis isi-visi">Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing,
-                        berwawasan lingkungan dan berakhlak mulia.</p>
+                    <p class="isi-vismis isi-visi">{{$visi->value}}</p>
                 </div>
-                <div class="col-md-6 div-misi">
+                <div class="col-md-6 div-misi text-white">
                     <h2 class="isi-vismis">MISI</h2>
-                    <ul class="list-isi-vismis">
+                    {{-- mencetak kode html dari tabel  --}}
+                    {!!($misi->value)!!}
+                    {{-- <ul class="list-isi-vismis">
                         <li>Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif
                             berorientasi pada kompetensi pendidikan nasional.</li>
                         <li>Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di
                             dunia kerja.</li>
                         <li>Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan
                             berwawasan lingkungan sekolah.</li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>

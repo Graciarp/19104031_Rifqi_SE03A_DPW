@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{informasi, prestasi, adminManagement, gurudankaryawanController};
+use App\Http\Controllers\{informasi, prestasi, adminManagement, gurudankaryawanController, profilsekolah};
 use App\Models\informasiModel;
 
 /*
@@ -31,8 +31,8 @@ Route::get('/informasi/baca/{slug}', function ($slug) {
     $informasi = informasiModel::where('slug', $slug)->first();
 
     // Tampilkan kedalam view baca artikel
-    return view('informasiBaca') -> with('informasi', $informasi);
-}) -> name('informasi.baca');
+    return view('informasiBaca')->with('informasi', $informasi);
+})->name('informasi.baca');
 
 Route::view('profil', 'profil');
 
@@ -47,7 +47,7 @@ Auth::routes([
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route hanya bisa diakses ketika sudah login
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/manajemenAdmin/infoUser/{id}', [adminManagement::class, 'show']);
     Route::resource('manajemenAdmin', adminManagement::class);
 
@@ -61,6 +61,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('gurukaryawan/json/{id}', [gurudankaryawanController::class, 'showJson']);
     Route::post('gurukaryawan/save', [gurudankaryawanController::class, 'save']);
     Route::put('gurukaryawan/update/{id}', [gurudankaryawanController::class, 'update']);
+
+    Route::get('profilsekolah/index', [profilsekolah::class, 'index']);
+    Route::get('profilsekolah/edit/{id}', [profilsekolah::class, 'edit']);
+    Route::post('profilsekolah/update/{id}', [profilsekolah::class, 'update']);
 });
 
 Route::view('/jurusan/DPIB', 'jurusan.DPIB');
@@ -74,4 +78,3 @@ Route::view('/jurusan/TKRO', 'jurusan.TKRO');
 Route::view('/guru/kepsek', 'guru.kepsek');
 Route::view('/guru/karyawan', 'guru.karyawan');
 Route::view('/guru/guruMapel', 'guru.guruMapel');
-

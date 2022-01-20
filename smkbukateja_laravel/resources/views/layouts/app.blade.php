@@ -61,7 +61,7 @@
                     <li><a href="/gurukaryawan/index"><i class="icon-group"></i><span>Guru Karyawan</span> </a> </li>
                     <li><a href="#"><i class="icon-cog"></i><span>Setting Beranda</span> </a> </li>
                     <li><a href="#"><i class="icon-th-list"></i><span>Testimoni</span> </a> </li>
-                    <li><a href="#"><i class="icon-th-large"></i><span>Profil Sekolah</span> </a> </li>
+                    <li><a href="/profilsekolah/index"><i class="icon-th-large"></i><span>Profil Sekolah</span> </a> </li>
                     <li><a href="/keluar"><i class="icon-off"></i><span>Logout</span> </a> </li>
                 </ul>
             </div>
@@ -108,7 +108,7 @@
     <!-- Le javascript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    
+
     <script src="{{url('/')}}/js/excanvas.min.js"></script>
     <script src="{{url('/')}}/js/chart.min.js" type="text/javascript"></script>
     <script src="{{url('/')}}/js/bootstrap.js"></script>
