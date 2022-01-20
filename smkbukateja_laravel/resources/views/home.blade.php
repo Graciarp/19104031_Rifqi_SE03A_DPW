@@ -19,14 +19,9 @@
 
             <div class="card">
                 <div class="card-header">
-                    <div class="row">
-                        <div class="col">
-                            {{ __('Berita') }}
-                        </div>
-                        <div class="col">
-                            <a href="{{ route('informasi.create') }}" class="btn btn-sm btn-primary float-right">{{ __('Tambah') }}</a>
-                        </div>
-                    </div>
+                    <h3>{{ __('Berita') }}</h3>
+                    
+                    <a href="{{ route('informasi.create') }}" class="btn pull-right btn-sm btn-primary float-right">{{ __('Tambah') }}</a>
                 </div>
 
                 <div class="card-body">
@@ -112,18 +107,12 @@
                 </div>
             </div>
 
-            <br>
+            <br><br>
 
             <div class="card">
                 <div class="card-header">
-                    <div class="row">
-                        <div class="col">
-                            Prestasi
-                        </div>
-                        <div class="col">
-                            <a href="{{ route('prestasi.create') }}" class="btn btn-sm btn-primary float-right">{{ __('Tambah') }}</a>
-                        </div>
-                    </div>
+                    <h3>Prestasi</h3>
+                    <a href="{{ route('prestasi.create') }}" class="btn pull-right btn-sm btn-primary float-right">{{ __('Tambah') }}</a>
                 </div>
                 <div class="card-body">
                     <table class="table">

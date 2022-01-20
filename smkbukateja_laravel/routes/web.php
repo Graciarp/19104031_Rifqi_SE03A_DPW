@@ -19,6 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/keluar', function () {
+    Auth::logout();
+    return redirect('/');
+});
+
 Route::view('prestasi', 'prestasi');
 
 Route::get('/informasi/baca/{slug}', function ($slug) {
