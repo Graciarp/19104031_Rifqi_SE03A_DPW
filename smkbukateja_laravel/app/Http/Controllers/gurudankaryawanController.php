@@ -33,7 +33,13 @@ class gurudankaryawanController extends Controller
 
         $data = new gurudankaryawan;
         $data->nama = $nama;
-        $data->jabatan = $jabatan . ' ' . $ngajarMapelApa;
+
+        if ($jabatan == 'guru') {
+            $data->jabatan = $jabatan . ' ' . $ngajarMapelApa;
+        } else {
+            $data->jabatan = $jabatan;
+        }
+        
         $data->sambutan = $sambutan;
 
         if ($request->hasFile('foto')) {
@@ -57,7 +63,13 @@ class gurudankaryawanController extends Controller
 
         $data = gurudankaryawan::find($id);
         $data->nama = $nama;
-        $data->jabatan = $jabatan . ' ' . $ngajarMapelApa;
+
+        if ($jabatan == 'guru') {
+            $data->jabatan = $jabatan . ' ' . $ngajarMapelApa;
+        } else {
+            $data->jabatan = $jabatan;
+        }
+
         $data->sambutan = $sambutan;
 
         if ($request->hasFile('foto')) {

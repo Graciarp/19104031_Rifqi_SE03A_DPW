@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="beranda"><a href="/">Beranda</a></li>
-                <li class="profil-Sekolah"><a href="profil">Profil Sekolah</a></li>
+                <li class="profil-Sekolah"><a href="/profil">Profil Sekolah</a></li>
                 <!-- dropdown -->
                 <li class="program-Keahlian dropdown">
                     <a href="" class="dropdown-toggle" href="#" id="navbarDropdown" role="button"

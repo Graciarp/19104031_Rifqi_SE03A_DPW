@@ -35,15 +35,11 @@
         <div class="navbar-inner">
             <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
                         class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a
-                    class="brand" href="/home"> {{config('app.name')}} </a>
+                    class="brand" href="/"> {{config('app.name')}} </a>
                 <div class="nav-collapse">
                     <ul class="nav pull-right">
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                    class="icon-user"></i> {{Auth::user()->name}} <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                {{-- <li><a href="javascript:;">Profile</a></li> --}}
-                                <li><a href="/keluar">Logout</a></li>
-                            </ul>
+                                    class="icon-user"></i> {{Auth::user()->name}}</a>
                         </li>
                     </ul>
                 </div>
@@ -58,12 +54,12 @@
         <div class="subnavbar-inner">
             <div class="container">
                 <ul class="mainnav">
-                    <li><a target="_blank" href="{{url('/')}}"><i class="icon-home"></i><span>Beranda</span> </a></li>
                     <li><a href="/home"><i class="icon-dashboard"></i><span>Dashboard</span> </a></li>
                     <li><a href="/informasi/index"><i class="icon-list-alt"></i><span>Berita</span> </a> </li>
                     <li><a href="/prestasi/index"><i class="icon-bar-chart"></i><span>Prestasi</span> </a> </li>
                     <li><a href="/manajemenAdmin"><i class="icon-group"></i><span>Manajemen Admin</span> </a> </li>
                     <li><a href="/gurukaryawan/index"><i class="icon-group"></i><span>Guru Karyawan</span> </a> </li>
+                    <li><a href="/keluar"><i class="icon-off"></i><span>Logout</span> </a> </li>
                 </ul>
             </div>
             <!-- /container -->
