@@ -61,7 +61,11 @@
                                 <a href="{{ route('testimoni.edit', $t->id) }}" class="btn btn-sm btn-warning">
                                     {{ __('Edit') }}
                                 </a>
+                                <a href="/testimoni/hapus/{{$t->id}}" class="btn btn-sm btn-danger">
+                                    {{ __('Hapus') }}
+                                </a>
                             </td>
+
                         </tr>
                     @endforeach
                 </tbody>

@@ -129,6 +129,15 @@ class testimoni extends Controller
         $testimoni->save();
 
         return redirect() -> route('home') -> with('success', 'Data berhasil diubah');
+
+    }
+
+    public function destroy($id)
+    {
+        $testimoni = testiModel::find($id);
+        $testimoni->delete();
+
+        return redirect() -> route('home') -> with('success', 'Data berhasil dihapus');
     }
 }
 

@@ -71,6 +71,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('beranda/update/{id}', [beranda::class, 'update']);
 
     Route::get('testimoni/index', [testimoni::class, 'index']);
+    Route::get('testimoni/hapus/{id}', [testimoni::class, 'destroy']);
     Route::resource('testimoni', testimoni::class, ['except' => ['index']]);
 });
 
