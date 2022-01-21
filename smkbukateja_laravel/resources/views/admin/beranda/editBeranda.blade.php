@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4>
-                        Edit Data Beranda
+                        Edit Data Beranda : {{ $beranda->key }}
                     </h4>
                 </div>
 
@@ -17,12 +17,30 @@
                     <form method="POST" action="/beranda/update/{{$beranda->id}}" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="">
-                            <label for="isi" class="col-md-4 col-form-label text-md-right">{{ __('value') }}</label>
+                        @if ($beranda->key == 'banner_beranda')
+                            <p>
+                                Gambar saat ini :
+                            </p>
+                            <img src="{{url('img' . '/' . $beranda->value)}}" width="100%" alt="" srcset="">
+
+                            <br><br>
+
+                            <p>
+                                Unggah gambar baru untuk mengubah gambar :
+                            </p>
+                            <input type="file" name="value" accept=".jpg, .png, .jpeg" required id="">
+
+                            <br>
+                        @else
                             <div class="">
-                                <textarea required name="value" class="form-control" style="width: 100%" rows="5">{{$beranda->value}}</textarea>
+                                <label for="isi" class="col-md-4 col-form-label text-md-right">{{ __('value') }}</label>
+                                <div class="">
+                                    <textarea required name="value" class="form-control" style="width: 100%" rows="5">{{$beranda->value}}</textarea>
+                                </div>
                             </div>
-                        </div>
+                        @endif
+
+                        <br>
 
                         {{-- <div class="">
                             <label for="gambar" class="col-md-4 col-form-label text-md-right">{{ __('Gambar') }}</label>
