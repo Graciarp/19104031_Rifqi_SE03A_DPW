@@ -25,8 +25,23 @@ class profilsekolah extends Controller
     public function update($id)
     {
         $data = profilsekolahmodel::find($id);
-        $data->value = request('value');
+
+        if (
+            $data->key == 'struktur_organisasi' and request() -> hasFile('value')
+        ) {
+            $path_upload = public_path('img');
+            $file = request()->file('value');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move($path_upload, $filename);
+
+            $data->value = $filename;
+        }
+
+        if ($data->key != 'struktur_organisasi') {
+            $data->value=request('value');
+        }
+
         $data->save();
-        return redirect()->back();
+        return redirect()->back() -> with('success', 'Data berhasil diubah');
     }
 }

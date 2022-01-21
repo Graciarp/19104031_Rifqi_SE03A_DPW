@@ -31,7 +31,7 @@ class beranda extends Controller
         ) {
             $path_upload = public_path('img');
             $file = request()->file('value');
-            $filename = $file->getClientOriginalName();
+            $filename = time() . '_' . $file->getClientOriginalName();
             $file->move($path_upload, $filename);
 
             $data->value = $filename;
