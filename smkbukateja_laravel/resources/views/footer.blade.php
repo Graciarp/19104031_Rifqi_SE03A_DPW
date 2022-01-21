@@ -20,7 +20,7 @@
                             <a href="https://www.instagram.com/smkn1bukateja/"><i class="fa fa-instagram"></i>&nbsp;</a>
                             <a href="https://www.facebook.com/SMKNEGERI1BUKATEJAPBG"><i
                                     class="fa fa-facebook"></i>&nbsp;</a>
-                            <a href=""><i class="fa fa-twitter"></i>&nbsp;</a>
+                            {{-- <a href=""><i class="fa fa-twitter"></i>&nbsp;</a> --}}
                         </h2>
                     </div>
                 </div>
