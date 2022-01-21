@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 21 Jan 2022 pada 10.31
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.4.10
+-- Host: localhost
+-- Generation Time: Jan 21, 2022 at 11:38 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `beranda`
+-- Table structure for table `beranda`
 --
 
 CREATE TABLE `beranda` (
@@ -36,7 +36,7 @@ CREATE TABLE `beranda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `beranda`
+-- Dumping data for table `beranda`
 --
 
 INSERT INTO `beranda` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
@@ -44,12 +44,12 @@ INSERT INTO `beranda` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (2, 'slogan', 'SMK Negeri 1 Bukateja merupakan salah satu Sekolah Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah. SMK ini merupakan SMK rujukan yang menawakan 7 program kompetensi keahlian.', '2022-01-20 07:38:10', '2022-01-20 07:38:10'),
 (3, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 12:57:12', '2022-01-20 09:43:14'),
 (4, 'misi', '<ul style=\"text-align: justify;\"> <li> Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif berorientasi pada kompetensi pendidikan nasional. </li> <li> Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia kerja. </li> <li> Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan berwawasan lingkungan sekolah. </li> </ul>', '2022-01-20 12:57:58', '2022-01-20 09:43:42'),
-(5, 'banner_beranda', 'foto carousel 1.png', '2022-01-20 15:17:11', '2022-01-20 09:47:13');
+(5, 'banner_beranda', '10.jpg', '2022-01-20 15:17:11', '2022-01-21 03:27:43');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `failed_jobs`
+-- Table structure for table `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -65,7 +65,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gurudankaryawans`
+-- Table structure for table `gurudankaryawans`
 --
 
 CREATE TABLE `gurudankaryawans` (
@@ -79,7 +79,7 @@ CREATE TABLE `gurudankaryawans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `gurudankaryawans`
+-- Dumping data for table `gurudankaryawans`
 --
 
 INSERT INTO `gurudankaryawans` (`id`, `nama`, `jabatan`, `foto`, `sambutan`, `created_at`, `updated_at`) VALUES
@@ -94,7 +94,7 @@ INSERT INTO `gurudankaryawans` (`id`, `nama`, `jabatan`, `foto`, `sambutan`, `cr
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `informasi`
+-- Table structure for table `informasi`
 --
 
 CREATE TABLE `informasi` (
@@ -108,7 +108,7 @@ CREATE TABLE `informasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `informasi`
+-- Dumping data for table `informasi`
 --
 
 INSERT INTO `informasi` (`id`, `judul`, `slug`, `gambar`, `isi`, `created_at`, `updated_at`) VALUES
@@ -130,7 +130,7 @@ INSERT INTO `informasi` (`id`, `judul`, `slug`, `gambar`, `isi`, `created_at`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -140,7 +140,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -155,7 +155,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -167,7 +167,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `personal_access_tokens`
+-- Table structure for table `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -185,7 +185,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `prestasis`
+-- Table structure for table `prestasis`
 --
 
 CREATE TABLE `prestasis` (
@@ -198,7 +198,7 @@ CREATE TABLE `prestasis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `prestasis`
+-- Dumping data for table `prestasis`
 --
 
 INSERT INTO `prestasis` (`id`, `judul`, `gambar`, `isi`, `created_at`, `updated_at`) VALUES
@@ -207,7 +207,7 @@ INSERT INTO `prestasis` (`id`, `judul`, `gambar`, `isi`, `created_at`, `updated_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profilsekolah`
+-- Table structure for table `profilsekolah`
 --
 
 CREATE TABLE `profilsekolah` (
@@ -219,7 +219,7 @@ CREATE TABLE `profilsekolah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `profilsekolah`
+-- Dumping data for table `profilsekolah`
 --
 
 INSERT INTO `profilsekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
@@ -232,7 +232,7 @@ INSERT INTO `profilsekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) V
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `testimonis`
+-- Table structure for table `testimonis`
 --
 
 CREATE TABLE `testimonis` (
@@ -246,7 +246,7 @@ CREATE TABLE `testimonis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `testimonis`
+-- Dumping data for table `testimonis`
 --
 
 INSERT INTO `testimonis` (`id`, `nama`, `posisi`, `foto`, `teks`, `created_at`, `updated_at`) VALUES
@@ -257,7 +257,7 @@ INSERT INTO `testimonis` (`id`, `nama`, `posisi`, `foto`, `teks`, `created_at`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -273,7 +273,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `nowa`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -285,44 +285,44 @@ INSERT INTO `users` (`id`, `name`, `nowa`, `email`, `email_verified_at`, `passwo
 --
 
 --
--- Indeks untuk tabel `beranda`
+-- Indexes for table `beranda`
 --
 ALTER TABLE `beranda`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `failed_jobs`
+-- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Indeks untuk tabel `gurudankaryawans`
+-- Indexes for table `gurudankaryawans`
 --
 ALTER TABLE `gurudankaryawans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `informasi`
+-- Indexes for table `informasi`
 --
 ALTER TABLE `informasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `password_resets`
+-- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indeks untuk tabel `personal_access_tokens`
+-- Indexes for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -330,90 +330,90 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indeks untuk tabel `prestasis`
+-- Indexes for table `prestasis`
 --
 ALTER TABLE `prestasis`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `profilsekolah`
+-- Indexes for table `profilsekolah`
 --
 ALTER TABLE `profilsekolah`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `testimonis`
+-- Indexes for table `testimonis`
 --
 ALTER TABLE `testimonis`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `beranda`
+-- AUTO_INCREMENT for table `beranda`
 --
 ALTER TABLE `beranda`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `failed_jobs`
+-- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `gurudankaryawans`
+-- AUTO_INCREMENT for table `gurudankaryawans`
 --
 ALTER TABLE `gurudankaryawans`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `informasi`
+-- AUTO_INCREMENT for table `informasi`
 --
 ALTER TABLE `informasi`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT untuk tabel `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `personal_access_tokens`
+-- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `prestasis`
+-- AUTO_INCREMENT for table `prestasis`
 --
 ALTER TABLE `prestasis`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `profilsekolah`
+-- AUTO_INCREMENT for table `profilsekolah`
 --
 ALTER TABLE `profilsekolah`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `testimonis`
+-- AUTO_INCREMENT for table `testimonis`
 --
 ALTER TABLE `testimonis`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;

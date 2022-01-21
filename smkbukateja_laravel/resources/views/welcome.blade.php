@@ -2,6 +2,8 @@
     // import model
     use App\Models\beranda as berandaModel;
     use App\Models\testimoni as testiModel;
+    use App\Models\gurudankaryawan;
+
     // memanggil data dari model
     $namaSekolah=berandaModel::where('key', 'nama_sekolah')->first();
     $slogan=berandaModel::where('key', 'slogan')->first();
@@ -9,7 +11,15 @@
     $misi=berandaModel::where('key', 'misi')->first();
     $banner_beranda=berandaModel::where('key', 'banner_beranda')->first();
     $testimoni=testiModel::all();
+
+    $kepsek = gurudankaryawan::where('jabatan', 'kepala_sekolah') -> first();
+    $wakilkepsek = gurudankaryawan::where('jabatan', 'wakil_kepala_sekolah') -> first();
+    $kepalaTU = gurudankaryawan::where('jabatan', 'kepala_tata_usaha') -> first();
+
+    $guru = gurudankaryawan::whereNotIn('jabatan', ['kepala_sekolah', 'wakil_kepala_sekolah', 'kepala_tata_usaha', 'karyawan']) -> get();
+    $karyawan = gurudankaryawan::where('jabatan', 'karyawan') -> get();
 @endphp
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -194,44 +204,88 @@
 
         <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
-                <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300">
-                    <div class="box-guru-karyawan">
-                        <img class="profile-p" src="img/photo-1491780499145-c497fbe6d1b3.jpeg">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">
+                    <div class="box-guru-karyawan ">
+                        <img class="profile-p" src="{{url('img/guru_karyawan' . '/' . $kepsek->foto)}}">
 
-                        <h3 class="nama-pekerjaan">Guru</h3>
+                        <h3 class="nama-pekerjaan">Kepala Sekolah</h3>
 
-                        <button class="tombol-guru-karyawan">Selengkapnya
+                        <br><br>
+
+                        <h4>
+                            {{$kepsek->nama}}
+                        </h4>
+
+                        <a href="/guru/kepsek" class="tombol-guru-karyawan">Selengkapnya
                             <i class="fas fa-chevron-circle-right"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">
                     <div class="box-guru-karyawan ">
-                        <img class="profile-p" src="img/photo-1491780499145-c497fbe6d1b3.jpeg">
+                        <img class="profile-p" src="{{url('img/guru_karyawan' . '/' . $wakilkepsek->foto)}}">
 
-                        <h3 class="nama-pekerjaan">Kepala & Wakil Sekolah</h3>
+                        <h3 class="nama-pekerjaan">Wakil Kepala Sekolah</h3>
 
-                        <button class="tombol-guru-karyawan">Selengkapnya
+                        <br><br>
+
+                        <h4>
+                            {{$wakilkepsek->nama}}
+                        </h4>
+
+                        <a href="/guru/kepsek" class="tombol-guru-karyawan">Selengkapnya
                             <i class="fas fa-chevron-circle-right"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
+
+            @foreach ($guru as $g)
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300">
+                    <div class="box-guru-karyawan">
+                        <img class="profile-p" src="{{url('img/guru_karyawan' . '/' . $g->foto)}}">
+
+                        <h3 class="nama-pekerjaan">Guru</h3>
+
+                        <br><br>
+
+                        <h4>
+                            {{$g->nama}}
+                        </h4>
+
+                        <a href="/guru/kepsek" class="tombol-guru-karyawan">Selengkapnya
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+            @foreach ($karyawan as $k)
             <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
                 <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="300">
                     <div class="box-guru-karyawan">
-                        <img class="profile-p" src="img/photo-1491780499145-c497fbe6d1b3.jpeg">
+                        <img class="profile-p" src="{{url('img/guru_karyawan' . '/' . $k->foto)}}">
 
                         <h3 class="nama-pekerjaan">Staff & Karyawan</h3>
 
-                        <button class="tombol-guru-karyawan">Selengkapnya
+                        <br><br>
+
+                        <h4>
+                            {{$k->nama}}
+                        </h4>
+
+                        <a href="/guru/kepsek" class="tombol-guru-karyawan">Selengkapnya
                             <i class="fas fa-chevron-circle-right"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
+            @endforeach
+
         </div>
     </div>
     </div>
