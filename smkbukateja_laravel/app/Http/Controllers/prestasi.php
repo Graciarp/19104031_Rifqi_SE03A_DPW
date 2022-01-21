@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\prestasi as prestasiModel;
-use Str;
+use Illuminate\Support\Str;
 
 class prestasi extends Controller
 {
@@ -149,7 +149,7 @@ class prestasi extends Controller
     {
         $prestasi = prestasiModel::find($id);
         $prestasi->delete();
-        
+
         return redirect() -> route('home') -> with('success', 'Data berhasil dihapus');
     }
 }
