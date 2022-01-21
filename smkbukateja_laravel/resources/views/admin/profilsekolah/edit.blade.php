@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4>
-                        Edit Data Prestasi
+                        Edit Data Profil Sekolah
                     </h4>
                 </div>
 

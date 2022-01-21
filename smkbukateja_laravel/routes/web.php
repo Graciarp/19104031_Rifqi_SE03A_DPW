@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{informasi, prestasi, adminManagement, gurudankaryawanController, profilsekolah};
+use App\Http\Controllers\{informasi, prestasi, adminManagement, gurudankaryawanController, profilsekolah, beranda, testimoni};
 use App\Models\informasiModel;
 
 /*
@@ -66,7 +66,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('profilsekolah/edit/{id}', [profilsekolah::class, 'edit']);
     Route::post('profilsekolah/update/{id}', [profilsekolah::class, 'update']);
 
-    
+    Route::get('beranda/index', [beranda::class, 'index']);
+    Route::get('beranda/editBeranda/{id}', [beranda::class, 'edit']);
+    Route::post('beranda/update/{id}', [beranda::class, 'update']);
+
+    Route::get('testimoni/index', [testimoni::class, 'index']);
+    Route::resource('testimoni', testimoni::class, ['except' => ['index']]);
 });
 
 Route::view('/jurusan/DPIB', 'jurusan.DPIB');

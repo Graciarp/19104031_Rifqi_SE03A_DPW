@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-<h4>profil sekolah</h4>
+<h4>Profil Sekolah</h4>
 <table class="table">
     <tr>
         <td>
@@ -25,7 +25,7 @@
                 {{$item->value}}
             </td>
             <td>
-                <a href="/profilsekolah/edit/{{$item->id}}" class="btn btn-warning">edit</a>
+                <a href="/profilsekolah/edit/{{$item->id}}" class="btn btn-warning">Edit</a>
             </td>
         </tr>
     @endforeach

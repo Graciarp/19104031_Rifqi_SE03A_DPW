@@ -1,12 +1,14 @@
 @php
-    // import profilkolah
-    use App\Models\beranda as berandamodel;
-    // memanggil data sejarah singkat
-    $namaSekolah=berandamodel::where('key', 'nama_sekolah')->first();
-    $slogan=berandamodel::where('key', 'slogan')->first();
-    $visi=berandamodel::where('key', 'visi')->first();
-    $misi=berandamodel::where('key', 'misi')->first();
-    // $misi=profilsekolahmodel::where('key', 'misi')->first();
+    // import model
+    use App\Models\beranda as berandaModel;
+    use App\Models\testimoni as testiModel;
+    // memanggil data dari model
+    $namaSekolah=berandaModel::where('key', 'nama_sekolah')->first();
+    $slogan=berandaModel::where('key', 'slogan')->first();
+    $visi=berandaModel::where('key', 'visi')->first();
+    $misi=berandaModel::where('key', 'misi')->first();
+    $banner_beranda=berandaModel::where('key', 'banner_beranda')->first();
+    $testimoni=testiModel::all();
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +38,8 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/foto carousel 1.png" class="d-block w-100" alt="...">
+                {{-- {!!($banner_beranda)!!} --}}
+                <img src="{{url('img' . '/' . $banner_beranda->value)}}" class="d-block w-100" alt="...">
             </div>
             <!-- <div class="carousel-item">
                 <img src="img/gerbang sekolah.png" class="d-block w-100" alt="...">
@@ -47,8 +50,8 @@
 
             <div class="caption-carousel">
                 <h3>SELAMAT DATANG DI</h3>
-                <p class="nama-smk">SMK NEGERI 1 BUKATEJA</p>
-                <p class="desc">{{$namaSekolah->value}}</p>
+                <p class="nama-smk">{{$namaSekolah->value}}</p>
+                <p class="desc">{{$slogan->value}}</p>
 
                 <button type="button" class="btn btn-danger"
                     style="border-radius: 15px; background-color: #E82329; border: 0px;">
@@ -73,7 +76,7 @@
                 </div>
                 <div class="col-md-6 div-misi text-white">
                     <h2 class="isi-vismis">MISI</h2>
-                    {{-- mencetak kode html dari tabel  --}}
+                    {{-- mencetak kode html dari tabel --}}
                     {!!($misi->value)!!}
                     {{-- <ul class="list-isi-vismis">
                         <li>Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif
@@ -248,28 +251,30 @@
         <!-- kata alumni -->
         <div class="container">
             <div class="row">
+                @foreach ($testimoni as $k)
+
                 <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
                     <!-- <div class="display"> -->
                     <div class="testi 1">
                         <div class="person">
                             <div class="nama">
-                                <img src="img/Ya.jpg" alt="gambar">
+                                <img src="{{url('img' . '/' . $k->foto)}}" class="d-block" width="100px" alt="...">
                                 <h3>
-                                    Fauziyah
+                                    {{$k->nama}}
                                 </h3>
                                 <h4>
-                                    Kuliah di Universitas Telkom
+                                    {{$k->posisi}}
                                 </h4>
                                 <p>
-                                    Saya menemukan banyak pengalaman disini. Guru-guru yang menyenangkan,
-                                    teman-teman yang seru, fasilitas lab yang lengkap.
+                                    {{$k->teks}}
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
                 <!-- </div> -->
-                <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+                {{-- <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
                     <div class="testi 2">
                         <div class="person">
                             <div class="nama">
@@ -287,9 +292,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+                {{-- <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
                     <div class="testi 3">
                         <div class="person">
                             <div class="nama">
@@ -307,7 +312,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- kata alumni -->

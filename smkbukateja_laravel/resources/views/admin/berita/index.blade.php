@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="pull-left">{{ __('Berita') }}</h3>
-                
+
                 <a href="{{ route('informasi.create') }}" class="btn pull-right btn-sm btn-primary float-right">{{ __('Tambah') }}</a>
             </div>
 

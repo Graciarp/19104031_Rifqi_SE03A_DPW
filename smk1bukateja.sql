@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Jan 2022 pada 14.45
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 8.0.13
+-- Waktu pembuatan: 21 Jan 2022 pada 10.31
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,10 +40,11 @@ CREATE TABLE `beranda` (
 --
 
 INSERT INTO `beranda` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
-(1, 'nama_sekolah', 'SMK NEGERI 1 BUKATEJA', '2022-01-20 07:37:38', '2022-01-20 07:37:38'),
+(1, 'nama_sekolah', 'SMK 1 NEGERI BUKATEJA', '2022-01-20 07:37:38', '2022-01-20 09:45:01'),
 (2, 'slogan', 'SMK Negeri 1 Bukateja merupakan salah satu Sekolah Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah. SMK ini merupakan SMK rujukan yang menawakan 7 program kompetensi keahlian.', '2022-01-20 07:38:10', '2022-01-20 07:38:10'),
-(3, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 12:57:12', '2022-01-20 12:57:12'),
-(4, 'misi', '	<ul style=\"text-align: justify;\"> <li> Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif berorientasi pada kompetensi pendidikan nasional. </li> <li> Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia kerja. </li> <li> Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan berwawasan lingkungan sekolah. </li> </ul>', '2022-01-20 12:57:58', '2022-01-20 12:57:58');
+(3, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 12:57:12', '2022-01-20 09:43:14'),
+(4, 'misi', '<ul style=\"text-align: justify;\"> <li> Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif berorientasi pada kompetensi pendidikan nasional. </li> <li> Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia kerja. </li> <li> Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan berwawasan lingkungan sekolah. </li> </ul>', '2022-01-20 12:57:58', '2022-01-20 09:43:42'),
+(5, 'banner_beranda', 'foto carousel 1.png', '2022-01-20 15:17:11', '2022-01-20 09:47:13');
 
 -- --------------------------------------------------------
 
@@ -222,7 +223,7 @@ CREATE TABLE `profilsekolah` (
 --
 
 INSERT INTO `profilsekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
-(1, 'sejarah_singkat', 'SMK Negeri 1 Bukateja berdiri pada bulan maret pada tahun 2004 berdasar pada Keputusan Bupati Purbalingga No. 36 Tahun 2004 Tentang penyelenggaraan SMK dan Program SMK Kelas Jauh di Purbalingga dengan Program Keahlian Teknik Perkayuan, Kemudian dikeluarkan Peraturan Bupati N0. 24 Tahun 2007 pada tanggal 21 April 2007 tentang pembentukan Sekolah Menengah Kejuruan Negeri 1 Bukateja dengan perubahan dan Penambahan Program Keahlian Teknik Gambar Bangunan dan Tata Busana. Pada Tahun 2008 pada bulan April dibuka kembali Program Keahlian Teknik Mekanik Otomotif.', '2022-01-20 07:22:54', '2022-01-20 05:28:18'),
+(1, 'sejarah_singkat', 'SMK Negeri 1 Bukateja berdiri pada bulan maret pada tahun 2004 berdasar pada Keputusan Bupati Purbalingga No. 36 Tahun 2004 Tentang penyelenggaraan SMK dan Program SMK Kelas Jauh di Purbalingga dengan Program Keahlian Teknik Perkayuan, Kemudian dikeluarkan Peraturan Bupati N0. 24 Tahun 2007 pada tanggal 21 April 2007 tentang pembentukan Sekolah Menengah Kejuruan Negeri 1 Bukateja dengan perubahan dan Penambahan Program Keahlian Teknik Gambar Bangunan dan Tata Busana. Pada Tahun 2008 pada bulan April dibuka kembali Program Keahlian Teknik Mekanik Otomotif.', '2022-01-20 07:22:54', '2022-01-20 08:58:45'),
 (2, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 07:23:33', '2022-01-20 07:23:33'),
 (3, 'misi', '<ul style=\"text-align: justify;\">\r\n                    <li>\r\n                        Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif\r\n                        berorientasi pada kompetensi pendidikan nasional.\r\n                    </li>\r\n                    <li>\r\n                        Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia\r\n                        kerja.\r\n                    </li>\r\n                    <li>\r\n                        Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan\r\n                        berwawasan lingkungan sekolah.\r\n                    </li>\r\n                </ul>', '2022-01-20 07:24:16', '2022-01-20 07:24:16'),
 (4, 'struktur_organisasi', 'struktur-organisasi.png', '2022-01-20 07:24:47', '2022-01-20 07:24:47'),
@@ -231,10 +232,10 @@ INSERT INTO `profilsekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) V
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `testimoni`
+-- Struktur dari tabel `testimonis`
 --
 
-CREATE TABLE `testimoni` (
+CREATE TABLE `testimonis` (
   `id` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `posisi` varchar(255) NOT NULL,
@@ -245,11 +246,13 @@ CREATE TABLE `testimoni` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `testimoni`
+-- Dumping data untuk tabel `testimonis`
 --
 
-INSERT INTO `testimoni` (`id`, `nama`, `posisi`, `foto`, `teks`, `created_at`, `updated_at`) VALUES
-(1, 'Fauziyah', 'Kuliah di Universitas Telkom', 'Ya.jpg', 'Saya menemukan banyak pengalaman disini. Guru-guru yang menyenangkan, teman-teman yang seru, fasilitas lab yang lengkap.', '2022-01-20 07:41:47', '2022-01-20 07:41:47');
+INSERT INTO `testimonis` (`id`, `nama`, `posisi`, `foto`, `teks`, `created_at`, `updated_at`) VALUES
+(1, 'Hanafi', 'Kuliah di Universitas Telkom', 'Ya.jpg', 'Saya menemukan banyak pengalaman disini. Guru-guru yang menyenangkan, teman-teman yang seru, fasilitas lab yang lengkap. halo', '2022-01-20 07:41:47', '2022-01-21 02:17:02'),
+(2, 'Rizki', 'Kuliah di IT Telkom Purwokerto', '79eW8mzo5nv4uq8sV6LtGyDxuFXnJVLzbhcZzswm.jpg', 'Saya menemukan banyak pengalaman disini. Guru-guru yang menyenangkan, teman-teman yang seru, fasilitas lab yang lengkap. hello', '2022-01-21 02:20:10', '2022-01-21 02:20:10'),
+(3, 'Raihan', 'Bekerja di PT Telkom', 'HVghkT53QBotlLeLGMUwhSUaX7pUs2ZfWT4mP0xr.jpg', 'Saya menemukan banyak pengalaman disini. Guru-guru yang menyenangkan, teman-teman yang seru, fasilitas lab yang lengkap.', '2022-01-21 02:21:02', '2022-01-21 02:28:21');
 
 -- --------------------------------------------------------
 
@@ -339,9 +342,9 @@ ALTER TABLE `profilsekolah`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `testimoni`
+-- Indeks untuk tabel `testimonis`
 --
-ALTER TABLE `testimoni`
+ALTER TABLE `testimonis`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -359,7 +362,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `beranda`
 --
 ALTER TABLE `beranda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -404,10 +407,10 @@ ALTER TABLE `profilsekolah`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `testimoni`
+-- AUTO_INCREMENT untuk tabel `testimonis`
 --
-ALTER TABLE `testimoni`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `testimonis`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
