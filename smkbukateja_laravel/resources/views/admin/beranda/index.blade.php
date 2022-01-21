@@ -2,7 +2,10 @@
 
 @section('content')
 <div class="container">
-    <h4>Beranda</h4>
+    <h3>Beranda</h3>
+
+    <br>
+
     <table class="table">
         <tr>
             <td>
@@ -22,7 +25,11 @@
                     {{$b->key}}
                 </td>
                 <td>
-                    {{$b->value}}
+                    @if ($b->key == 'banner_beranda')
+                        <img src="{{url('img' . '/' . $b->value)}}" width="150px" alt="" srcset="">
+                    @else
+                        {!!($b->value)!!}
+                    @endif
                 </td>
                 <td>
                     <a href="/beranda/editBeranda/{{$b->id}}" class="btn btn-warning">Edit</a>
