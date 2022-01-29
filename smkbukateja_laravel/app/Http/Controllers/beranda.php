@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\beranda as berandaModel;
+use App\Models\programKeahlian as programKeahlianModel;
 
 class beranda extends Controller
 {
@@ -12,7 +13,9 @@ class beranda extends Controller
     {
         // Memanggil file index
         return view('admin.beranda.index')
-            ->with('beranda', berandaModel::all());
+            ->with('beranda', berandaModel::all())
+            ->with('programKeahlian', programKeahlianModel::all());
+            ;
     }
 
     public function edit($id)

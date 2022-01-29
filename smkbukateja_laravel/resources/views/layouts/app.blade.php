@@ -27,6 +27,10 @@
         .main {
             border-bottom: 0px !important
         }
+
+        .bg-white {
+            background-color: white !important
+        }
     </style>
 </head>
 

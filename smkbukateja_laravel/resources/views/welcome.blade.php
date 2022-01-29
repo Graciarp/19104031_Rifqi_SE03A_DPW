@@ -6,6 +6,7 @@
     use App\Models\beranda as berandaModel;
     use App\Models\testimoni as testiModel;
     use App\Models\gurudankaryawan;
+    use App\Models\programKeahlian;
 
     // memanggil data dari model
     $namaSekolah=berandaModel::where('key', 'nama_sekolah')->first();
@@ -21,6 +22,8 @@
 
     $guru = gurudankaryawan::whereNotIn('jabatan', ['kepala_sekolah', 'wakil_kepala_sekolah', 'kepala_tata_usaha', 'karyawan']) -> get();
     $karyawan = gurudankaryawan::where('jabatan', 'karyawan') -> get();
+
+    $programKeahlian = programKeahlian::all();
 @endphp
 
     <!-- CAROUSEL -->
@@ -108,72 +111,23 @@
         </center>
         <div class="container p-5">
             <div class="row g-4 justify-content-center">
+                @foreach($programKeahlian as $program)
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100">
-                        <img src="{{url('/')}}/new_design/bahan/mm-1.JPG" class="card-img-top" alt="...">
+                        <img src="{{url('img/program_keahlian') . '/' . $program->image}}" class="card-img-top" alt="...">
                         <a href="#" class="link">
                             <div class="card-body">
-                                <h5 class="card-title carousel_text">Multimedia</h5>
-                                <p class="card-text carousel_text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title carousel_text">
+                                    {{$program->judul}}
+                                </h5>
+                                <p class="card-text carousel_text">
+                                    {{$program->deskripsi}}
+                                </p>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100">
-                        <img src="{{url('/')}}/new_design/bahan/tbs-2.JPG" class="card-img-top" alt="...">
-                        <a href="#" class="link">
-                            <div class="card-body">
-                                <h5 class="card-title carousel_text">Tata Busana</h5>
-                                <p class="card-text carousel_text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100">
-                        <img src="{{url('/')}}/new_design/bahan/tkj-1.JPG" class="card-img-top" alt="...">
-                        <a href="#" class="link">
-                            <div class="card-body">
-                                <h5 class="card-title carousel_text">Tata Busana</h5>
-                                <p class="card-text carousel_text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100">
-                        <img src="{{url('/')}}/new_design/bahan/tkro-1.JPG" class="card-img-top" alt="...">
-                        <a href="#" class="link">
-                            <div class="card-body">
-                                <h5 class="card-title carousel_text">Tata Busana</h5>
-                                <p class="card-text carousel_text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100">
-                        <img src="{{url('/')}}/new_design/bahan/tkro-1.JPG" class="card-img-top" alt="...">
-                        <a href="#" class="link">
-                            <div class="card-body">
-                                <h5 class="card-title carousel_text">Tata Busana</h5>
-                                <p class="card-text carousel_text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100">
-                        <img src="{{url('/')}}/new_design/bahan/tkro-1.JPG" class="card-img-top" alt="...">
-                        <a href="#" class="link">
-                            <div class="card-body">
-                                <h5 class="card-title carousel_text">Tata Busana</h5>
-                                <p class="card-text carousel_text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
