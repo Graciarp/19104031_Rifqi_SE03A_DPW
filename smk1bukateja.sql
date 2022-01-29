@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 21, 2022 at 11:38 AM
+-- Generation Time: Jan 29, 2022 at 04:40 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -150,7 +150,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2021_12_23_085402_informasi', 2),
 (6, '2021_12_31_063010_create_prestasis_table', 3),
-(7, '2022_01_19_055816_create_gurudankaryawans_table', 4);
+(7, '2022_01_19_055816_create_gurudankaryawans_table', 4),
+(8, '2022_01_29_143126_create_program_keahlians_table', 5);
 
 -- --------------------------------------------------------
 
@@ -226,8 +227,32 @@ INSERT INTO `profilsekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) V
 (1, 'sejarah_singkat', 'SMK Negeri 1 Bukateja berdiri pada bulan maret pada tahun 2004 berdasar pada Keputusan Bupati Purbalingga No. 36 Tahun 2004 Tentang penyelenggaraan SMK dan Program SMK Kelas Jauh di Purbalingga dengan Program Keahlian Teknik Perkayuan, Kemudian dikeluarkan Peraturan Bupati N0. 24 Tahun 2007 pada tanggal 21 April 2007 tentang pembentukan Sekolah Menengah Kejuruan Negeri 1 Bukateja dengan perubahan dan Penambahan Program Keahlian Teknik Gambar Bangunan dan Tata Busana. Pada Tahun 2008 pada bulan April dibuka kembali Program Keahlian Teknik Mekanik Otomotif.', '2022-01-20 07:22:54', '2022-01-20 08:58:45'),
 (2, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 07:23:33', '2022-01-20 07:23:33'),
 (3, 'misi', '<ul style=\"text-align: justify;\">\r\n                    <li>\r\n                        Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif\r\n                        berorientasi pada kompetensi pendidikan nasional.\r\n                    </li>\r\n                    <li>\r\n                        Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia\r\n                        kerja.\r\n                    </li>\r\n                    <li>\r\n                        Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan\r\n                        berwawasan lingkungan sekolah.\r\n                    </li>\r\n                </ul>', '2022-01-20 07:24:16', '2022-01-20 07:24:16'),
-(4, 'struktur_organisasi', 'struktur-organisasi.png', '2022-01-20 07:24:47', '2022-01-20 07:24:47'),
+(4, 'struktur_organisasi', '1642766024_struktur-organisasi.png', '2022-01-20 07:24:47', '2022-01-21 04:53:44'),
 (5, 'peta_sekolah', '<iframe\r\n            src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15825.39092970486!2d109.42302!3d-7.426716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x578f1a3d93c545f6!2sSMK%20Negeri%201%20Bukateja!5e0!3m2!1sid!2sid!4v1637673631032!5m2!1sid!2sid\"\r\n            width=\"100%\" height=\"500px\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>', '2022-01-20 07:25:12', '2022-01-20 07:25:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `program_keahlians`
+--
+
+CREATE TABLE `program_keahlians` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `judul` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deskripsi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `program_keahlians`
+--
+
+INSERT INTO `program_keahlians` (`id`, `judul`, `image`, `deskripsi`, `created_at`, `updated_at`) VALUES
+(1, 'Multimedia', 'EevLphsviphwkD0GN3XCBVtqBGDy4DvZyjJxWOzj.jpeg', 'Jurusan multimedia kami belajar bagaimana cara membuat animasi, film, fotografi yang baik dan benar', '2022-01-29 08:02:02', '2022-01-29 08:02:02'),
+(2, 'Tata Busana', '2gGgAh6lrZiOrNjgNOEb4otOT2a73SRpRfcCkVz0.jpeg', 'Pada jurusan tata busana ini kami mempelajari mengenai bagaimana cara pembuatan busana yang benar, dan kami mempelajari banyak hal lainnya mengenai busana', '2022-01-29 08:06:04', '2022-01-29 08:38:50'),
+(3, 'Teknik Kendaraan Ringan Otomotif', 'ioPcf7xkUZHD5dnE9l4Bn6d4vy08BPL0Yyq6aUqu.jpeg', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer', '2022-01-29 08:10:14', '2022-01-29 08:10:14');
 
 -- --------------------------------------------------------
 
@@ -342,6 +367,12 @@ ALTER TABLE `profilsekolah`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `program_keahlians`
+--
+ALTER TABLE `program_keahlians`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `testimonis`
 --
 ALTER TABLE `testimonis`
@@ -386,7 +417,7 @@ ALTER TABLE `informasi`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -405,6 +436,12 @@ ALTER TABLE `prestasis`
 --
 ALTER TABLE `profilsekolah`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `program_keahlians`
+--
+ALTER TABLE `program_keahlians`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `testimonis`
