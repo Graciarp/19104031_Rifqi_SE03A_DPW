@@ -1,244 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
+@php
+    use App\Models\informasiModel;
+
+    $nextData = informasiModel::where('id', '>', $informasi->id)->first();
+    $previousData = informasiModel::where('id', '<', $informasi->id)->first();
+@endphp
+
+<html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Informasi SMK Negeri 1 Bukateja</title>
-	<link rel="icon" href="/img/informasi/Logo-SMK.png">
-	<link rel="stylesheet" type="text/css" href="/css-external/informasi-style.css">
-	<link rel="stylesheet" href="/css-external/homepage-style.css">
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<!-- Bundle -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-	</script>
-	<!-- Separate -->
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-	</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    @include('layouts.meta_seo')
 
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
+    {{-- Import All Css --}}
+    @include('layouts.css')
 
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-		integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
-	</script>
-	<script src="js/bootstrap.min.js"></script>
-	<style>
-		a {
-			color: inherit;
-			text-decoration: none;
-			font-family: 'Poppins', sans-serif;
-		}
+    {{-- Import All Js --}}
+    @include('layouts.js')
 
-		a:hover {
-			color: #ffc400;
-		}
-		.rectangle-1 {
-			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: space-between;
-			padding-top: 0em !important;
-			padding-bottom: 0 !important;
-		}
-	</style>
-
+    <!-- title -->
+    <title> Program Keahlian SMK Negeri 1 Bukateja </title>
 </head>
 
-<body style="background-color:#EEEEEE">
-	<!-- NAVBAR -->
-	<nav class="navbar navbar-expand-sm">
-		<div class="container">
-			<div class="skansika">
-				<img src="img/Logo SMK.png" alt="" class="logo">
-				<div class="name-skansika">
-					SKANSIKA
-				</div>
-			</div>
+<body style="font-family: Poppins;">
 
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ms-auto">
-					<li class="beranda"><a href="/">Beranda</a></li>
-					<li class="profil-Sekolah"><a href="profil">Profil Sekolah</a></li>
-					<!-- dropdown -->
-					<li class="program-Keahlian dropdown">
-						<a href="" class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							Program Keahlian
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="/jurusan/DPIB.html">Desain Permodelan Bangunan</a></li>
-                            <li><a class="dropdown-item" href="/jurusan/TB.html">Tata Busana</a></li>
-                            <li><a class="dropdown-item" href="/jurusan/TKRO.html">TKR</a></li>
-                            <li><a class="dropdown-item" href="/jurusan/TKJ.html">TKJ</a></li>
-                            <li><a class="dropdown-item" href="/jurusan/Multimedia.html">Multimedia</a></li>
-                            <li><a class="dropdown-item" href="/jurusan/RPL.html">RPL</a></li>
-                            <li><a class="dropdown-item" href="/jurusan/TBO.html">Teknik Body Otomotif</a></li>
-						</ul>
-					</li>
-					<li class="guru-karyawan"><a href="">Guru dan Karyawan</a></li>
-					<li class="prestasi"><a href="/prestasi">Prestasi</a></li>
-					<!-- dropdown navbar -->
-					<li class="informasi dropdown">
-						<a href="" class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							Informasi
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="/informasi">Berita</a></li>
-							<li><a class="dropdown-item" href="#">Kegiatan Intra Sekolah</a></li>
-							<li><a class="dropdown-item" href="#">Kegiatan Ekstra Sekolah</a></li>
-							<li><a class="dropdown-item" href="#">SEMAKIN</a></li>
-							<li><a class="dropdown-item" href="#">LSP</a></li>
-							<li><a class="dropdown-item" href="#">SIPANDIK</a></li>
-							<li><a class="dropdown-item" href="#">E-Learning</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- NAVBAR -->
-	<br>
-	<!-- BODY JUDUL -->
-	<div class="jumbotron jumbotron-fluid" style="background-color: #E82329; color:#FFF;">
-		<div class="container">
-			<h6>Informasi /</h5>
-				<h2>Berita Acara</h2>
-		</div>
-	</div>
-	<br>
-	<!-- BODY CARD -->
-	<div class="container">
+    <!-- NAVBAR -->
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-danger">
+            <div class="container-fluid justify-content-end px-5">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav" style="font-size: 14px;">
+                        @include('layouts.navbar_content')
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR -->
+    </div>
+    <!-- NAVBAR -->
 
-		<h4>
-			{{$informasi->judul}}
-		</h4>
+    <div class="container-fluid p-3">
+        <!-- ISI -->
+        <div class="container py-3 px-0 bg-light" style="margin-top: 5em; margin-bottom:3em; border-radius: 10px; box-shadow: 4px 4px 4px rgba(0, 0, 2, 0.5);">
+            <!-- JUDUL -->
+            <div class="container-fluid p-5">
+                <h1 style="font-weight: bold; text-align: center;">
+                    {{$informasi->judul}}
+                </h1>
+            </div>
+            <!-- JUDUL -->
 
-		<br>
+            <!-- ARTIKEL -->
+            <div class="container pb-5">
+                <center>
+                    <img class="img-fluid-pk" src="{{url('/img/artikel' . '/' . $informasi->gambar)}}" style="border-radius: 5px;">
+                </center>
+            </div>
+            <div class="container px-5">
+                <div class="container py-4 px-5 ">
+                    <p style="text-align: justify; ">
+                        {{$informasi->isi}}
+                    </p>
+                </div>
+            </div>
+            <!-- ARTIKEL -->
 
-		<img src="{{url('/img/artikel' . '/' . $informasi->gambar)}}" width="100%" alt="" srcset="">
+            <!-- GALERI KEGIATAN -->
+            <div class="container-fluid p-0">
+                <div class="container">
+                    <div class="scroll" style="height: 250px; background:linear-gradient(#A80000, #630000);">
+                        <div class="row px-5 g-2">
+                            @foreach ($informasiAll as $i)
+                            <div class="col-lg-4 col-md-6 col-sm-12 px-3 pt-2 pb-3">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <a href="{{route('informasi.baca', $i->slug)}}">
+                                            <img src="{{url('img/artikel'.'/' . $i->gambar)}}" class="card-img-top">
+                                        </a>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <a class="text-decoration-none text-black" href="{{route('informasi.baca', $i->slug)}}">
+                                            <b>
+                                                {{$i->judul}}
+                                            </b>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- GALERI KEGIATAN -->
 
-		<br><br>
+            <!-- PREVIOUS NEXT -->
+            <div class="container-fluid p-5">
+                <div class="row px-3">
+                    <div class="col-lg-6 col-md-6 col-sm-6 justify-content-start">
+                        @if($previousData)
+                            <img class="img-fluid" src="{{url('new_design/bahan/icon.png')}}">
+                            <a class="px-2 link-pk" href="{{route('informasi.baca', $previousData->slug)}}">prev</a>
+                        @endif
+                    </div>
 
-		{{$informasi->isi}}
-	</div>
-	<br>
-	<!-- BODY PAGE -->
-	{{-- <div class="container" style="align-content: center;">
-		<nav aria-label="...">
-			<ul class="pagination justify-content-center">
-				<li class="page-item disabled">
-					<span class="page-link">Previous</span>
-				</li>
-				<li class="page-item"><a class="page-link" href="#">1</a></li>
-				<li class="page-item active" aria-current="page">
-					<span class="page-link">2</span>
-				</li>
-				<li class="page-item"><a class="page-link" href="#">3</a></li>
-				<li class="page-item">
-					<a class="page-link" href="#">Next</a>
-				</li>
-			</ul>
-		</nav>
-	</div> --}}
-	<br>
+                    <div class="col-lg-6 col-md-6 col-sm-6" style="text-align: right;">
+                        @if($nextData)
+                            <a class="px-2 link-pk" href="{{route('informasi.baca', $nextData->slug)}}">next</a>
+                            <img class="img-fluid" src="{{url('new_design/bahan/icon2.png')}}">
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <!-- PREVIOUS NEXT -->
+        </div>
+    </div>
+
+    @include('layouts.base_footer')
 </body>
-<footer>
-	<!-- Footer -->
-	<div id="site-footer" class="footer" role="contentinfo" style="background-color: #DB292F;"">
-        <div class=" container pt-2 pb-2">
-		<div class="row text-white">
-			<div class="col-lg-1 col-sm-12 col-md-3 p-lg-4">
-				<img src="img/Logo SMK.png" height="50px" alt="">
-			</div>
-			<div class="col-lg-4 col-sm-12 col-md-3 p-3">
-				<div class="row">
-					<div class="col-lg-12 col-sm-12 col-md-12">
-						<h5><b>Kontak</b></h5>
-						<p>Email : <a href="mailto:admin@smkn1bukateja.sch.id">admin@smkn1bukateja.sch.id</a>
-							<br>Telp/Fax. <a href="tel:0286-476110">(0286) 476110</a></p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12 col-sm-12 col-md-12">
-						<h2>
-							<a href="https://www.instagram.com/smkn1bukateja/"><i class="fa fa-instagram"></i>&nbsp;</a>
-							<a href="https://www.facebook.com/SMKNEGERI1BUKATEJAPBG"><i
-									class="fa fa-facebook"></i>&nbsp;</a>
-							<a href=""><i class="fa fa-twitter"></i>&nbsp;</a>
-						</h2>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-12 col-md-3 p-3">
-				<div class="footer-nav">
-					<h5 class="section-title"><b>Menu</b></h5>
-					<ul class="list-unstyled">
-						<li>
-							<a href="index.html">Beranda</a>
-						</li>
-						<li>
-							<a href="profil.html">Profil Sekolah</a>
-						</li>
-						<li>
-							<a href="">Program Keahlian</a>
-						</li>
-						<li>
-							<a href="">Guru dan Karyawan</a>
-						</li>
-						<li>
-							<a href="">Prestasi</a>
-						</li>
-						<li>
-							<a href="">Informasi</a>
-						</li>
-						<li>
-                            <a href="/login">Login</a>
-                        </li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-12 col-md-3 p-3">
-				<h5 class="section-title"><b>Lokasi</b></h5>
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.3477758537724!2d109.4208317142061!3d-7.42671117521803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e65572a528cddab%3A0x578f1a3d93c545f6!2sSMK%20Negeri%201%20Bukateja!5e0!3m2!1sid!2sid!4v1637638049203!5m2!1sid!2sid"
-					style="border:0; height: 200; width: 200px;" allowfullscreen="" loading="lazy"></iframe>
-			</div>
-		</div>
-	</div>
-	</div>
-	<!-- Footer -->
 
-	<!-- Copyright -->
-	<div class="d-flex justify-content-center text-white" style="background-color: #B7292D;">
-		<div class="p-2">Copyright © 2021 SMKN 1 BUKATEJA | Powered by Team Romusha</div>
-	</div>
-	<!-- Copyright -->
-</footer>
+</html>
 
 </html>

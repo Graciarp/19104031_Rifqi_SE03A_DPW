@@ -34,7 +34,10 @@ Route::get('/informasi/baca/{slug}', function ($slug) {
     $informasi = informasiModel::where('slug', $slug)->first();
     
     // Tampilkan kedalam view baca artikel
-    return view('informasiBaca')->with('informasi', $informasi);
+    return view('informasiBaca')
+        ->with('informasi', $informasi)
+        ->with('informasiAll', informasiModel::all())
+        ;
 })->name('informasi.baca');
 
 Route::get('/keluar', function () {Auth::logout();return redirect('/');});

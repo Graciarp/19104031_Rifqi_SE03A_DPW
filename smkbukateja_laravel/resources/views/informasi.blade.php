@@ -1,204 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
+@php
+    use App\Models\beranda as berandaModel;
+
+    $namaSekolah=berandaModel::where('key', 'nama_sekolah')->first();
+    $slogan=berandaModel::where('key', 'slogan')->first();
+    $banner_beranda=berandaModel::where('key', 'banner_beranda')->first();
+@endphp
+
+<html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Informasi SMK Negeri 1 Bukateja</title>
-	<link rel="icon" href="img/informasi/Logo-SMK.png">
-	<link rel="stylesheet" type="text/css" href="css-external/informasi-style.css">
-	<link rel="stylesheet" href="css-external/homepage-style.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<!-- Bundle -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-	</script>
-	<!-- Separate -->
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-	</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    @include('layouts.meta_seo')
 
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
+    {{-- Import All Css --}}
+    @include('layouts.css')
 
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-		integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
-	</script>
-	<script src="js/bootstrap.min.js"></script>
-	<style>
-		a {
-			color: inherit;
-			text-decoration: none;
-			font-family: 'Poppins', sans-serif;
-		}
+    {{-- Import All Js --}}
+    @include('layouts.js')
 
-		a:hover {
-			color: #ffc400;
-		}
-		.rectangle-1 {
-			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: space-between;
-			padding-top: 0em !important;
-			padding-bottom: 0 !important;
-		}
-	</style>
-
+    <!-- title -->
+    <title> SMK Negeri 1 Bukateja </title>
 </head>
 
-<body style="background-color:#EEEEEE">
-	<!-- NAVBAR -->
-	@include('navbar')
-	<!-- NAVBAR -->
-	<br>
-	<!-- BODY JUDUL -->
-	<div class="jumbotron jumbotron-fluid" style="background-color: #E82329; color:#FFF;">
-		<div class="container">
-			<h6>Informasi /</h5>
-				<h2>Berita Acara</h2>
-		</div>
-	</div>
-	<br>
-	<!-- BODY ISI CAROUSEL -->
-	<div class="container">
-		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-					aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-					aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-					aria-label="Slide 3"></button>
-			</div>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="img/informasi/ihtcv-1.png" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h4>In House Training (IHT) Peningkatan Mutu Pendidikan Melalui Digital School Management System
-						</h4>
-						<p>Kegiatan ini dijadwalkan berlangsung selama 3 hari, dimulai pada tanggal 6 s.d. 8 Oktober
-							2021 di Aula SMK Negeri 1 Bukateja.
-							<a class="navbar-brand" href="#" style="font-size: 14px; color: #E82329;">Selengkapnya
-								...</a></p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="img/informasi/info-2.png" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h4>Alur dan Jadwal PPDB SMK Negeri 1 Bukateja TP. 2021/2022</h4>
-						<p>Berikut berkas-berkas yang perlu dipersiapkan dalam pendafataran PPDB TP. 2021/2022.</p>
-						<a class="navbar-brand" href="#" style="font-size: 14px; color: #E82329;">Selengkapnya ...</a>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="img/informasi/info-3.png" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h4>PELAKSANAAN PTM DAN ANBK 2021</h4>
-						<p>Pada Hari Senin Tanggal 6 September 2021 SMK Negeri 1 Bukateja melakukan pelakasanaan tatap
-							muka (PTM) dengan prokes yang ketat dan pengamanan satgas covid -19</p>
-						<a class="navbar-brand" href="#" style="font-size: 14px; color: #E82329;">Selengkapnya ...</a>
-					</div>
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-				data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-				data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
-		</div>
-	</div>
-	<br>
-	<!-- BODY CARD -->
-	<div class="container">
-		<div class="row">
-			@foreach($informasi as $i)
-			<div class="col-sm-4 mb-3">
-				<div class="card">
-					<a href="{{route('informasi.baca', $i->slug)}}" style="text-decoration: none; color: #B7292D;">
-						<img src="{{url('img/artikel'.'/' . $i->gambar)}}" class="card-img-top" alt="">
-						<div class="card-body">
-							<h5 class="card-title">
-								{{$i->judul}}
-							</h5>
-							<p class="card-text">
-								{{ Str::limit($i->isi, 90, '...') }}
-							</p>
-						</div>
-					</a>
-				</div>
-			</div>
-			@endforeach
-			{{-- <div class="col-sm-4">
-				<div class="card">
-					<a href="#" style="text-decoration: none; color: #B7292D;">
-						<img src="img/informasi/info-4.jpg" class="card-img-top" alt="">
-						<div class="card-body">
-							<h5 class="card-title">Pengambilan Gambar Sinematografi</h5>
-							<p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. </p>
-						</div>
-					</a>
-				</div>
-			</div> --}}
-			{{-- <div class="col-sm-4">
-				<div class="card">
-					<a href="#" style="text-decoration: none; color: #B7292D;">
-						<img src="img/informasi/info-4.jpg" class="card-img-top" alt="">
-						<div class="card-body">
-							<h5 class="card-title">Pengambilan Gambar Sinematografi</h5>
-							<p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. </p>
-						</div>
-					</a>
-				</div>
-			</div> --}}
-		</div>
-	</div>
-	<br>
-	<!-- BODY PAGE -->
-	{{-- <div class="container" style="align-content: center;">
-		<nav aria-label="...">
-			<ul class="pagination justify-content-center">
-				<li class="page-item disabled">
-					<span class="page-link">Previous</span>
-				</li>
-				<li class="page-item"><a class="page-link" href="#">1</a></li>
-				<li class="page-item active" aria-current="page">
-					<span class="page-link">2</span>
-				</li>
-				<li class="page-item"><a class="page-link" href="#">3</a></li>
-				<li class="page-item">
-					<a class="page-link" href="#">Next</a>
-				</li>
-			</ul>
-		</nav>
-	</div> --}}
-	<br>
+<body style="font-family: Poppins;">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container-fluid justify-content-end px-5">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav" style="font-size: 14px;">
+                    @include('layouts.navbar_content')
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- CAROUSEL -->
+    <div id="carouselExampleSlidesOnly " class="carousel slide " data-bs-ride="carousel ">
+        <div class="carousel-inner ">
+            @php
+                $urutan_slide = 1;
+            @endphp
+            @foreach (json_decode($banner_beranda->value, true) as $item)
+                <div class="carousel-item @if($urutan_slide == 1) active @endif">
+                    <img src="{{url('/img' . '/' . $item)}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <font style="font-family: Poppins;">
+                            <h4>Selamat Datang di</h4>
+                            <h1 style="font-weight: bold;">
+                                {{$namaSekolah->value}}
+                            </h1>
+                            <p>
+                                {{$slogan->value}}
+                            </p>
+                            <br/>
+                            <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
+                        </font>
+                    </div>
+                </div>    
+
+                @php
+                    $urutan_slide++;
+                @endphp
+            @endforeach
+        </div>
+    </div>
+    <!-- CAROUSEL -->
+
+    <!-- INFORMASI -->
+    <div class="container-fluid pt-5 " style="background-color: #F6FAFD ">
+        <center>
+            <h1 style="text-align: center; font-weight: bold; ">BERITA ACARA</h1>
+            <img class="img-fluid " src="{{url('new_design/bahan/line.png')}}">
+        </center>
+        <div class="container p-5">
+            <div class="scroll">
+                <div class="row g-4 p-5 justify-content-center " style="background:linear-gradient(#a80000, #630000);">
+                    
+                    @foreach ($informasi as $i)
+                    <div class="col-lg-4 col-md-6 ">
+                        <div class="card h-100 ">
+                            <img src="{{url('img/artikel'.'/' . $i->gambar)}}" class="card-img-top " alt="... ">
+                            <a href="{{route('informasi.baca', $i->slug)}}" class="link ">
+                                <div class="card-body ">
+                                    <h5 class="card-title carousel_text ">
+                                        {{$i->judul}}
+                                    </h5>
+                                    <p class="card-text carousel_text ">
+                                        {{ Str::limit($i->isi, 90, '...') }}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- INFORMASI -->
+
+    @include('layouts.base_footer')
+
+    <!-- Navbar JS -->
+    <script>
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                document.getElementById("navbar").style.backgroundColor = "#630000";
+            } else {
+                document.getElementById("navbar").style.backgroundColor = "transparent";
+            }
+        }
+    </script>
+    <!-- Navbar JS -->
 </body>
-@include('footer')
+
+</html>
 
 </html>
