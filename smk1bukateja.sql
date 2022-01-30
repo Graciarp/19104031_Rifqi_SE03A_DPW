@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2022 at 02:33 AM
+-- Generation Time: Jan 30, 2022 at 07:01 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -44,7 +44,7 @@ INSERT INTO `beranda` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (2, 'slogan', 'SMK Negeri 1 Bukateja merupakan salah satu Sekolah Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah. SMK ini merupakan SMK rujukan yang menawakan 7 program kompetensi keahlian.', '2022-01-20 07:38:10', '2022-01-20 07:38:10'),
 (3, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 12:57:12', '2022-01-20 09:43:14'),
 (4, 'misi', '<ul style=\"text-align: justify;\"> <li> Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif berorientasi pada kompetensi pendidikan nasional. </li> <li> Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia kerja. </li> <li> Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan berwawasan lingkungan sekolah. </li> </ul>', '2022-01-20 12:57:58', '2022-01-20 09:43:42'),
-(5, 'banner_beranda', '10.jpg', '2022-01-20 15:17:11', '2022-01-21 03:27:43');
+(5, 'banner_beranda', '[\"U7FfRNQFRn2EonMX_carousel-1.png\",\"eOz7QYP8VpC2k2pu_carousel-2.png\",\"FjluFeqLmNkWlzVX_carousel-3.png\"]', '2022-01-20 15:17:11', '2022-01-29 22:45:39');
 
 -- --------------------------------------------------------
 
