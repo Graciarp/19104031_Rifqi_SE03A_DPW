@@ -63,6 +63,9 @@
                     Gambar
                 </td>
                 <td>
+                    Gambar Materi
+                </td>
+                <td>
                     Deskripsi
                 </td>
                 <td>
@@ -83,13 +86,28 @@
                             {{$item->judul}}
                         </td>
                         <td>
-                            <img src="{{url('img/program_keahlian') . '/' . $item->image}}" width="150px" alt="" sizes="" srcset="">
+                            <a href="{{url('img/program_keahlian') . '/' . $item->image}}" target="_blank">
+                                <img src="{{url('img/program_keahlian') . '/' . $item->image}}" width="150px" alt="" sizes="" srcset="">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{url('img/program_keahlian/materi') . '/' . $item->yang_dipelajari_img}}" target="_blank">
+                                <img src="{{url('img/program_keahlian/materi') . '/' . $item->yang_dipelajari_img}}" width="150px" alt="" sizes="" srcset="">
+                            </a>
                         </td>
                         <td>
                             {{Str::limit($item->deskripsi, 80)}}..
                         </td>
                         <td>
-                            <button onclick="editProgramKeahlian('{{$item->id}}')" class="btn btn-warning">Edit</button>
+                            <button style="width: 100%; margin-bottom: 5px" onclick="editGaleriProgramKeahlian('{{$item->id}}', '{{$item->judul}}')" type="button" class="btn btn-light">
+                                Edit Foto Galeri
+                            </button>
+                            <button style="width: 100%; margin-bottom: 5px" onclick="editProgramKeahlian('{{$item->id}}')" class="btn btn-warning">Edit</button>
+                            <a target="_blank" href="{{url('program_keahlian' . '/' . $item->id)}}">
+                                <button style="width: 100%" type="button" class="btn btn-info">
+                                    Lihat
+                                </button>
+                            </a>
                         </td>
                     </tr>
                 @endforeach
@@ -204,6 +222,36 @@
                 $('#editEkstrakurikuler form').attr('action', "{{url('ekstrakurikuler/update')}}/" + id)
 
                 $("#editEkstrakurikuler").modal('show')
+            }
+        });
+    }
+
+    function editGaleriProgramKeahlian(id, judul) {
+        $('#programKeahlianGaleriEdit h4.modal-title').text("Galeri Program Kerja " + judul);
+        $('#programKeahlianGaleriEdit form').attr('action', "{{url('programKeahlian/galery_save')}}/" + id);
+
+        $.ajax({
+            url: "{{url('programKeahlian/galery_json')}}/" + id,
+            success: function (response) {
+                var data = response.data
+
+                $('#programKeahlianGaleriEdit #loopGaleriProgramKeahlian').empty()
+
+                if (data.length > 0) {
+                    
+                    for (let index = 0; index < data.length; index++) {
+                        var htmlLooping = `
+                            <a onclick="if(!confirm('yakin ingin menghapus?')){return false}" href="/programKeahlian/galery_hapus/`+id+`/index/`+index+`">
+                              <img src="`+ data[index] +`" width="150px">
+                            </a>
+                        `;
+                        
+                        $('#programKeahlianGaleriEdit #loopGaleriProgramKeahlian').append(htmlLooping);
+                    }
+
+                }
+
+                $("#programKeahlianGaleriEdit").modal('show')
             }
         });
     }

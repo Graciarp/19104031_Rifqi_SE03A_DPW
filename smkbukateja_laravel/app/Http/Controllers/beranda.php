@@ -66,6 +66,11 @@ class beranda extends Controller
     {
         $data = berandaModel::where('key', 'banner_beranda') -> first();
         $gambar = json_decode($data->value, true);
+
+        if (count($gambar) <= 1) {
+            return redirect() -> back() -> with('warning', 'Gambar tidak boleh kosong');
+        }
+
         $urutan = $index - 1;
 
         unset($gambar[$urutan]);

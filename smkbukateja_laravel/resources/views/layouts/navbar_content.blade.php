@@ -1,3 +1,9 @@
+@php
+    use App\Models\programKeahlian;
+
+    $programKeahlian = programKeahlian::select('id','judul')->get();
+@endphp
+
 <li class="nav-item active">
     <a class="nav-link navigasi-link" href="/">Beranda</a>
 </li>
@@ -9,13 +15,11 @@
 Program Keahlian
   </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Desain Permodelan dan Informasi Bangunan</a>
-        <a class="dropdown-item" href="#">Tata Busana</a>
-        <a class="dropdown-item" href="#">Teknik Kendaraan Ringan dan Otomotif</a>
-        <a class="dropdown-item" href="#">Teknik Komputer dan Jaringan</a>
-        <a class="dropdown-item" href="#">Multimedia</a>
-        <a class="dropdown-item" href="#">Rekayasa Perangkat Lunak</a>
-        <a class="dropdown-item" href="#">Teknik Body Otomotif</a>
+        @foreach ($programKeahlian as $item)
+            <a class="dropdown-item" href="{{url('/program_keahlian' . '/' . $item->id)}}">
+                {{$item->judul}}
+            </a>
+        @endforeach
     </div>
 </li>
 <li class="nav-item">

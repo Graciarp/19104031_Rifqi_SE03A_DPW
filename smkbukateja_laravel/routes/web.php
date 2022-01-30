@@ -10,7 +10,7 @@ use App\Http\Controllers\{
     beranda, 
     testimoni,
     programKeahlian,
-    EkstrakurikulerController
+    EkstrakurikulerController,
 };
 use App\Models\informasiModel;
 
@@ -73,7 +73,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('testimoni', testimoni::class, ['except' => ['index']]);
 
     Route::get('programKeahlian/json/{id}', [programKeahlian::class, 'json']);
+    Route::get('programKeahlian/galery_json/{id}', [programKeahlian::class, 'galery_json']);
     Route::post('programKeahlian/save', [programKeahlian::class, 'save']);
+    Route::post('programKeahlian/galery_save/{id}', [programKeahlian::class, 'galery_save']);
+    Route::get('programKeahlian/galery_hapus/{id}/index/{index}', [programKeahlian::class, 'galery_hapus']);
     Route::post('programKeahlian/update/{id}', [programKeahlian::class, 'update']);
 
     Route::get('ekstrakurikuler/json/{id}', [EkstrakurikulerController::class, 'json']);
@@ -97,6 +100,7 @@ Route::view('/guru/karyawan', 'guru.karyawan');
 Route::view('/guru/guruMapel', 'guru.guruMapel');
 
 Route::view('informasi', 'informasi', ['informasi' => informasiModel::all()]);
+Route::get('/program_keahlian/{id}', [App\Http\Controllers\programKeahlian::class, 'lihat_detail']);
 
 Auth::routes([
     'register' => false, // Registration Routes...

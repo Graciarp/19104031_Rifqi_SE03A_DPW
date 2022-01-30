@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2022 at 02:25 PM
+-- Generation Time: Jan 30, 2022 at 03:54 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -269,6 +269,8 @@ CREATE TABLE `program_keahlians` (
   `judul` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `deskripsi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `yang_dipelajari_img` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `galeri` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -277,13 +279,13 @@ CREATE TABLE `program_keahlians` (
 -- Dumping data for table `program_keahlians`
 --
 
-INSERT INTO `program_keahlians` (`id`, `judul`, `image`, `deskripsi`, `created_at`, `updated_at`) VALUES
-(1, 'Multimedia', 'EevLphsviphwkD0GN3XCBVtqBGDy4DvZyjJxWOzj.jpeg', 'Jurusan multimedia kami belajar bagaimana cara membuat animasi, film, fotografi yang baik dan benar', '2022-01-29 08:02:02', '2022-01-29 08:02:02'),
-(2, 'Tata Busana', '2gGgAh6lrZiOrNjgNOEb4otOT2a73SRpRfcCkVz0.jpeg', 'Pada jurusan tata busana ini kami mempelajari mengenai bagaimana cara pembuatan busana yang benar, dan kami mempelajari banyak hal lainnya mengenai busana', '2022-01-29 08:06:04', '2022-01-29 08:38:50'),
-(3, 'Teknik Kendaraan Ringan Otomotif', 'ioPcf7xkUZHD5dnE9l4Bn6d4vy08BPL0Yyq6aUqu.jpeg', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer', '2022-01-29 08:10:14', '2022-01-29 08:10:14'),
-(4, 'Desain Permodelan dan Informasi Bangunan', 'Yo6S5IaCQOUx0Njms3OQTxI3SiqYFY6sjayhstde.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2022-01-30 06:19:26', '2022-01-30 06:19:26'),
-(5, 'Teknik Komputer dan Jaringan', 'I14fpQlYeBwFtdbhvEdMg4J68mifs2OR3puomOV1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2022-01-30 06:22:51', '2022-01-30 06:22:51'),
-(6, 'Rekayasa Perangkat Lunak', 'kHSvXoO6JBIg0KVqIw5Yw95Fns0JpyYIvHuEGieE.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2022-01-30 06:23:50', '2022-01-30 06:23:50');
+INSERT INTO `program_keahlians` (`id`, `judul`, `image`, `deskripsi`, `yang_dipelajari_img`, `galeri`, `created_at`, `updated_at`) VALUES
+(1, 'Multimedia', 'EevLphsviphwkD0GN3XCBVtqBGDy4DvZyjJxWOzj.jpeg', 'Jurusan multimedia kami belajar bagaimana cara membuat animasi, film, fotografi yang baik dan benar', 'ktXnGcMIRD6BcYmsd3T32uqVP4YhPHSm9mDX7Y0O.png', '{\"0\":\"FF1ad813NqaNNbCUfbKNWuVOWz20FZ5OHdUGgGFt.jpeg\",\"2\":\"CAn8CGkMM0zLs5rWfxL3P7JoGHPkboqXhKKkJrJg.jpeg\"}', '2022-01-29 08:02:02', '2022-01-30 07:53:15'),
+(2, 'Tata Busana', '2gGgAh6lrZiOrNjgNOEb4otOT2a73SRpRfcCkVz0.jpeg', 'Pada jurusan tata busana ini kami mempelajari mengenai bagaimana cara pembuatan busana yang benar, dan kami mempelajari banyak hal lainnya mengenai busana', '8kNCNHQUYRNNwcrl9iz8PWvcEBN1L9akka9J7cIT.png', '[\"OKHAnwOmbCmc1IHF9rDvmzDvUKEuHubMue1t8mxu.jpeg\",\"xDRVVFW9jJcnuvdKkNOZalQTfe95smjLBPHPWjU9.jpeg\"]', '2022-01-29 08:06:04', '2022-01-30 07:32:01'),
+(3, 'Teknik Kendaraan Ringan Otomotif', 'ioPcf7xkUZHD5dnE9l4Bn6d4vy08BPL0Yyq6aUqu.jpeg', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer', 'T1qjqq55XGrgQbiy1rjc72xFQTrAJ9mLyaLGMUOb.png', NULL, '2022-01-29 08:10:14', '2022-01-30 06:49:48'),
+(4, 'Desain Permodelan dan Informasi Bangunan', 'Yo6S5IaCQOUx0Njms3OQTxI3SiqYFY6sjayhstde.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '395fkcFiWBTrWXXRoufFRGKCsT7JVZYJvZWgfeJJ.png', NULL, '2022-01-30 06:19:26', '2022-01-30 06:50:00'),
+(5, 'Teknik Komputer dan Jaringan', 'I14fpQlYeBwFtdbhvEdMg4J68mifs2OR3puomOV1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'tNa9VpfBH27K0TWG3acHgfAbqjCIKJ4YdVh23GVZ.png', NULL, '2022-01-30 06:22:51', '2022-01-30 06:44:54'),
+(6, 'Rekayasa Perangkat Lunak', 'kHSvXoO6JBIg0KVqIw5Yw95Fns0JpyYIvHuEGieE.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'lWqrelF6BH9Gtt5JQKVjRRwAovLeFdne3WZEoMtP.png', '[\"dJYC5oUPDmbfPcmCr6sCm5VpikM6zYR6Hqjaw7UA.jpg\"]', '2022-01-30 06:23:50', '2022-01-30 07:31:38');
 
 -- --------------------------------------------------------
 

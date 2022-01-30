@@ -94,8 +94,8 @@
                 @foreach($programKeahlian as $program)
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100">
-                        <img src="{{url('img/program_keahlian') . '/' . $program->image}}" class="card-img-top" alt="...">
-                        <a class="link">
+                        <a href="{{url('/program_keahlian' . '/' . $program->id)}}" class="link">
+                            <img src="{{url('img/program_keahlian') . '/' . $program->image}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title carousel_text">
                                     {{$program->judul}}
