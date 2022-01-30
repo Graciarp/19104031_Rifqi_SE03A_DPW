@@ -29,31 +29,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/keluar', function () {
-    Auth::logout();
-    return redirect('/');
-});
-
-Route::view('prestasi', 'prestasi');
-
 Route::get('/informasi/baca/{slug}', function ($slug) {
     // Ambil data berdasarkan slug
     $informasi = informasiModel::where('slug', $slug)->first();
-
+    
     // Tampilkan kedalam view baca artikel
     return view('informasiBaca')->with('informasi', $informasi);
 })->name('informasi.baca');
 
-Route::view('profil', 'profil');
-
-Route::view('informasi', 'informasi', ['informasi' => informasiModel::all()]);
-
-Auth::routes([
-    'register' => false, // Registration Routes...
-    'reset' => false, // Password Reset Routes...
-    'verify' => false, // Email Verification Routes...
-]);
-
+Route::get('/keluar', function () {Auth::logout();return redirect('/');});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route hanya bisa diakses ketika sudah login
@@ -94,6 +78,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('ekstrakurikuler/update/{id}', [EkstrakurikulerController::class, 'update']);
 });
 
+Route::view('prestasi', 'prestasi');
+Route::view('profil', 'profil');
+
 Route::view('/jurusan/DPIB', 'jurusan.DPIB');
 Route::view('/jurusan/Multimedia', 'jurusan.Multimedia');
 Route::view('/jurusan/RPL', 'jurusan.RPL');
@@ -105,3 +92,11 @@ Route::view('/jurusan/TKRO', 'jurusan.TKRO');
 Route::view('/guru/kepsek', 'guru.kepsek');
 Route::view('/guru/karyawan', 'guru.karyawan');
 Route::view('/guru/guruMapel', 'guru.guruMapel');
+
+Route::view('informasi', 'informasi', ['informasi' => informasiModel::all()]);
+
+Auth::routes([
+    'register' => false, // Registration Routes...
+    'reset' => false, // Password Reset Routes...
+    'verify' => false, // Email Verification Routes...
+]);

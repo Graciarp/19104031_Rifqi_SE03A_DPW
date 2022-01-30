@@ -1,0 +1,62 @@
+<div class="container-fluid p-5" style="background-color: #630000; color:#FFF">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4 text-center">
+                <img src="{{url('/')}}/new_design/bahan/Logo.png" width="50%">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <h5 class="text-center">Kontak</h5>
+                <ul style="font-size: 14px; list-style: none;">
+                    <li>
+                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Email : admin@smkn1bukateja.sch.id</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Telp/Fax. (0286)476110</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
+                <h5 class="text-center">Menu</h5>
+                <ul style="font-size: 14px; list-style: none;">
+                    <li>
+                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Program Keahlian</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Ekstrakurikuler</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Informasi</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <h5 class="text-center">Peta Sekolah</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.348088010624!2d109.42078471500977!3d-7.426676494641882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e65572a528cddab%3A0x578f1a3d93c545f6!2sSMK%20Negeri%201%20Bukateja!5e0!3m2!1sen!2sid!4v1643293554375!5m2!1sen!2sid"
+                    width="100%" style="border-radius:5px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BACK TO TOP -->
+<img src="{{url('/')}}/new_design/bahan/top.png" class="backtotop">
+<!-- BACK TO TOP -->
+
+<!-- Back to top JS -->
+<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+            $('.backtotop').fadeIn();
+        } else {
+            $('.backtotop').fadeOut();
+        }
+    });
+
+    $(".backtotop").click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 500);
+    });
+</script>
+<!-- Back to top JS -->
+
