@@ -1,117 +1,119 @@
 @php
     use App\Models\prestasi;
+
+    $prestasiTerbaru = prestasi::orderBy('created_at', 'desc')->first();
+    $prestasi = prestasi::all();
 @endphp
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prestasi Sekolah</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css-external/homepage-style.css">
-    <link rel="stylesheet" href="css-external/profile-style.css">
-    <link rel="stylesheet" href="css-external/prestasi-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <script src="js/bootstrap.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <style>
-        a {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {{-- Import All Css --}}
+    @include('layouts.css')
+
+    {{-- Import All Js --}}
+    @include('layouts.js')
+
+    <!-- title -->
+    <title> Prestasi SMK Negeri 1 Bukateja </title>
 </head>
 
-<body>
+<body style="font-family: Poppins;">
+
     <!-- NAVBAR -->
-    @include('navbar')
-
-    <!-- PRESTASI -->
-    <div class="container-fluid prestasi">
-        <div class="title-prestasi">
-            <h1 class="item-title-prestasi">Prestasi</h1>
-        </div>
-        <div class="desc-prestasi">
-            <p>Berikut ini adalah berbagai prestasi yang diraih oleh SMK Negeri 1 Bukateja</p>
-        </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-danger">
+            <div class="container-fluid justify-content-end px-5">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav" style="font-size: 14px;">
+                        @include('layouts.navbar_content')
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-    @php
-        $prestasiTerbaru = prestasi::orderBy('created_at', 'desc')->first();
-    @endphp
-    <div class="container-fluid prestasi-pertama">
-        <img src="{{url('img/prestasi' . '/' . $prestasiTerbaru->gambar)}}" class="img-fluid mx-auto d-block" width="650" alt="Prestasi">
-        <p class="text-center">
-            {{$prestasiTerbaru->judul}}
-        </p>
-    </div>
+    <!-- NAVBAR -->
 
-    <!-- GALERI PRESTASI -->
-    <section class="gallery min-vh-100">
-        <div class="container-lg">
-            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
-                @foreach (prestasi::all() as $p)
-                    <div class="col text-center text-white">
-                        <img src="{{url('img/prestasi' . '/' . $p->gambar)}}" class="gallery-item" alt="Prestasi">
-                        <p class="t-prestasi">
-                            {{$p->judul}}
-                        </p>
-                        <p>
-                            <small>
-                                {{$p->isi}}
-                            </small>
-                        </p>
+    <!-- COLUMN 1 -->
+    <div class="container-fluid p-3 pb-5">
+        <br/><br/>
+        <div class="container" style="background-color: #F6FAFD; border-radius: 20px; margin-top: 0.75em; box-shadow: 4px 4px 4px rgba(0, 0, 1.2, 0.5);">
+            <!-- CAROUSEL -->
+            <div class="container p-5">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @php
+                            $nourut = 1
+                        @endphp
+                        @foreach ($prestasi as $p)
+                        <div class="carousel-item @if($nourut == 1) active @endif">
+                            <img src="{{url('img/prestasi' . '/' . $p->gambar)}}" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3 style="font-weight: bold;">
+                                    {{$p->judul}}
+                                </h3>
+                                <p>
+                                    {{$p->isi}}
+                                </p>
+                            </div>
+                        </div>
+
+                        @php
+                            $nourut++
+                        @endphp
+                        @endforeach
+
                     </div>
-                @endforeach
-                {{-- <div class="col">
-                    <img src="img/prestasi/prestasi.jpeg" class="gallery-item" alt="Prestasi">
-                    <p class="t-prestasi">Juara 1 Artikel Provinsi Jawa Tengah</p>
                 </div>
-                <div class="col">
-                    <img src="img/prestasi/prestasi.jpeg" class="gallery-item" alt="Prestasi">
-                    <p class="t-prestasi">Juara 1 Artikel Provinsi Jawa Tengah</p>
-                </div>
-                <div class="col">
-                    <img src="img/prestasi/prestasi.jpeg" class="gallery-item" alt="Prestasi">
-                    <p class="t-prestasi">Juara 1 Artikel Provinsi Jawa Tengah</p>
-                </div>
-                <div class="col">
-                    <img src="img/prestasi/prestasi.jpeg" class="gallery-item" alt="Prestasi">
-                    <p class="t-prestasi">Juara 1 Artikel Provinsi Jawa Tengah</p>
-                </div>
-                <div class="col">
-                    <img src="img/prestasi/prestasi.jpeg" class="gallery-item" alt="Prestasi">
-                    <p class="t-prestasi">Juara 1 Artikel Provinsi Jawa Tengah</p>
-                </div> --}}
             </div>
-        </div>
-    </section>
+            <!-- CAROUSEL -->
 
-    <!-- MODAL -->
-    <div class="modal fade" id="gallery-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- PRESTASI -->
+            <div class="container-fluid p-0 pt-4">
+                <div class="rec-pk">Prestasi SMK Negeri 1 Bukateja</div>
+                <div class="container pt-5">
+                    <div class="scroll">
+                        <div class="row px-5 justify-content-center d-flex">
+
+                            @foreach ($prestasi as $p)
+                            <div class="col-lg-4 col-md-6 px-3 pt-2 pb-3">
+                                <div class="card h-100">
+                                    <img src="{{url('img/prestasi' . '/' . $p->gambar)}}" class="card-img-top" alt="...">
+                                    <a href="#" class="link">
+                                        <div class="card-body">
+                                            <h5 class="card-title carousel_text">
+                                                {{$p->judul}}
+                                            </h5>
+                                            <p class="card-text carousel_text" style="text-align: justify;">
+                                                {{$p->isi}}
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            @endforeach
+                            
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <img src="img/prestasi/prestasi.jpeg" class="modal-img" alt="modal-img">
-                </div>
+
+                <br><br>
             </div>
         </div>
     </div>
-    </div>
+    <!-- PRESTASI -->
+    <!-- COLUMN 1 -->
 
-
-    <!-- FOOTER -->
-    @include('footer')
-
-    <script src="js/main.js"></script>
+    @include('layouts.base_footer')
 </body>
+
+</html>
 
 </html>
