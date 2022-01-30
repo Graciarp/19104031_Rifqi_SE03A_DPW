@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 29, 2022 at 04:40 PM
+-- Generation Time: Jan 30, 2022 at 02:33 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -45,6 +45,31 @@ INSERT INTO `beranda` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (3, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 12:57:12', '2022-01-20 09:43:14'),
 (4, 'misi', '<ul style=\"text-align: justify;\"> <li> Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif berorientasi pada kompetensi pendidikan nasional. </li> <li> Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia kerja. </li> <li> Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan berwawasan lingkungan sekolah. </li> </ul>', '2022-01-20 12:57:58', '2022-01-20 09:43:42'),
 (5, 'banner_beranda', '10.jpg', '2022-01-20 15:17:11', '2022-01-21 03:27:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ekstrakurikulers`
+--
+
+CREATE TABLE `ekstrakurikulers` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `judul` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deskripsi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `ekstrakurikulers`
+--
+
+INSERT INTO `ekstrakurikulers` (`id`, `judul`, `image`, `deskripsi`, `created_at`, `updated_at`) VALUES
+(1, 'OSIS', 'Yq9vOquF7dyYqlTbSwtuAht1i5oIE6MaeIuCqSTN.jpeg', 'OSIS adalah sekelompok siswa yang tergabung dalam OSIS yang memiliki tugas sebagai pelaksana dalam suatu kegiatan sekolah dan pendukung berbagai kegiatan siswa di sekolah.', '2022-01-29 18:12:05', '2022-01-29 18:12:05'),
+(2, 'Pramuka', 'ENGZIJvEF3cX6yFVy62uK2xCEMjCXPlqsMqTDHfs.jpg', 'suatu kegiatan kepramukaan yang dilaksanakan diluar jam pembelajaran di sekolah dan di luar lingkungan keluarga yang bertujuan mewadahi bakat, minat, dan potensi anak untuk dikembangkan secara terus-menerus.', '2022-01-29 18:15:02', '2022-01-29 18:32:52'),
+(3, 'Teater', 'n10wWzJhttZHPTfjYTqyep5ISxRc4z8I6mYu7Rbs.png', 'merupakan salah satu salah satu seni bermain peran (drama) yang menyajikan cerita kehidupan nyata di atas pentas.', '2022-01-29 18:17:04', '2022-01-29 18:17:04'),
+(4, 'Seni Tari', 'Xq5fVqQaZyQZ9C4ctNhndSI7MRhqeVPveqrzwgTy.jpg', 'wadah bagi siswi yang memiliki kemampuan dalam menari. Sehingga mereka bisa mengembangkan dan mengekspresikan diri mereka melalui seni tari.', '2022-01-29 18:18:07', '2022-01-29 18:18:07');
 
 -- --------------------------------------------------------
 
@@ -151,7 +176,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2021_12_23_085402_informasi', 2),
 (6, '2021_12_31_063010_create_prestasis_table', 3),
 (7, '2022_01_19_055816_create_gurudankaryawans_table', 4),
-(8, '2022_01_29_143126_create_program_keahlians_table', 5);
+(8, '2022_01_29_143126_create_program_keahlians_table', 5),
+(9, '2022_01_30_010839_create_ekstrakurikulers_table', 6);
 
 -- --------------------------------------------------------
 
@@ -316,6 +342,12 @@ ALTER TABLE `beranda`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `ekstrakurikulers`
+--
+ALTER TABLE `ekstrakurikulers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -396,6 +428,12 @@ ALTER TABLE `beranda`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `ekstrakurikulers`
+--
+ALTER TABLE `ekstrakurikulers`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -417,7 +455,7 @@ ALTER TABLE `informasi`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
