@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2022 at 11:13 AM
+-- Generation Time: Jan 30, 2022 at 02:25 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -280,7 +280,10 @@ CREATE TABLE `program_keahlians` (
 INSERT INTO `program_keahlians` (`id`, `judul`, `image`, `deskripsi`, `created_at`, `updated_at`) VALUES
 (1, 'Multimedia', 'EevLphsviphwkD0GN3XCBVtqBGDy4DvZyjJxWOzj.jpeg', 'Jurusan multimedia kami belajar bagaimana cara membuat animasi, film, fotografi yang baik dan benar', '2022-01-29 08:02:02', '2022-01-29 08:02:02'),
 (2, 'Tata Busana', '2gGgAh6lrZiOrNjgNOEb4otOT2a73SRpRfcCkVz0.jpeg', 'Pada jurusan tata busana ini kami mempelajari mengenai bagaimana cara pembuatan busana yang benar, dan kami mempelajari banyak hal lainnya mengenai busana', '2022-01-29 08:06:04', '2022-01-29 08:38:50'),
-(3, 'Teknik Kendaraan Ringan Otomotif', 'ioPcf7xkUZHD5dnE9l4Bn6d4vy08BPL0Yyq6aUqu.jpeg', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer', '2022-01-29 08:10:14', '2022-01-29 08:10:14');
+(3, 'Teknik Kendaraan Ringan Otomotif', 'ioPcf7xkUZHD5dnE9l4Bn6d4vy08BPL0Yyq6aUqu.jpeg', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer', '2022-01-29 08:10:14', '2022-01-29 08:10:14'),
+(4, 'Desain Permodelan dan Informasi Bangunan', 'Yo6S5IaCQOUx0Njms3OQTxI3SiqYFY6sjayhstde.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2022-01-30 06:19:26', '2022-01-30 06:19:26'),
+(5, 'Teknik Komputer dan Jaringan', 'I14fpQlYeBwFtdbhvEdMg4J68mifs2OR3puomOV1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2022-01-30 06:22:51', '2022-01-30 06:22:51'),
+(6, 'Rekayasa Perangkat Lunak', 'kHSvXoO6JBIg0KVqIw5Yw95Fns0JpyYIvHuEGieE.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2022-01-30 06:23:50', '2022-01-30 06:23:50');
 
 -- --------------------------------------------------------
 
@@ -481,7 +484,7 @@ ALTER TABLE `profilsekolah`
 -- AUTO_INCREMENT for table `program_keahlians`
 --
 ALTER TABLE `program_keahlians`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `testimonis`
