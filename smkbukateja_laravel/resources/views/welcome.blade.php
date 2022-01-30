@@ -7,6 +7,7 @@
     use App\Models\testimoni as testiModel;
     use App\Models\gurudankaryawan;
     use App\Models\programKeahlian;
+    use App\Models\ekstrakurikuler;
 
     // memanggil data dari model
     $namaSekolah=berandaModel::where('key', 'nama_sekolah')->first();
@@ -24,6 +25,8 @@
     $karyawan = gurudankaryawan::where('jabatan', 'karyawan') -> get();
 
     $programKeahlian = programKeahlian::all();
+    $ekstrakurikuler = ekstrakurikuler::all();
+    $ekstrakurikulerFirst = ekstrakurikuler::first();
 @endphp
 
     <!-- CAROUSEL -->
@@ -41,7 +44,7 @@
                             {{$slogan->value}}
                         </p>
                         <br/>
-                        <button type="button" class="btn btn-danger">Selengkapnya</button>
+                        <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
                     </font>
                 </div>
             </div>
@@ -57,7 +60,7 @@
                             {{$slogan->value}}
                         </p>
                         <br/>
-                        <button type="button" class="btn btn-danger">Selengkapnya</button>
+                        <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
                     </font>
                 </div>
             </div>
@@ -73,7 +76,7 @@
                             {{$slogan->value}}
                         </p>
                         <br/>
-                        <button type="button" class="btn btn-danger">Selengkapnya</button>
+                        <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
                     </font>
                 </div>
             </div>
@@ -115,7 +118,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100">
                         <img src="{{url('img/program_keahlian') . '/' . $program->image}}" class="card-img-top" alt="...">
-                        <a href="#" class="link">
+                        <a class="link">
                             <div class="card-body">
                                 <h5 class="card-title carousel_text">
                                     {{$program->judul}}
@@ -142,31 +145,24 @@
         <div class="container p-5">
             <div class="row">
                 <div class="img-card col-6-a">
-                    <img class="img-fluid" src="{{url('/')}}/new_design/bahan/mm-1.JPG" style="border-radius: 3px;">
+                    <img id="ekstraImage" class="img-fluid" src="{{url('/img/ekstrakurikuler' .'/' . $ekstrakurikulerFirst->image )}}" style="border-radius: 3px;">
                 </div>
                 <div class="col-6-a">
                     <div class="row" style="background-color: #A80000; border-radius: 5px;">
                         <ul class="nav justify-content-center">
+                            @foreach($ekstrakurikuler as $e)
                             <li class="nav-item">
-                                <a class="nav-link link-eskul" onclick="extraOsis()">OSIS</a>
+                                <a class="nav-link link-eskul" onclick="extra{{str_replace(' ', '_', $e->judul)}}()">
+                                    {{$e->judul}}
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-eskul" onclick="extraPramuka()">Pramuka</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-eskul" onclick="extraTeater()">Teater</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-eskul" onclick="extraSeniTari()">Seni Tari</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-eskul" onclick="extraLainnya()">Lainnya</a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="row ">
                         <div class="col p-3 " style="border-color: #630000; border-width: 2px; border-radius: 5px; ">
-                            <p id="ekstraText" style="text-align: justify; ">OSIS adalah sekelompok siswa yang tergabung dalam OSIS yang memiliki tugas sebagai pelaksana dalam suatu kegiatan sekolah dan pendukung berbagai kegiatan siswa di sekolah.
+                            <p id="ekstraText" style="text-align: justify; ">
+                                {{$ekstrakurikulerFirst->deskripsi}}
                             </p>
                         </div>
                     </div>
@@ -231,29 +227,12 @@
     <!-- KATA ALUMNI -->
 
     <script>
-        function extraOsis() {
-            var ekstraDescription = "OSIS adalah sekelompok siswa yang tergabung dalam OSIS yang memiliki tugas sebagai pelaksana dalam suatu kegiatan sekolah dan pendukung berbagai kegiatan siswa di sekolah.";
+        @foreach($ekstrakurikuler as $e)
+        function extra{{str_replace(' ', '_', $e->judul)}}() {
+            var ekstraDescription = "{{$e->deskripsi}}";
             $("#ekstraText").text(ekstraDescription)
+            $('#ekstraImage').attr('src', '{{url('img/ekstrakurikuler' . '/' . $e->image)}}');
         }
-
-        function extraPramuka() {
-            var ekstraDescription = "suatu kegiatan kepramukaan yang dilaksanakan diluar jam pembelajaran di sekolah dan di luar lingkungan keluarga yang bertujuan mewadahi bakat, minat, dan potensi anak untuk dikembangkan secara terus-menerus."
-            $("#ekstraText").text(ekstraDescription)
-        }
-
-        function extraTeater() {
-            var ekstraDescription = "merupakan salah satu salah satu seni bermain peran (drama) yang menyajikan cerita kehidupan nyata di atas pentas."
-            $("#ekstraText").text(ekstraDescription)
-        }
-
-        function extraSeniTari() {
-            var ekstraDescription = "wadah bagi siswi yang memiliki kemampuan dalam menari. Sehingga mereka bisa mengembangkan dan mengekspresikan diri mereka melalui seni tari."
-            $("#ekstraText").text(ekstraDescription)
-        }
-
-        function extraLainnya() {
-            var ekstraDescription = "Kami memiliki beberapa ekstrakurikuler lainnya"
-            $("#ekstraText").text(ekstraDescription)
-        }
+        @endforeach
     </script>
 @endsection

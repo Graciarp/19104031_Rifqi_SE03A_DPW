@@ -9,7 +9,8 @@ use App\Http\Controllers\{
     profilsekolah, 
     beranda, 
     testimoni,
-    programKeahlian
+    programKeahlian,
+    EkstrakurikulerController
 };
 use App\Models\informasiModel;
 
@@ -86,6 +87,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('programKeahlian/json/{id}', [programKeahlian::class, 'json']);
     Route::post('programKeahlian/save', [programKeahlian::class, 'save']);
     Route::post('programKeahlian/update/{id}', [programKeahlian::class, 'update']);
+
+    Route::get('ekstrakurikuler/json/{id}', [EkstrakurikulerController::class, 'json']);
+    Route::post('ekstrakurikuler/save', [EkstrakurikulerController::class, 'save']);
+    Route::post('ekstrakurikuler/update/{id}', [EkstrakurikulerController::class, 'update']);
 });
 
 Route::view('/jurusan/DPIB', 'jurusan.DPIB');

@@ -96,11 +96,71 @@
             </tbody>
         </table>
     </div>
+
+    <br>
+
+    <div class="well" id="ekstrakurikulerToggler" style="cursor: pointer; margin-bottom: 0px">
+        <h3 class="pull-left">Ekstrakurikuler</h3>
+
+        <button class="btn btn-success pull-right" data-toggle="modal" data-target="#addEkstrakurikuler">
+            Tambah
+        </button>
+    </div>
+
+    <div class="well" id="ekstrakurikulerSection">
+        <table class="table">
+            <tr>
+                <td>
+                    #
+                </td>
+                <td>
+                    Judul
+                </td>
+                <td>
+                    Gambar
+                </td>
+                <td>
+                    Deskripsi
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tbody>
+                @php
+                    $nomor = 1
+                @endphp
+                @foreach ($ekstrakurikuler as $item)
+                    <tr>
+                        <td>
+                            {{$nomor++}}
+                        </td>
+                        <td>
+                            {{$item->judul}}
+                        </td>
+                        <td>
+                            <img src="{{url('img/ekstrakurikuler') . '/' . $item->image}}" width="150px" alt="" sizes="" srcset="">
+                        </td>
+                        <td>
+                            {{Str::limit($item->deskripsi, 80)}}..
+                        </td>
+                        <td>
+                            <button onclick="editEkstra('{{$item->id}}')" class="btn btn-warning">Edit</button>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+
 </div>
 
 @include('admin.beranda.modal')
 
 <script>
+    $('#programKeahlianSection, #ekstrakurikulerSection').hide();
+
     $('#berandaToggler').click(function (e) { 
         e.preventDefault();
         $('#berandaSection').slideToggle();
@@ -109,6 +169,11 @@
     $('#programKeahlianToggler').click(function (e) { 
         e.preventDefault();
         $('#programKeahlianSection').slideToggle();
+    });
+
+    $('#ekstrakurikulerToggler').click(function (e) { 
+        e.preventDefault();
+        $('#ekstrakurikulerSection').slideToggle();
     });
 
     function editProgramKeahlian(id) {
@@ -124,6 +189,21 @@
                 $('#editProgramKeahlian').modal('show')
 
                 
+            }
+        });
+    }
+
+    function editEkstra(id) {
+        $.ajax({
+            url: "{{url('ekstrakurikuler/json')}}/" + id,
+            success: function (response) {
+                var data = response.data
+
+                $('#editEkstrakurikuler input#judul').val(data.judul)
+                $('#editEkstrakurikuler #deskripsi').val(data.deskripsi)
+                $('#editEkstrakurikuler form').attr('action', "{{url('ekstrakurikuler/update')}}/" + id)
+
+                $("#editEkstrakurikuler").modal('show')
             }
         });
     }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\beranda as berandaModel;
 use App\Models\programKeahlian as programKeahlianModel;
+use App\Models\ekstrakurikuler;
 
 class beranda extends Controller
 {
@@ -14,7 +15,9 @@ class beranda extends Controller
         // Memanggil file index
         return view('admin.beranda.index')
             ->with('beranda', berandaModel::all())
-            ->with('programKeahlian', programKeahlianModel::all());
+            ->with('programKeahlian', programKeahlianModel::all())
+            ->with('ekstrakurikuler', ekstrakurikuler::all());
+            ;
             ;
     }
 
