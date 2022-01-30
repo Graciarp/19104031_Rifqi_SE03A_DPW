@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\beranda as berandaModel;
 use App\Models\programKeahlian as programKeahlianModel;
 use App\Models\ekstrakurikuler;
+use Illuminate\Support\Str;
 
 class beranda extends Controller
 {
@@ -35,12 +36,22 @@ class beranda extends Controller
         if (
             $data->key == 'banner_beranda' and request() -> hasFile('value')
         ) {
+            $beranda = $data->value;
+            $beranda_array = [];
+            
             $path_upload = public_path('img');
             $file = request()->file('value');
-            $filename = time() . '_' . $file->getClientOriginalName();
+            $filename = Str::random() . '_' . $file->getClientOriginalName();
             $file->move($path_upload, $filename);
 
-            $data->value = $filename;
+            if (empty($beranda)) {
+                array_push($beranda_array, $filename);
+            } else {
+                $beranda_array = json_decode($beranda, true);
+                array_push($beranda_array, $filename);
+            }
+
+            $data->value = json_encode($beranda_array);
         }
 
         if ($data->key != 'banner_beranda') {
@@ -48,6 +59,21 @@ class beranda extends Controller
         }
 
         $data->save();
+        return redirect()->back() -> with('success', 'Data berhasil diubah');
+    }
+
+    public function hapus_gb_beranda($index)
+    {
+        $data = berandaModel::where('key', 'banner_beranda') -> first();
+        $gambar = json_decode($data->value, true);
+        $urutan = $index - 1;
+
+        unset($gambar[$urutan]);
+        $gambar = array_values($gambar);
+
+        $data->value = json_encode($gambar);
+        $data->save();
+
         return redirect()->back() -> with('success', 'Data berhasil diubah');
     }
 }

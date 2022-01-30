@@ -78,6 +78,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('beranda/index', [beranda::class, 'index']);
     Route::get('beranda/editBeranda/{id}', [beranda::class, 'edit']);
+    Route::get('beranda/hapus_gb_beranda/{index}', [beranda::class, 'hapus_gb_beranda']);
     Route::post('beranda/update/{id}', [beranda::class, 'update']);
 
     Route::get('testimoni/index', [testimoni::class, 'index']);

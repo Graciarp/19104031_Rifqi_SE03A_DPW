@@ -32,54 +32,31 @@
     <!-- CAROUSEL -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{url('/')}}/new_design/bahan/carousel-1.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                    <font style="font-family: Poppins;">
-                        <h4>Selamat Datang di</h4>
-                        <h1 style="font-weight: bold;">
-                            {{$namaSekolah->value}}
-                        </h1>
-                        <p>
-                            {{$slogan->value}}
-                        </p>
-                        <br/>
-                        <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
-                    </font>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{url('/')}}/new_design/bahan/carousel-2.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                    <font style="font-family: Poppins;">
-                        <h4>Selamat Datang di</h4>
-                        <h1 style="font-weight: bold;">
-                            {{$namaSekolah->value}}
-                        </h1>
-                        <p>
-                            {{$slogan->value}}
-                        </p>
-                        <br/>
-                        <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
-                    </font>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{url('/')}}/new_design/bahan/carousel-3.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                    <font style="font-family: Poppins;">
-                        <h4>Selamat Datang di</h4>
-                        <h1 style="font-weight: bold;">
-                            {{$namaSekolah->value}}
-                        </h1>
-                        <p>
-                            {{$slogan->value}}
-                        </p>
-                        <br/>
-                        <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
-                    </font>
-                </div>
-            </div>
+            @php
+                $urutan_slide = 1;
+            @endphp
+            @foreach (json_decode($banner_beranda->value, true) as $item)
+                <div class="carousel-item @if($urutan_slide == 1) active @endif">
+                    <img src="{{url('/img' . '/' . $item)}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <font style="font-family: Poppins;">
+                            <h4>Selamat Datang di</h4>
+                            <h1 style="font-weight: bold;">
+                                {{$namaSekolah->value}}
+                            </h1>
+                            <p>
+                                {{$slogan->value}}
+                            </p>
+                            <br/>
+                            <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
+                        </font>
+                    </div>
+                </div>    
+
+                @php
+                    $urutan_slide++;
+                @endphp
+            @endforeach
         </div>
     </div>
     <!-- CAROUSEL -->

@@ -19,9 +19,27 @@
 
                         @if ($beranda->key == 'banner_beranda')
                             <p>
-                                Gambar saat ini :
+                                Gambar saat ini (tekan gambar untuk menghapusnya) :
                             </p>
-                            <img src="{{url('img' . '/' . $beranda->value)}}" width="100%" alt="" srcset="">
+
+                            @php
+                                $gambar = json_decode($beranda->value, true);
+                            @endphp
+
+                            <div style="width: 100%; overflow-x: auto">
+                                @php
+                                    $urutan = 1
+                                @endphp
+                                @foreach ($gambar as $g)
+                                    <a href="{{url('beranda/hapus_gb_beranda' . '/' . $urutan)}}" onclick="if(!confirm('Yakin ingin menghapus gambar ke {{$urutan}}')){return false}">
+                                        <img src="{{url('img' . '/' . $g)}}" width="300px" alt="" srcset="">
+                                    </a>
+                            
+                                    @php
+                                        $urutan++
+                                    @endphp
+                                @endforeach
+                            </div>
 
                             <br><br>
 
