@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2022 at 07:01 AM
+-- Generation Time: Jan 30, 2022 at 11:13 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -254,7 +254,9 @@ INSERT INTO `profilsekolah` (`id`, `key`, `value`, `created_at`, `updated_at`) V
 (2, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 07:23:33', '2022-01-20 07:23:33'),
 (3, 'misi', '<ul style=\"text-align: justify;\">\r\n                    <li>\r\n                        Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif\r\n                        berorientasi pada kompetensi pendidikan nasional.\r\n                    </li>\r\n                    <li>\r\n                        Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia\r\n                        kerja.\r\n                    </li>\r\n                    <li>\r\n                        Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan\r\n                        berwawasan lingkungan sekolah.\r\n                    </li>\r\n                </ul>', '2022-01-20 07:24:16', '2022-01-20 07:24:16'),
 (4, 'struktur_organisasi', '1642766024_struktur-organisasi.png', '2022-01-20 07:24:47', '2022-01-21 04:53:44'),
-(5, 'peta_sekolah', '<iframe\r\n            src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15825.39092970486!2d109.42302!3d-7.426716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x578f1a3d93c545f6!2sSMK%20Negeri%201%20Bukateja!5e0!3m2!1sid!2sid!4v1637673631032!5m2!1sid!2sid\"\r\n            width=\"100%\" height=\"500px\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>', '2022-01-20 07:25:12', '2022-01-20 07:25:12');
+(5, 'peta_sekolah', '<iframe class=\"img-fluid \" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.348088010624!2d109.42078471500977!3d-7.426676494641882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e65572a528cddab%3A0x578f1a3d93c545f6!2sSMK%20Negeri%201%20Bukateja!5e0!3m2!1sid!2sid!4v1643474230804!5m2!1sid!2sid \"\r\n                                width=\"600 \" height=\"450 \" style=\"border-radius:5px; \" allowfullscreen=\" \" loading=\"lazy \"></iframe>', '2022-01-20 07:25:12', '2022-01-30 02:51:24'),
+(7, 'profil_sekolah', 'Selamat datang di website resmi SMK Negeri 1 Bukateja. SMK Negeri 1 Bukateja merupakan salah satu Sekolah Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah. SMK ini merupakan SMK rujukan yang menawakan 7 program kompetensi keahlian.', '2022-01-30 09:48:28', '2022-01-30 02:48:56'),
+(8, 'makna_logo', 'Makna Logo SMK Negeri 1 Bukateja adalah \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2022-01-30 09:49:57', '2022-01-30 09:49:57');
 
 -- --------------------------------------------------------
 
@@ -473,7 +475,7 @@ ALTER TABLE `prestasis`
 -- AUTO_INCREMENT for table `profilsekolah`
 --
 ALTER TABLE `profilsekolah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `program_keahlians`
