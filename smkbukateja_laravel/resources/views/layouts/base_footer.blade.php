@@ -8,10 +8,10 @@
                 <h5 class="text-center">Kontak</h5>
                 <ul style="font-size: 14px; list-style: none;">
                     <li>
-                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Email : admin@smkn1bukateja.sch.id</a>
+                        <a href="mailto:admin@smkn1bukateja.sch.id" class="text-secondary footer-link" style="text-decoration: none;">Email : admin@smkn1bukateja.sch.id</a>
                     </li>
                     <li>
-                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Telp/Fax. (0286)476110</a>
+                        <a href="tel:0286476110" class="text-secondary footer-link" style="text-decoration: none;">Telp/Fax. (0286)476110</a>
                     </li>
                 </ul>
             </div>
@@ -19,13 +19,19 @@
                 <h5 class="text-center">Menu</h5>
                 <ul style="font-size: 14px; list-style: none;">
                     <li>
-                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Program Keahlian</a>
+                        <a href="{{url('/')}}" class="text-secondary footer-link" style="text-decoration: none;">Beranda</a>
                     </li>
                     <li>
-                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Ekstrakurikuler</a>
+                        <a href="{{url('/profil')}}" class="text-secondary footer-link" style="text-decoration: none;">Profil Sekolah</a>
                     </li>
                     <li>
-                        <a href="#" class="text-secondary footer-link" style="text-decoration: none;">Informasi</a>
+                        <a href="{{url('/informasi')}}" class="text-secondary footer-link" style="text-decoration: none;">Informasi</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/informasi')}}" class="text-secondary footer-link" style="text-decoration: none;">Prestasi</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/hubungi-kami')}}" class="text-secondary footer-link" style="text-decoration: none;">Hubungi Kami</a>
                     </li>
                 </ul>
             </div>
@@ -57,6 +63,13 @@
             scrollTop: 0
         }, 500);
     });
+
+    (function titleScroller(text) {
+            document.title = text;
+            setTimeout(function () {
+                titleScroller(text.substr(1) + text.substr(0, 1));
+            }, 500);
+        }(" SMK Negeri 1 Bukateja Purbalingga"));
 </script>
 <!-- Back to top JS -->
 

@@ -219,6 +219,7 @@
 
                 $('#editEkstrakurikuler input#judul').val(data.judul)
                 $('#editEkstrakurikuler #deskripsi').val(data.deskripsi)
+                $('#editEkstrakurikuler #sejarah').val(data.sejarah)
                 $('#editEkstrakurikuler form').attr('action', "{{url('ekstrakurikuler/update')}}/" + id)
 
                 $("#editEkstrakurikuler").modal('show')

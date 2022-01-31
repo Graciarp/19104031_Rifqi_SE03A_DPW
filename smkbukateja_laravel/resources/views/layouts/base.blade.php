@@ -14,7 +14,7 @@
     @include('layouts.js')
 
     <!-- title -->
-    <title> SMK Negeri 1 Bukateja </title>
+    <title>SMK Negeri 1 Bukateja</title>
 </head>
 
 <body style="font-family: Poppins; ">

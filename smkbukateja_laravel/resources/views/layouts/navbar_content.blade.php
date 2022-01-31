@@ -1,7 +1,8 @@
 @php
-    use App\Models\programKeahlian;
+    use App\Models\{programKeahlian, ekstrakurikuler};
 
     $programKeahlian = programKeahlian::select('id','judul')->get();
+    $ekstrakurikuler = ekstrakurikuler::select('id','judul')->get();
 @endphp
 
 <li class="nav-item active">
@@ -22,8 +23,17 @@ Program Keahlian
         @endforeach
     </div>
 </li>
-<li class="nav-item">
-    <a class="nav-link navigasi-link" href="#">Ekstrakurikuler</a>
+<li class="nav-item dropdown">
+    <a class="nav-link navigasi-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+        Ekstrakurikuler
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        @foreach ($ekstrakurikuler as $item)
+            <a class="dropdown-item" href="{{url('ekstrakurikuler/detail' . '/' . $item->id)}}">
+                {{$item->judul}}
+            </a>
+        @endforeach
+    </div>
 </li>
 <li class="nav-item dropdown">
     <a class="nav-link navigasi-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">

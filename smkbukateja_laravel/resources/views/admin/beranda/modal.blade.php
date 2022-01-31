@@ -155,6 +155,11 @@
               </div>
 
               <div class="form-group">
+                <label for="sejarah">Sejarah Singkat:</label>
+                <textarea class="form-control" rows="7" id="sejarah" name="sejarah" required></textarea>
+              </div>
+
+              <div class="form-group">
                 <label for="gambar">Unggah Gambar :</label>
                 <input accept=".jpg, .jpeg, .png" type="file" name="gambar" required id="gambar">
               </div>
@@ -176,7 +181,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Tambah Ekstrakurikuler</h4>
+          <h4 class="modal-title">Edit Ekstrakurikuler</h4>
         </div>
         <div class="modal-body">
           <form action="{{url('/ekstrakurikuler/save')}}" enctype="multipart/form-data" method="post">
@@ -189,6 +194,11 @@
               <div class="form-group">
                 <label for="deskripsi">Deskripsi:</label>
                 <textarea class="form-control" rows="5" id="deskripsi" name="deskripsi" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="sejarah">Sejarah Singkat:</label>
+                <textarea class="form-control" rows="7" id="sejarah" name="sejarah" required></textarea>
               </div>
 
               <div class="form-group">

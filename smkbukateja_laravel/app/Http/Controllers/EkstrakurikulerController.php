@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\ekstrakurikuler;
+use App\Models\beranda as berandaModel;
 
 class EkstrakurikulerController extends Controller
 {
@@ -19,6 +20,7 @@ class EkstrakurikulerController extends Controller
         $data = new ekstrakurikuler;
         $data->judul = $request->judul;
         $data->deskripsi = $request->deskripsi;
+        $data->sejarah = $request->sejarah;
 
         // Jika file gambar diisi
         if ($request->hasFile('gambar')) {
@@ -50,6 +52,7 @@ class EkstrakurikulerController extends Controller
         $data = ekstrakurikuler::find($id);
         $data->judul = $request->judul;
         $data->deskripsi = $request->deskripsi;
+        $data->sejarah = $request->sejarah;
 
         // Jika file gambar diisi
         if ($request->hasFile('gambar')) {
@@ -76,5 +79,19 @@ class EkstrakurikulerController extends Controller
 
         $data->update();
         return redirect() -> back() -> with('success', 'Data berhasil disimpan');
+    }
+
+    public function detail($id)
+    {
+        $namaSekolah=berandaModel::where('key', 'nama_sekolah')->first();
+        $slogan=berandaModel::where('key', 'slogan')->first();
+        $banner_beranda=berandaModel::where('key', 'banner_beranda')->first();
+        return view('ekstrakurikuler')
+            ->with('ekstrakurikuler', ekstrakurikuler::find($id))
+            ->with('namaSekolah', $namaSekolah)
+            ->with('slogan', $slogan)
+            ->with('banner_beranda', $banner_beranda);
+            ;
+        ;
     }
 }

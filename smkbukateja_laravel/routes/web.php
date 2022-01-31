@@ -86,6 +86,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::view('prestasi', 'prestasi');
 Route::view('profil', 'profil');
+Route::view('hubungi-kami', 'hubungiKami');
 
 Route::view('/jurusan/DPIB', 'jurusan.DPIB');
 Route::view('/jurusan/Multimedia', 'jurusan.Multimedia');
@@ -101,6 +102,7 @@ Route::view('/guru/guruMapel', 'guru.guruMapel');
 
 Route::view('informasi', 'informasi', ['informasi' => informasiModel::all()]);
 Route::get('/program_keahlian/{id}', [App\Http\Controllers\programKeahlian::class, 'lihat_detail']);
+Route::get('/ekstrakurikuler/detail/{id}', [App\Http\Controllers\EkstrakurikulerController::class, 'detail']);
 
 Auth::routes([
     'register' => false, // Registration Routes...
