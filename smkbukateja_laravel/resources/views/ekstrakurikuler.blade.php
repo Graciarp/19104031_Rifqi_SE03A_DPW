@@ -98,7 +98,7 @@
             <!-- KEGIATAN -->
             <div class="container-fluid px-0">
                 <div class="container-fluid pt-5">
-                    <div class="rec-pk">Kegiatan Pramuka SKANSIKA</div>
+                    <div class="rec-pk">Kegiatan {{strtoupper($ekstrakurikuler->judul)}} SKANSIKA</div>
                 </div>
                 <div class="container">
                     <div class="row pt-4 px-5">

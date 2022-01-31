@@ -11,6 +11,7 @@ use App\Http\Controllers\{
     testimoni,
     programKeahlian,
     EkstrakurikulerController,
+    KegiatanEkstraController
 };
 use App\Models\informasiModel;
 
@@ -82,6 +83,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('ekstrakurikuler/json/{id}', [EkstrakurikulerController::class, 'json']);
     Route::post('ekstrakurikuler/save', [EkstrakurikulerController::class, 'save']);
     Route::post('ekstrakurikuler/update/{id}', [EkstrakurikulerController::class, 'update']);
+
+    Route::get('ekstrakurikuler/kegiatan/{id}', [KegiatanEkstraController::class, 'edit']);
+    Route::post('ekstrakurikuler/kegiatan/{id}', [KegiatanEkstraController::class, 'save']);
 });
 
 Route::view('prestasi', 'prestasi');

@@ -39,6 +39,7 @@ return array(
     'App\\Models\\ekstrakurikuler' => $baseDir . '/app/Models/ekstrakurikuler.php',
     'App\\Models\\gurudankaryawan' => $baseDir . '/app/Models/gurudankaryawan.php',
     'App\\Models\\informasiModel' => $baseDir . '/app/Models/informasiModel.php',
+    'App\\Models\\kegiatanEkstra' => $baseDir . '/app/Models/kegiatanEkstra.php',
     'App\\Models\\prestasi' => $baseDir . '/app/Models/prestasi.php',
     'App\\Models\\profilSekolah' => $baseDir . '/app/Models/profilSekolah.php',
     'App\\Models\\programKeahlian' => $baseDir . '/app/Models/programKeahlian.php',

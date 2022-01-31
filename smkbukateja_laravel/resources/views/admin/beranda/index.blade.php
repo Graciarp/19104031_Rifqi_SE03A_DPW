@@ -165,6 +165,9 @@
                         </td>
                         <td>
                             <button onclick="editEkstra('{{$item->id}}')" class="btn btn-warning">Edit</button>
+                            <a href="{{url('ekstrakurikuler/kegiatan' . '/' . $item->id)}}" class="btn btn-info" type="button">
+                                Edit Kegiatan Ekstra
+                            </a>
                         </td>
                     </tr>
                 @endforeach
