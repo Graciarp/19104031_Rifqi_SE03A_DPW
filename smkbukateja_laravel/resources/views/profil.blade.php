@@ -72,8 +72,8 @@
             <!-- INTRO -->
 
             <!-- MAKNA LOGO -->
-            <div class="container-fluid px-5 py-3">
-                <div class="row py-4">
+            <div class="container-fluid @if(Agent::isDesktop()) px-5 @endif py-3">
+                <div class="row  py-4">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <center>
                             <img class="img-fluid w-50" src="{{url('new_design/bahan/Rectangle 211.png')}}">
@@ -82,11 +82,11 @@
                         </center>
                     </div>
                 </div>
-                <div class="row rec-profile p-3 px-5">
+                <div class="row rec-profile p-3 @if(Agent::isDesktop()) px-5 @endif">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="container p-5">
                             <center>
-                                <img class="img-fluid w-25" src="{{url('new_design/bahan/Logo.png')}}">
+                                <img class="img-fluid @if(Agent::isDesktop()) w-25 @endif" src="{{url('new_design/bahan/Logo.png')}}">
                             </center>
                         </div>
                     </div>
@@ -102,8 +102,8 @@
             <!-- MAKNA LOGO-->
 
             <!-- SEJARAH -->
-            <div class="container-fluid px-5 py-3">
-                <div class="row rec-profile-2 p-3 px-5">
+            <div class="container-fluid @if(Agent::isDesktop()) px-5 @endif py-3">
+                <div class="row rec-profile-2 p-3 @if(Agent::isDesktop()) px-5 @endif">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="container p-3">
                             <center>
@@ -124,7 +124,7 @@
             <!-- SEJARAH -->
 
             <!-- VISI MISI -->
-            <div class="container-fluid px-5 py-5 ">
+            <div class="container-fluid @if(Agent::isDesktop()) px-5 @endif py-5 ">
                 <div class="row rec-profile-2 ">
                     <div class="col-lg-6 col-md-6 col-sm-12 p-3 " style="text-align: center; ">
                         <h1 style="font-weight: bold; ">VISI</h1>
@@ -146,7 +146,7 @@
             <!-- VISI MISI -->
 
             <!-- MAPS -->
-            <div class="container-fluid pt-2 pb-5 px-5 ">
+            <div class="container-fluid pt-2 pb-5 @if(Agent::isDesktop()) px-5 @endif">
                 <div class="row pb-4 ">
                     <div class="col-lg-12 col-md-12 col-sm-12 ">
                         <center>

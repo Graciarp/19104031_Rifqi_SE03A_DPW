@@ -73,7 +73,7 @@
             <div class="container p-3">
                 <div class="container row">
                     <div class="col-lg-12 col-md-12 col-sm-12 ">
-                        <div class="container py-4 px-5 ">
+                        <div class="container py-4 @if(Agent::isDesktop()) px-5 @endif">
                             <p style="text-align: justify; ">
                                 {{$data->deskripsi}}
                             </p>
@@ -88,7 +88,7 @@
             <div class="container p-3">
                 <div class="container row">
                     <div class="col-lg-12 col-md-12 col-sm-12 ">
-                        <div class="container py-4 px-5 ">
+                        <div class="container py-4 @if(Agent::isDesktop()) px-5 @endif">
                             <center>
                                 <img class="img-fluid" src="{{url('img/program_keahlian/materi') . '/' . $data->yang_dipelajari_img}}">
                             </center>

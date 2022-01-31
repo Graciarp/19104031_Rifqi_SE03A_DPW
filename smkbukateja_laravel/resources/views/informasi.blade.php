@@ -30,7 +30,7 @@
     @include('layouts.preloader')
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+    <nav @if(Agent::isMobile()) style="background-color: #630000;" @endif class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
         <div class="container-fluid justify-content-end px-5">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,6 +44,12 @@
     </nav>
     <!-- NAVBAR -->
 
+    @if(Agent::isMobile())
+        <div style="height: 47px">
+
+        </div>
+    @endif
+
     <!-- CAROUSEL -->
     <div id="carouselExampleSlidesOnly " class="carousel slide " data-bs-ride="carousel ">
         <div class="carousel-inner ">
@@ -53,6 +59,7 @@
             @foreach (json_decode($banner_beranda->value, true) as $item)
                 <div class="carousel-item @if($urutan_slide == 1) active @endif">
                     <img src="{{url('/img' . '/' . $item)}}" class="d-block w-100" alt="...">
+                    @if(Agent::isDesktop() or Agent::isTablet())
                     <div class="carousel-caption" id="carouselcaption">
                         <font style="font-family: Poppins;">
                             <h4>Selamat Datang di</h4>
@@ -66,6 +73,7 @@
                             <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
                         </font>
                     </div>
+                    @endif
                 </div>    
 
                 @php
@@ -112,19 +120,22 @@
 
     @include('layouts.base_footer')
 
-    <!-- Navbar JS -->
     <script>
-        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-        window.onscroll = function() {
-            scrollFunction()
-        };
-
         $('#carouselcaption').hide();
         $(document).ready(function () {
             setTimeout(() => {
                 $('#carouselcaption').slideDown(1000);
             }, 500);
         });
+    </script>
+
+    @if(Agent::isDesktop() or Agent::isTablet())
+    <!-- Navbar JS -->
+    <script>
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
         function scrollFunction() {
             if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
@@ -135,6 +146,8 @@
         }
     </script>
     <!-- Navbar JS -->
+    @endif
+
 </body>
 
 </html>

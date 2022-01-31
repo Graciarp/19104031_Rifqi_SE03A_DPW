@@ -29,6 +29,12 @@
     $ekstrakurikulerFirst = ekstrakurikuler::first();
 @endphp
 
+    @if(Agent::isMobile())
+        <div style="height: 47px">
+
+        </div>
+    @endif
+
     <!-- CAROUSEL -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -38,6 +44,8 @@
             @foreach (json_decode($banner_beranda->value, true) as $item)
                 <div class="carousel-item @if($urutan_slide == 1) active @endif">
                     <img src="{{url('/img' . '/' . $item)}}" class="d-block w-100" alt="...">
+
+                    @if(Agent::isDesktop() or Agent::isTablet())
                     <div class="carousel-caption" id="carouselcaption">
                         <font style="font-family: Poppins;">
                             <h4>Selamat Datang di</h4>
@@ -51,6 +59,7 @@
                             <a href="/profil" type="button" class="btn btn-danger">Selengkapnya</a>
                         </font>
                     </div>
+                    @endif
                 </div>    
 
                 @php

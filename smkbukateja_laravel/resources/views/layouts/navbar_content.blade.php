@@ -12,22 +12,30 @@
     <a class="nav-link navigasi-link" href="/profil">Profil Sekolah</a>
 </li>
 <li class="nav-item dropdown">
-    <a class="nav-link navigasi-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-Program Keahlian
-  </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    <a class="nav-link navigasi-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkKeahlian" role="button" data-toggle="dropdown" aria-expanded="false">
+        Program Keahlian
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkKeahlian">
         @foreach ($programKeahlian as $item)
+            @if(Agent::isDesktop() or Agent::isTablet())
             <a class="dropdown-item" href="{{url('/program_keahlian' . '/' . $item->id)}}">
                 {{$item->judul}}
             </a>
+            @else
+            <a class="dropdown-item" href="{{url('/program_keahlian' . '/' . $item->id)}}">
+                <small>
+                    {{Str::limit($item->judul, 30)}}
+                </small>
+            </a>
+            @endif
         @endforeach
     </div>
 </li>
 <li class="nav-item dropdown">
-    <a class="nav-link navigasi-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link navigasi-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkEkstra" role="button" data-toggle="dropdown" aria-expanded="false">
         Ekstrakurikuler
     </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkEkstra">
         @foreach ($ekstrakurikuler as $item)
             <a class="dropdown-item" href="{{url('ekstrakurikuler/detail' . '/' . $item->id)}}">
                 {{$item->judul}}

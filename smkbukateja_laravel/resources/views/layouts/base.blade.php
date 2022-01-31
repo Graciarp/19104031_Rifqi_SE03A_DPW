@@ -22,7 +22,7 @@
     @include('layouts.preloader')
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+    <nav @if(Agent::isMobile()) style="background-color: #630000;" @endif class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
         <div class="container-fluid justify-content-end px-5">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,8 +45,10 @@
     <!-- FOOTER -->
 
     <!-- Navbar JS -->
+    @if(Agent::isDesktop() or Agent::isTablet())
     <script>
-        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        // When the user scrolls down 80px from the top of the document, 
+        // resize the navbar's padding and the logo's font size
         window.onscroll = function() {
             scrollFunction()
         };
@@ -59,6 +61,7 @@
             }
         }
     </script>
+    @endif
 </body>
 
 </html>

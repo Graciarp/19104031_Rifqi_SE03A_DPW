@@ -64,7 +64,7 @@
                     <img class="img-fluid-pk" src="{{url('/img/artikel' . '/' . $informasi->gambar)}}" style="border-radius: 5px;">
                 </center>
             </div>
-            <div class="container px-5">
+            <div class="container @if(Agent::isDesktop()) px-5 @endif">
                 <div class="container py-4 px-5 ">
                     <p style="text-align: justify; ">
                         {{$informasi->isi}}
@@ -77,7 +77,7 @@
             <div class="container-fluid p-0">
                 <div class="container">
                     <div class="scroll" style="height: 250px; background:linear-gradient(#A80000, #630000);">
-                        <div class="row px-5 g-2">
+                        <div class="row @if(Agent::isDesktop()) px-5 @endif g-2">
                             @foreach ($informasiAll as $i)
                             <div class="col-lg-4 col-md-6 col-sm-12 px-3 pt-2 pb-3">
                                 <div class="card">
