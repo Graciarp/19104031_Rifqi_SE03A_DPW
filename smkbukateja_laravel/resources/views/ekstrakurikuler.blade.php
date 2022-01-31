@@ -95,6 +95,7 @@
             </div>
             <!-- SEJARAH -->
 
+            @if($kegiatanEkstra)
             <!-- KEGIATAN -->
             <div class="container-fluid px-0">
                 <div class="container-fluid pt-5">
@@ -103,34 +104,25 @@
                 <div class="container">
                     <div class="row pt-4 px-5">
                         <div class="img-card col-6-a">
-                            <img class="img-fluid " src="bahan/mm-1.JPG " style="border-radius: 3px; ">
+                            <img class="img-fluid" id="gambarKegiatanEkstra" src="{{url('img/kegiatanekstra' . '/' . $kegiatanEkstraFirst->gambar)}}" style="border-radius: 3px; ">
                         </div>
                         <div class="col-6-a ">
                             <div class="row " style="background-color: #A80000; border-radius: 5px; ">
                                 <ul class="nav justify-content-center ">
+                                    @foreach ($kegiatanEkstra as $k)
                                     <li class="nav-item ">
-                                        <a class="nav-link link-eskul " href="# ">Kegiatan I</a>
+                                        <a style="cursor: pointer" onclick="ekstra{{str_replace(' ', '_', $k->judul)}}()" class="nav-link link-eskul">
+                                            {{$k->judul}}
+                                        </a>
                                     </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link link-eskul " href="# ">Kegiatan II</a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link link-eskul " href="# ">Kegiatan III</a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link link-eskul " href="# ">Kegiatan IV</a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link link-eskul " href="# ">Lainnya</a>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                             <br/>
                             <div class="row ">
                                 <div class="col p-3 " style="border: 2px solid#A80000; border-width: 2px; border-radius: 5px; ">
-                                    <p style="text-align: justify; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                        est laborum.
+                                    <p id="deskripsiKegiatanEkstra" style="text-align: justify; ">
+                                        {{$kegiatanEkstraFirst->deskripsi}}
                                     </p>
                                 </div>
                             </div>
@@ -139,11 +131,12 @@
                 </div>
             </div>
             <!-- KEGIATAN -->
+            @endif
 
             <br/>
 
             <!-- PRESTASI YANG DIRAIH -->
-            <div class="container-fluid pt-5 px-0">
+            {{-- <div class="container-fluid pt-5 px-0">
                 <div class="rec-pk">Prestasi yang Diraih</div>
             </div>
             <div class="container pb-5">
@@ -206,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- PRESTASI YANG DIRAIH -->
 
             <div class="container pt-5" style="background-color: #A80000; border-radius: 0px 0px 10px 10px;">
@@ -237,6 +230,13 @@
                 document.getElementById("navbar").style.backgroundColor = "transparent";
             }
         }
+
+        @foreach ($kegiatanEkstra as $k)
+            function ekstra{{str_replace(' ', '_', $k->judul)}}() {
+                $('#gambarKegiatanEkstra').attr('src', '{{url('img/kegiatanekstra' . '/' . $k->gambar)}}');
+                $("#deskripsiKegiatanEkstra").text("{{$k->deskripsi}}");
+            }
+        @endforeach
     </script>
 </body>
 

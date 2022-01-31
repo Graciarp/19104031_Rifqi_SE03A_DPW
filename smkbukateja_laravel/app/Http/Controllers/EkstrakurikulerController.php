@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\ekstrakurikuler;
 use App\Models\beranda as berandaModel;
+use App\Models\kegiatanEkstra;
 
 class EkstrakurikulerController extends Controller
 {
@@ -90,8 +91,10 @@ class EkstrakurikulerController extends Controller
             ->with('ekstrakurikuler', ekstrakurikuler::find($id))
             ->with('namaSekolah', $namaSekolah)
             ->with('slogan', $slogan)
-            ->with('banner_beranda', $banner_beranda);
-            ;
+            ->with('banner_beranda', $banner_beranda)
+            ->with('kegiatanEkstra', kegiatanEkstra::where('id_ekstra', $id)->get())
+            ->with('kegiatanEkstraFirst', kegiatanEkstra::where('id_ekstra', $id)->first());
+        
         ;
     }
 }
