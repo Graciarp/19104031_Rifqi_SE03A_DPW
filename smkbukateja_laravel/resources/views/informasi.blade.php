@@ -27,6 +27,8 @@
 
 <body style="font-family: Poppins;">
 
+    @include('layouts.preloader')
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
         <div class="container-fluid justify-content-end px-5">
@@ -51,7 +53,7 @@
             @foreach (json_decode($banner_beranda->value, true) as $item)
                 <div class="carousel-item @if($urutan_slide == 1) active @endif">
                     <img src="{{url('/img' . '/' . $item)}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption">
+                    <div class="carousel-caption" id="carouselcaption">
                         <font style="font-family: Poppins;">
                             <h4>Selamat Datang di</h4>
                             <h1 style="font-weight: bold;">
@@ -116,6 +118,13 @@
         window.onscroll = function() {
             scrollFunction()
         };
+
+        $('#carouselcaption').hide();
+        $(document).ready(function () {
+            setTimeout(() => {
+                $('#carouselcaption').slideDown(1000);
+            }, 500);
+        });
 
         function scrollFunction() {
             if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {

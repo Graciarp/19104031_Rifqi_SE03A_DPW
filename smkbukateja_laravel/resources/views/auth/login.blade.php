@@ -16,7 +16,7 @@
             overflow: hidden !important;
         }
         .background {
-            background-image: url("{{url('img/bg_login.jpg')}}");
+            background-image: url("{{url('new_design/bahan/carousel-3.png')}}");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -27,7 +27,7 @@
         .overlay_hitam { 
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0,0,0,0.3);
         }
 
         .flex_tengah {
@@ -46,14 +46,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="card rounded-0" id="loginCard">
-                            <div class="card-header px-2 py-3">
+                        <div id="loadingSection">
+                            <img src="{{url('new_design/bahan/loading.gif')}}" width="200px" alt="" srcset="">
+                        </div>
+
+                        <div class="card border-0 rounded-0" id="loginCard">
+                            <div class="card-header text-white px-2 py-3" style="background-color: #630000">
                                 <h5>Silahkan Login</h5>
                             </div>
                             <div class="card-body py-4">
-                                <form action="{{ route('login') }}" method="post">
+                                <form action="{{ route('login') }}" method="post" id="loginForm">
                                     @csrf
-                                    <input type="email" name="email" required class="form-control" placeholder="Masukan Email" id="">
+                                    <input type="email" name="email" required class="form-control" placeholder="Masukan Email" id="email">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -61,7 +65,7 @@
                                         </span>
                                     @enderror
 
-                                    <input type="password" name="password" required class="form-control mt-3" placeholder="Masukan Kata Sandi" id="">
+                                    <input type="password" name="password" required class="form-control mt-3" placeholder="Masukan Kata Sandi" id="password">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -69,7 +73,7 @@
                                         </span>
                                     @enderror
 
-                                    <button class="btn btn-success mt-3 float-right" type="submit">
+                                    <button id="submitBtn" class="btn text-white mt-3 float-right" style="background-color: #630000" type="submit">
                                         Masuk
                                     </button>
                                 </form>
@@ -82,9 +86,29 @@
     </div>
 
     <script>
-        $("#loginCard").hide();
+        $("#loginCard, #loadingSection").hide();
         $(function () {
             $("#loginCard").slideDown(1000);
+        });
+
+        $('#submitBtn').click(function (e) { 
+            e.preventDefault();
+            var email = $('#email').val();
+            var password = $('#password').val();
+
+            if (email && password) {
+                $("#loginCard").slideUp(1000);
+
+                setTimeout(() => {
+                    $('#loadingSection').show();
+                }, 1000);
+
+                setTimeout(() => {
+                    $("#loginForm").submit();
+                }, 3000);
+
+            }
+
         });
     </script>
 </body>

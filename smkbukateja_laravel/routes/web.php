@@ -40,7 +40,7 @@ Route::get('/informasi/baca/{slug}', function ($slug) {
         ;
 })->name('informasi.baca');
 
-Route::get('/keluar', function () {Auth::logout();return redirect('/');});
+Route::get('/keluar', function () {Auth::logout();return redirect('/login');});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route hanya bisa diakses ketika sudah login

@@ -26,6 +26,8 @@
 
 <body style="font-family: Poppins;">
 
+    @include('layouts.preloader')
+
     <!-- NAVBAR -->
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-danger">

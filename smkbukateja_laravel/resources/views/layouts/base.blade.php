@@ -19,6 +19,8 @@
 
 <body style="font-family: Poppins; ">
 
+    @include('layouts.preloader')
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
         <div class="container-fluid justify-content-end px-5">

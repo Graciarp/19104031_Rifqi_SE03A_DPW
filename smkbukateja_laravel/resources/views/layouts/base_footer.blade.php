@@ -33,6 +33,9 @@
                     <li>
                         <a href="{{url('/hubungi-kami')}}" class="text-secondary footer-link" style="text-decoration: none;">Hubungi Kami</a>
                     </li>
+                    <li>
+                        <a href="{{url('/login')}}" class="text-secondary footer-link" style="text-decoration: none;">Login</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -57,6 +60,12 @@
             $('.backtotop').fadeOut();
         }
     });
+
+    $(document).ready(function () {
+            setTimeout(() => {
+                $('#preloaderLayer').fadeOut();
+            }, 1000);
+        });
 
     $(".backtotop").click(function() {
         $("html, body").animate({

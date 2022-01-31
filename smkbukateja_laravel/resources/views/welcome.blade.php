@@ -38,7 +38,7 @@
             @foreach (json_decode($banner_beranda->value, true) as $item)
                 <div class="carousel-item @if($urutan_slide == 1) active @endif">
                     <img src="{{url('/img' . '/' . $item)}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption">
+                    <div class="carousel-caption" id="carouselcaption">
                         <font style="font-family: Poppins;">
                             <h4>Selamat Datang di</h4>
                             <h1 style="font-weight: bold;">
@@ -204,6 +204,13 @@
     <!-- KATA ALUMNI -->
 
     <script>
+        $('#carouselcaption').hide();
+        $(document).ready(function () {
+            setTimeout(() => {
+                $('#carouselcaption').slideDown(1000);
+            }, 500);
+        });
+
         @foreach($ekstrakurikuler as $e)
         function extra{{str_replace(' ', '_', $e->judul)}}() {
             var ekstraDescription = "{{$e->deskripsi}}";
