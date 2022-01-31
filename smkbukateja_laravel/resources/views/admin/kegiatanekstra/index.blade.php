@@ -56,7 +56,7 @@
                                 {{ Str::limit($k->deskripsi, 100) }}...
                             </td>
                             <td>
-                                <button data-toggle="modal" data-target="#editData" class="btn btn-warning" type="button">
+                                <button onclick="editekstra('{{$k->id}}')" class="btn btn-warning" type="button">
                                     Edit
                                 </button>
                             </td>
@@ -93,4 +93,23 @@
 </div>
 
 @include('admin.kegiatanekstra.modal', ['id' => $data->id])
+
+<script>
+    function editekstra(id) {
+        $.ajax({
+            url: "{{url('ekstrakurikuler/kegiatan/json')}}/" + id,
+            success: function (response) {
+                var data = response.data;
+
+                $("#editData #judul").val(data.judul)
+                $("#editData #deskripsi").val(data.deskripsi)
+
+                var urlEdit = "{{url('ekstrakurikuler/kegiatan')}}/" + id;
+                $("#editData form").attr('action', urlEdit);
+
+                $("#editData").modal('show')
+            }
+        });
+    }
+</script>
 @endsection

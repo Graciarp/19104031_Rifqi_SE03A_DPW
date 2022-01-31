@@ -85,7 +85,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('ekstrakurikuler/update/{id}', [EkstrakurikulerController::class, 'update']);
 
     Route::get('ekstrakurikuler/kegiatan/{id}', [KegiatanEkstraController::class, 'edit']);
+    Route::get('ekstrakurikuler/kegiatan/json/{id}', [KegiatanEkstraController::class, 'json']);
     Route::post('ekstrakurikuler/kegiatan/{id}', [KegiatanEkstraController::class, 'save']);
+    Route::put('ekstrakurikuler/kegiatan/{id}', [KegiatanEkstraController::class, 'update']);
 });
 
 Route::view('prestasi', 'prestasi');
