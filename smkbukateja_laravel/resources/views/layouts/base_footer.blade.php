@@ -36,6 +36,9 @@
                     <li>
                         <a href="{{url('/login')}}" class="text-secondary footer-link" style="text-decoration: none;">Login</a>
                     </li>
+                    <li>
+                        <a target="_blank" href="{{url('/sitemap')}}" class="text-secondary footer-link" style="text-decoration: none;">Sitemap</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">

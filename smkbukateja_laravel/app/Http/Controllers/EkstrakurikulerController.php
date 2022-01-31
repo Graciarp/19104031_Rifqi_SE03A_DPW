@@ -93,7 +93,7 @@ class EkstrakurikulerController extends Controller
             ->with('slogan', $slogan)
             ->with('banner_beranda', $banner_beranda)
             ->with('kegiatanEkstra', kegiatanEkstra::where('id_ekstra', $id)->get())
-            ->with('kegiatanEkstraFirst', kegiatanEkstra::where('id_ekstra', $id)->first());
+            ->with('kegiatanEkstraFirst', kegiatanEkstra::where('id_ekstra', $id) -> first());
         
         ;
     }

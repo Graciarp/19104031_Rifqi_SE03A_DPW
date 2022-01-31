@@ -95,7 +95,7 @@
             </div>
             <!-- SEJARAH -->
 
-            @if($kegiatanEkstra)
+            @if($kegiatanEkstra and $kegiatanEkstraFirst)
             <!-- KEGIATAN -->
             <div class="container-fluid px-0">
                 <div class="container-fluid pt-5">

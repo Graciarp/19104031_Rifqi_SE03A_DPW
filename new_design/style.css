@@ -1,7 +1,17 @@
 body {
-    background-color: #F2F2F2;
+    background-color: hsl(0, 0%, 95%);
     background-image: url("bahan/Group\ 113.png");
     background-repeat: repeat;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: #A80000;
+}
+  
+::selection {
+    color: #fff;
+    background: #A80000;
 }
 
 .preloader {

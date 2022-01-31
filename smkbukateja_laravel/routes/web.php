@@ -11,7 +11,8 @@ use App\Http\Controllers\{
     testimoni,
     programKeahlian,
     EkstrakurikulerController,
-    KegiatanEkstraController
+    KegiatanEkstraController,
+    SitemapXmlController
 };
 use App\Models\informasiModel;
 
@@ -109,6 +110,8 @@ Route::view('/guru/guruMapel', 'guru.guruMapel');
 Route::view('informasi', 'informasi', ['informasi' => informasiModel::all()]);
 Route::get('/program_keahlian/{id}', [App\Http\Controllers\programKeahlian::class, 'lihat_detail']);
 Route::get('/ekstrakurikuler/detail/{id}', [App\Http\Controllers\EkstrakurikulerController::class, 'detail']);
+Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
+Route::get('/sitemap', [SitemapXmlController::class, 'index']);
 
 Auth::routes([
     'register' => false, // Registration Routes...
