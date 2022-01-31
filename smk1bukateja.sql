@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2022 at 03:54 PM
+-- Generation Time: Jan 31, 2022 at 05:45 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -57,6 +57,7 @@ CREATE TABLE `ekstrakurikulers` (
   `judul` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `deskripsi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sejarah` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -65,11 +66,11 @@ CREATE TABLE `ekstrakurikulers` (
 -- Dumping data for table `ekstrakurikulers`
 --
 
-INSERT INTO `ekstrakurikulers` (`id`, `judul`, `image`, `deskripsi`, `created_at`, `updated_at`) VALUES
-(1, 'OSIS', 'Yq9vOquF7dyYqlTbSwtuAht1i5oIE6MaeIuCqSTN.jpeg', 'OSIS adalah sekelompok siswa yang tergabung dalam OSIS yang memiliki tugas sebagai pelaksana dalam suatu kegiatan sekolah dan pendukung berbagai kegiatan siswa di sekolah.', '2022-01-29 18:12:05', '2022-01-29 18:12:05'),
-(2, 'Pramuka', 'ENGZIJvEF3cX6yFVy62uK2xCEMjCXPlqsMqTDHfs.jpg', 'suatu kegiatan kepramukaan yang dilaksanakan diluar jam pembelajaran di sekolah dan di luar lingkungan keluarga yang bertujuan mewadahi bakat, minat, dan potensi anak untuk dikembangkan secara terus-menerus.', '2022-01-29 18:15:02', '2022-01-29 18:32:52'),
-(3, 'Teater', 'n10wWzJhttZHPTfjYTqyep5ISxRc4z8I6mYu7Rbs.png', 'merupakan salah satu salah satu seni bermain peran (drama) yang menyajikan cerita kehidupan nyata di atas pentas.', '2022-01-29 18:17:04', '2022-01-29 18:17:04'),
-(4, 'Seni Tari', 'Xq5fVqQaZyQZ9C4ctNhndSI7MRhqeVPveqrzwgTy.jpg', 'wadah bagi siswi yang memiliki kemampuan dalam menari. Sehingga mereka bisa mengembangkan dan mengekspresikan diri mereka melalui seni tari.', '2022-01-29 18:18:07', '2022-01-29 18:18:07');
+INSERT INTO `ekstrakurikulers` (`id`, `judul`, `image`, `deskripsi`, `sejarah`, `created_at`, `updated_at`) VALUES
+(1, 'OSIS', 'Yq9vOquF7dyYqlTbSwtuAht1i5oIE6MaeIuCqSTN.jpeg', 'OSIS adalah sekelompok siswa yang tergabung dalam OSIS yang memiliki tugas sebagai pelaksana dalam suatu kegiatan sekolah dan pendukung berbagai kegiatan siswa di sekolah.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2022-01-29 18:12:05', '2022-01-29 18:12:05'),
+(2, 'Pramuka', 'ENGZIJvEF3cX6yFVy62uK2xCEMjCXPlqsMqTDHfs.jpg', 'suatu kegiatan kepramukaan yang dilaksanakan diluar jam pembelajaran di sekolah dan di luar lingkungan keluarga yang bertujuan mewadahi bakat, minat, dan potensi anak untuk dikembangkan secara terus-menerus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2022-01-29 18:15:02', '2022-01-30 21:35:05'),
+(3, 'Teater', 'n10wWzJhttZHPTfjYTqyep5ISxRc4z8I6mYu7Rbs.png', 'merupakan salah satu salah satu seni bermain peran (drama) yang menyajikan cerita kehidupan nyata di atas pentas.', NULL, '2022-01-29 18:17:04', '2022-01-29 18:17:04'),
+(4, 'Seni Tari', 'Xq5fVqQaZyQZ9C4ctNhndSI7MRhqeVPveqrzwgTy.jpg', 'wadah bagi siswi yang memiliki kemampuan dalam menari. Sehingga mereka bisa mengembangkan dan mengekspresikan diri mereka melalui seni tari.', NULL, '2022-01-29 18:18:07', '2022-01-29 18:18:07');
 
 -- --------------------------------------------------------
 
