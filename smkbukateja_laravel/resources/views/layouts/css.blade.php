@@ -10,4 +10,13 @@
 <link href="{{url('/')}}/new_design/style.css" rel="stylesheet" type="text/css">
 
 <!-- icon -->
-<link rel="icon " href="{{url('/')}}/new_design/bahan/Logo.png ">
+<link rel="icon " href="{{url('/')}}/new_design/bahan/Logo.png">
+<link rel="apple-touch-icon" href="{{url('/')}}/new_design/bahan/Logo.png">
+
+@if(Agent::isMobile())
+<style>
+    .navbar-collapse {
+        height: 100vh;
+    }
+</style>
+@endif

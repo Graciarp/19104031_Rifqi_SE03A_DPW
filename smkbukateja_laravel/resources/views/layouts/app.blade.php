@@ -31,30 +31,54 @@
         .bg-white {
             background-color: white !important
         }
+
+        .table-responsive {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        #kontenHalamanAdmin table a, 
+        #kontenHalamanAdmin table button, 
+        #kontenHalamanAdmin table form 
+        {
+            width: 100%;
+            margin: 3px
+        }
+
+        .btn-navbar {
+            background-color: transparent !important;
+            background-image: none !important;
+            border: 1px solid white
+        }
+
+        .navbar, .navbar-inner {
+            background-color: #630000 !important;
+        }
     </style>
 </head>
 
 <body>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
-            <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
-                        class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a
-                    class="brand" href="/"> {{config('app.name')}} </a>
-                <div class="nav-collapse">
-                    <ul class="nav pull-right">
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                    class="icon-user"></i> {{Auth::user()->name}}</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="container"> 
+                <a id="menuTogglerBtn" class="btn btn-navbar">
+                    <span
+                        class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> 
+                </a>
+                @if(Agent::isDesktop())
+                <a class="brand" href="/"> {{config('app.name')}} </a>
+                @else 
+                <a class="brand" href="/home"> {{config('app.name')}} </a>
+                @endif
                 <!--/.nav-collapse -->
             </div>
             <!-- /container -->
         </div>
         <!-- /navbar-inner -->
     </div>
+
     <!-- /navbar -->
-    <div class="subnavbar">
+    <div id="subnavbarMenu" class="subnavbar" style="z-index: 9999; position: absolute; width: 100%">
         <div class="subnavbar-inner">
             <div class="container">
                 <ul class="mainnav">
@@ -75,8 +99,15 @@
     </div>
     <!-- /subnavbar -->
     <div class="main">
-        <div class="main-inner">
+        <div class="main-inner" id="kontenHalamanAdmin">
             <div class="container">
+
+                @if(Agent::isDesktop())
+                    <br><br><br>
+                @endif
+
+                <br>
+
                 @if(session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
@@ -88,6 +119,7 @@
                         {{ session('warning') }}
                     </div>
                 @endif
+
                 @yield('content')
             </div>
             <!-- /container -->
@@ -119,6 +151,16 @@
     <script language="javascript" type="text/javascript" src="{{url('/')}}/js/full-calendar/fullcalendar.min.js"></script>
 
     <script src="{{url('/')}}/js/base.js"></script>
+
+    @if(Agent::isMobile())
+    <script>
+        $('#subnavbarMenu').hide();
+        $('#menuTogglerBtn').click(function (e) { 
+            e.preventDefault();
+            $('#subnavbarMenu').slideToggle();
+        });
+    </script>
+    @endif
 </body>
 
 </html>

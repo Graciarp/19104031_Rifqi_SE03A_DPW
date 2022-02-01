@@ -56,6 +56,7 @@
 
 <!-- Back to top JS -->
 <script>
+
     $(window).scroll(function() {
         if ($(this).scrollTop()) {
             $('.backtotop').fadeIn();

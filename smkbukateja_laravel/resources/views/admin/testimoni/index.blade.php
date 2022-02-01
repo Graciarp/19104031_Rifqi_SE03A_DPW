@@ -8,7 +8,7 @@
             <a href="{{ route('testimoni.create') }}" class="btn pull-right btn-sm btn-primary float-right">{{ __('Tambah') }}</a>
         </div>
         <br><br>
-        <div class="card-body">
+        <div class="card-body table-responsive">
             <table class="table">
                 <thead>
                     <tr>

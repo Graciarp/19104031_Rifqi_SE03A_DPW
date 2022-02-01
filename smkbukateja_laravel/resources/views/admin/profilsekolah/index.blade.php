@@ -2,35 +2,40 @@
 
 @section('content')
 <div class="container">
-<h4>Profil Sekolah</h4>
-<table class="table">
-    <tr>
-        <td>
-            key
-        </td>
-        <td>
-            value
-        </td>
-        <td>
+<h3>Profil Sekolah</h3>
 
-        </td>
-    </tr>
+<br>
 
-    @foreach ($profilsekolah as $item)
+<div class="table-responsive">
+    <table class="table">
         <tr>
             <td>
-                {{$item->key}}
+                key
             </td>
             <td>
-                {{$item->value}}
+                value
             </td>
             <td>
-                <a href="/profilsekolah/edit/{{$item->id}}" class="btn btn-warning">Edit</a>
+    
             </td>
         </tr>
-    @endforeach
-
-
-</table>
+    
+        @foreach ($profilsekolah as $item)
+            <tr>
+                <td>
+                    {{$item->key}}
+                </td>
+                <td>
+                    {{$item->value}}
+                </td>
+                <td>
+                    <a href="/profilsekolah/edit/{{$item->id}}" class="btn btn-warning">Edit</a>
+                </td>
+            </tr>
+        @endforeach
+    
+    
+    </table>
+</div>
 </div>
 @endsection
