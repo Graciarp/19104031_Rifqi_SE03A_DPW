@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 31, 2022 at 05:45 AM
+-- Generation Time: Feb 01, 2022 at 03:28 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -156,6 +156,32 @@ INSERT INTO `informasi` (`id`, `judul`, `slug`, `gambar`, `isi`, `created_at`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kegiatan_ekstras`
+--
+
+CREATE TABLE `kegiatan_ekstras` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `id_ekstra` bigint(20) DEFAULT NULL,
+  `judul` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deskripsi` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gambar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `kegiatan_ekstras`
+--
+
+INSERT INTO `kegiatan_ekstras` (`id`, `id_ekstra`, `judul`, `deskripsi`, `gambar`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Persami', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'uXytV1mZzTUm0os1A6ezV8gywIGyxDvaJUpsM4I9.jpeg', '2022-01-30 23:32:40', '2022-01-30 23:32:40'),
+(2, 1, 'Kemah', 'Lorem aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'rYssWPAidUdnBP3nzr8gBkxMg7Ievh3xsv6csbpT.jpg', '2022-01-30 23:33:00', '2022-01-30 23:33:00'),
+(3, 2, 'Persami', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'GhxZQeIOFPN5KUfISi4MYclpHF5rF1sO1iOPcE0V.jpg', '2022-01-30 23:54:58', '2022-01-30 23:54:58'),
+(4, 1, 'Kegiatan Dua', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'i5ijye4rGwpHL7WfDXJ8RfQb7ZeJxDau1PPg458V.jpeg', '2022-01-30 23:55:18', '2022-01-31 00:59:04');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -178,7 +204,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2021_12_31_063010_create_prestasis_table', 3),
 (7, '2022_01_19_055816_create_gurudankaryawans_table', 4),
 (8, '2022_01_29_143126_create_program_keahlians_table', 5),
-(9, '2022_01_30_010839_create_ekstrakurikulers_table', 6);
+(9, '2022_01_30_010839_create_ekstrakurikulers_table', 6),
+(10, '2022_01_31_060605_create_kegiatan_ekstras_table', 7);
 
 -- --------------------------------------------------------
 
@@ -375,6 +402,12 @@ ALTER TABLE `informasi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `kegiatan_ekstras`
+--
+ALTER TABLE `kegiatan_ekstras`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -460,10 +493,16 @@ ALTER TABLE `informasi`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
+-- AUTO_INCREMENT for table `kegiatan_ekstras`
+--
+ALTER TABLE `kegiatan_ekstras`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
