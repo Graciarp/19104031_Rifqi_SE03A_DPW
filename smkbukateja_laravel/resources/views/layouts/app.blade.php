@@ -20,6 +20,10 @@
     <![endif]-->
 
     <style>
+        body {
+            overflow-x: hidden; 
+        }
+        
         input, textarea {
             width: 100%
         }
