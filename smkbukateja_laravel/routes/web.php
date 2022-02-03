@@ -104,6 +104,7 @@ Route::view('/jurusan/TKJ', 'jurusan.TKJ');
 Route::view('/jurusan/TKRO', 'jurusan.TKRO');
 
 Route::view('/guru/kepsek', 'guru.kepsek');
+Route::view('/guru_karyawan', 'guru.kepsek');
 Route::view('/guru/karyawan', 'guru.karyawan');
 Route::view('/guru/guruMapel', 'guru.guruMapel');
 

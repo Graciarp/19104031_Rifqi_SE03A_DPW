@@ -49,6 +49,7 @@ Informasi
   </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a class="dropdown-item" href="{{url('/informasi')}}">Berita & Acara</a>
+        <a class="dropdown-item" href="{{url('/guru_karyawan')}}">Guru & Karyawan</a>
         <a class="dropdown-item" href="http://lsp.smkn1bukateja.sch.id">LSP</a>
         <a class="dropdown-item" href="https://lms.smkn1bukateja.sch.id/a94355711b3cbd91f699e926ef37da9db6e870866ca288b9b3d2d88d7058f04f6a76c1b95b497ea5030dd6b99de4dbdcf5bd94fa149a6828c9ad810bcae60d82/login">SEMAKIN</a>
         {{-- <a class="dropdown-item" href="#">Kegiatan Siswa</a>
