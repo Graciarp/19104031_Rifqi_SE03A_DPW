@@ -164,7 +164,7 @@
 
     {{-- Galeri Video --}}
 
-    <div class="container-fluid">
+    <div class="container-fluid pt-4">
         <center>
             <h1 style="text-align: center; font-weight: bold;">GALERI VIDEO</h1>
             <img class="img-fluid" src="{{url('/')}}/new_design/bahan/line.png">
@@ -179,7 +179,7 @@
                     $parts = parse_url($v);
                     parse_str($parts['query'], $query);
                 @endphp         
-                <div class="col-lg-4 col-sm-12 col-md-6">
+                <div class="col-lg-4 col-sm-12 col-md-6 mb-3">
                     <iframe width="100%" height="300" src="https://www.youtube.com/embed/{{$query['v']}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 @endforeach
