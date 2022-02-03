@@ -15,6 +15,9 @@
     $visi=berandaModel::where('key', 'visi')->first();
     $misi=berandaModel::where('key', 'misi')->first();
     $banner_beranda=berandaModel::where('key', 'banner_beranda')->first();
+    $video_beranda=berandaModel::where('key', 'galeri_video_beranda')->first();
+    $video_beranda = json_decode($video_beranda->value, true);
+
     $testimoni=testiModel::all();
 
     $kepsek = gurudankaryawan::where('jabatan', 'kepala_sekolah') -> first();
@@ -158,6 +161,33 @@
     </div>
     </div>
     <!-- EKSTRAKURIKULER -->
+
+    {{-- Galeri Video --}}
+
+    <div class="container-fluid">
+        <center>
+            <h1 style="text-align: center; font-weight: bold;">GALERI VIDEO</h1>
+            <img class="img-fluid" src="{{url('/')}}/new_design/bahan/line.png">
+        </center>
+
+        <br><br>
+
+        <div class="container">
+            <div class="row">
+                @foreach ($video_beranda as $v)
+                @php
+                    $parts = parse_url($v);
+                    parse_str($parts['query'], $query);
+                @endphp         
+                <div class="col-lg-4 col-sm-12 col-md-6">
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/{{$query['v']}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    {{-- Galeri Video --}}
 
     <!-- KATA ALUMNI -->
     <div class="container-fluid pt-5">

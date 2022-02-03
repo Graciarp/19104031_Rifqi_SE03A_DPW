@@ -57,6 +57,17 @@
                                 Unggah gambar baru untuk mengubah gambar :
                             </p>
                             <input type="file" name="value" accept=".jpg, .png, .jpeg" required id="">
+                        
+                        @elseif($beranda->key == 'galeri_video_beranda')    
+                            @php
+                                $implodeVideo = implode(",", json_decode($beranda->value, true));
+                            @endphp
+
+                            <p>
+                                Copy paste link video youtube (pisahkan dengan koma) :
+                            </p>
+
+                            <input value="{{$implodeVideo}}" type="text" placeholder="https://www.youtube.com/watch?v=x1Ix7Kf0QWA, https://www.youtube.com/watch?v=iMTbh0WpH4I" name="value" required class="form-control" id="">
                         @else
                             <div class="">
                                 <label for="isi" class="col-md-4 col-form-label text-md-right">{{ __('value') }}</label>

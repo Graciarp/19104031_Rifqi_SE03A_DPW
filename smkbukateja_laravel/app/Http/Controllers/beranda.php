@@ -65,7 +65,15 @@ class beranda extends Controller
             $data->value = $filename_struktur;
         }
 
-        if (!in_array($data->key, ['banner_beranda', 'struktur_organisasi_sekolah'])) {
+        if (
+            $data->key == 'galeri_video_beranda'
+        ) {
+            $data_video = str_replace(" ", "", request()->value);
+            $data_video = explode(",", $data_video);
+            $data->value  = json_encode($data_video);
+        }
+
+        if (!in_array($data->key, ['banner_beranda', 'struktur_organisasi_sekolah', 'galeri_video_beranda'])) {
             $data->value=request('value');
         }
 

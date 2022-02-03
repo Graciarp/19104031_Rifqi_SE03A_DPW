@@ -80,7 +80,7 @@
                                                                 {{$kepsek->nama}}
                                                             </p>
                                                             <small>
-                                                                {{$kepsek->sambutan}}
+                                                                {!!($kepsek->sambutan)!!}
                                                             </small>
                                                         </div>
                                                     </div>

@@ -177,7 +177,7 @@
             <!-- GALERI KEGIATAN -->
             @if($data->galeri)
             <div class="container-fluid p-0 pt-4">
-                <div class="rec-pk">Galeri Kegiatan TKJ</div>
+                <div class="rec-pk">Galeri Kegiatan {{$data->judul}}</div>
                 <div class="container pt-5">
                     <div class="scroll" style="height: 250px;">
                         <div class="row px-5 g-2">

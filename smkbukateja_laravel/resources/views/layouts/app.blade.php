@@ -41,14 +41,6 @@
             width: 100%;
         }
 
-        #kontenHalamanAdmin table a, 
-        #kontenHalamanAdmin table button, 
-        #kontenHalamanAdmin table form 
-        {
-            width: 100%;
-            margin: 3px
-        }
-
         .btn-navbar {
             background-color: transparent !important;
             background-image: none !important;
@@ -153,7 +145,7 @@
     <script src="{{url('/')}}/js/chart.min.js" type="text/javascript"></script>
     <script src="{{url('/')}}/js/bootstrap.js"></script>
     <script language="javascript" type="text/javascript" src="{{url('/')}}/js/full-calendar/fullcalendar.min.js"></script>
-
+    <script src="https://cdn.tiny.cloud/1/e5rowkqsm3ew4m2qci6nsv9xr2s67nbyc14ay7uf61vjrb2j/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="{{url('/')}}/js/base.js"></script>
 
     @if(Agent::isMobile())
@@ -165,6 +157,15 @@
         });
     </script>
     @endif
+
+    <script>
+        tinymce.init({
+            height: '500',
+          selector: 'textarea',
+          plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+          toolbar_mode: 'floating',
+        });
+    </script>    
 </body>
 
 </html>
