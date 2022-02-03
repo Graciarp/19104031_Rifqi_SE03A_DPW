@@ -49,6 +49,14 @@
                             <input type="file" name="value" accept=".jpg, .png, .jpeg" required id="">
 
                             <br>
+                        @elseif($beranda->key == 'struktur_organisasi_sekolah')
+                            <p>Gambar saat ini :</p>
+                            <img src="{{url('img' . '/' . $beranda->value)}}" width="100%" alt="" srcset="">
+
+                            <p>
+                                Unggah gambar baru untuk mengubah gambar :
+                            </p>
+                            <input type="file" name="value" accept=".jpg, .png, .jpeg" required id="">
                         @else
                             <div class="">
                                 <label for="isi" class="col-md-4 col-form-label text-md-right">{{ __('value') }}</label>

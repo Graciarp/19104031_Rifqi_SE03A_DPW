@@ -94,6 +94,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::view('prestasi', 'prestasi');
 Route::view('profil', 'profil');
 Route::view('hubungi-kami', 'hubungiKami');
+Route::view('struktur-organisasi', 'strukturOrganisasi');
 
 Route::view('/jurusan/DPIB', 'jurusan.DPIB');
 Route::view('/jurusan/Multimedia', 'jurusan.Multimedia');

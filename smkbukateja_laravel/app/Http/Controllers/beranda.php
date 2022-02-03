@@ -54,7 +54,18 @@ class beranda extends Controller
             $data->value = json_encode($beranda_array);
         }
 
-        if ($data->key != 'banner_beranda') {
+        if (
+            $data->key == 'struktur_organisasi_sekolah' and request() -> hasFile('value')
+        ) {
+            
+            $path_upload_struktur = public_path('img');
+            $file_struktur = request()->file('value');
+            $filename_struktur = Str::random() . '_' . $file_struktur->getClientOriginalName();
+            $file_struktur->move($path_upload_struktur, $filename_struktur);
+            $data->value = $filename_struktur;
+        }
+
+        if (!in_array($data->key, ['banner_beranda', 'struktur_organisasi_sekolah'])) {
             $data->value=request('value');
         }
 
