@@ -77,6 +77,27 @@ class programKeahlian extends Controller
             $data->yang_dipelajari_img = $filename2;
         } 
 
+        // Jika file struktur_organisasi_img diisi
+        if ($request->hasFile('struktur_organisasi_img')) {
+            // Mengambil file
+            $file3 = $request->file('struktur_organisasi_img');
+            $path3 = public_path("img/program_keahlian/struktur_organisasi_img/");
+
+            // Buat direktori jika belum ada
+            if (!is_dir($path3)) {
+                mkdir($path3, 0777, true);
+            }
+
+            // Membuat nama file random
+            $filename3 = Str::random(40) . '.' . $file3->getClientOriginalExtension();
+
+            // Pindahkan file ke folder img/struktur_organisasi_img
+            $file3->move($path3, $filename3);
+
+            // Simpan nama file ke database
+            $data->struktur_organisasi_img = $filename3;
+        }
+
         $data->save();
         return redirect() -> back() -> with('success', 'Data berhasil disimpan');
     }
@@ -130,6 +151,29 @@ class programKeahlian extends Controller
             $data->yang_dipelajari_img = $filename2;
         } else {
             $data->yang_dipelajari_img = $data->yang_dipelajari_img;
+        }
+
+        // Jika file struktur_organisasi_img diisi
+        if ($request->hasFile('struktur_organisasi_img')) {
+            // Mengambil file
+            $file3 = $request->file('struktur_organisasi_img');
+            $path3 = public_path("img/program_keahlian/struktur_organisasi_img/");
+
+            // Buat direktori jika belum ada
+            if (!is_dir($path3)) {
+                mkdir($path3, 0777, true);
+            }
+
+            // Membuat nama file random
+            $filename3 = Str::random(40) . '.' . $file3->getClientOriginalExtension();
+
+            // Pindahkan file ke folder img/struktur_organisasi_img
+            $file3->move($path3, $filename3);
+
+            // Simpan nama file ke database
+            $data->struktur_organisasi_img = $filename3;
+        } else {
+            $data->struktur_organisasi_img = $data->struktur_organisasi_img;
         }
 
         $data->update();

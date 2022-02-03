@@ -66,6 +66,9 @@
                     Gambar Materi
                 </td>
                 <td>
+                    Struktur Organisasi
+                </td>
+                <td>
                     Deskripsi
                 </td>
                 <td>
@@ -93,6 +96,11 @@
                         <td>
                             <a href="{{url('img/program_keahlian/materi') . '/' . $item->yang_dipelajari_img}}" target="_blank">
                                 <img src="{{url('img/program_keahlian/materi') . '/' . $item->yang_dipelajari_img}}" width="150px" alt="" sizes="" srcset="">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{url('img/program_keahlian/struktur_organisasi_img') . '/' . $item->struktur_organisasi_img}}" target="_blank">
+                                <img src="{{url('img/program_keahlian/struktur_organisasi_img') . '/' . $item->struktur_organisasi_img}}" width="150px" alt="" sizes="" srcset="">
                             </a>
                         </td>
                         <td>

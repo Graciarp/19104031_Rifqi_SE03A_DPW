@@ -27,6 +27,11 @@
               </div>
 
               <div class="form-group">
+                <label for="struktur_organisasi_img">Unggah Gambar Struktur Organisasi:</label>
+                <input accept=".jpg, .jpeg, .png" type="file" name="struktur_organisasi_img" required id="struktur_organisasi_img">
+              </div>
+
+              <div class="form-group">
                 <label for="yang_dipelajari_img">Unggah Gambar Materi:</label>
                 <input accept=".jpg, .jpeg, .png" type="file" name="yang_dipelajari_img" required id="yang_dipelajari_img">
               </div>
@@ -70,14 +75,23 @@
               </div>
 
               <div class="form-group">
-                <label for="gambar">Unggah Gambar (unggah jika hanya ingin mengganti) :</label>
+                <label for="gambar">Unggah Gambar * :</label>
                 <input accept=".jpg, .jpeg, .png" type="file" name="gambar" id="gambar">
               </div>
 
               <div class="form-group">
-                <label for="yang_dipelajari_img">Unggah Gambar Materi:</label>
+                <label for="struktur_organisasi_img">Unggah Gambar Struktur Organisasi * :</label>
+                <input accept=".jpg, .jpeg, .png" type="file" name="struktur_organisasi_img" id="struktur_organisasi_img">
+              </div>
+
+              <div class="form-group">
+                <label for="yang_dipelajari_img">Unggah Gambar Materi *:</label>
                 <input accept=".jpg, .jpeg, .png" type="file" name="yang_dipelajari_img" id="yang_dipelajari_img">
               </div>
+
+              <p>
+                * unggah jika hanya ingin mengganti
+              </p>
 
           </form>
         </div>
