@@ -23,7 +23,7 @@
     @include('layouts.js')
     
     <!-- title -->
-    <title> Program Keahlian SMK Negeri 1 Bukateja </title>
+    <title> {{$data->judul}} | Program Keahlian SMK Negeri 1 Bukateja </title>
 </head>
 
 <body style="font-family: Poppins;">

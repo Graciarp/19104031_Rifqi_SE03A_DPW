@@ -23,7 +23,7 @@
     @include('layouts.js')
 
     <!-- title -->
-    <title> Struktur Organisasi SMK Negeri 1 Bukateja </title>
+    <title> Struktur Organisasi | SMK Negeri 1 Bukateja </title>
 </head>
 
 <body style="font-family: Poppins;">

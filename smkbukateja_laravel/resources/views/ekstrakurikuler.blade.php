@@ -13,7 +13,7 @@
     {{-- Import All Js --}}
     @include('layouts.js')
 
-    <title>{{strtoupper($ekstrakurikuler->judul)}} SMK Negeri 1 Bukateja</title>
+    <title>{{strtoupper($ekstrakurikuler->judul)}} | SMK Negeri 1 Bukateja</title>
 </head>
 
 <body style="font-family: Poppins;">

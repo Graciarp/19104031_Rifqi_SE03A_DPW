@@ -77,12 +77,13 @@
         }, 500);
     });
 
-    (function titleScroller(text) {
-            document.title = text;
-            setTimeout(function () {
-                titleScroller(text.substr(1) + text.substr(0, 1));
-            }, 500);
-        }(" SMK Negeri 1 Bukateja Purbalingga"));
+    // Fitur Title Berjalan
+    // (function titleScroller(text) {
+    //         document.title = text;
+    //         setTimeout(function () {
+    //             titleScroller(text.substr(1) + text.substr(0, 1));
+    //         }, 500);
+    //     }(" SMK Negeri 1 Bukateja Purbalingga"));
 </script>
 <!-- Back to top JS -->
 
