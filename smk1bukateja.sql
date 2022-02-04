@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 01, 2022 at 03:28 PM
+-- Generation Time: Feb 04, 2022 at 07:11 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -44,7 +44,9 @@ INSERT INTO `beranda` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (2, 'slogan', 'SMK Negeri 1 Bukateja merupakan salah satu Sekolah Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah. SMK ini merupakan SMK rujukan yang menawakan 7 program kompetensi keahlian.', '2022-01-20 07:38:10', '2022-01-20 07:38:10'),
 (3, 'visi', 'Menjadikan SMK yang memiliki kompetensi, berkualitas, berdaya saing, berwawasan lingkungan dan berakhlak mulia.', '2022-01-20 12:57:12', '2022-01-20 09:43:14'),
 (4, 'misi', '<ul style=\"text-align: justify;\"> <li> Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif berorientasi pada kompetensi pendidikan nasional. </li> <li> Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia kerja. </li> <li> Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan berwawasan lingkungan sekolah. </li> </ul>', '2022-01-20 12:57:58', '2022-01-20 09:43:42'),
-(5, 'banner_beranda', '[\"U7FfRNQFRn2EonMX_carousel-1.png\",\"eOz7QYP8VpC2k2pu_carousel-2.png\",\"FjluFeqLmNkWlzVX_carousel-3.png\"]', '2022-01-20 15:17:11', '2022-01-29 22:45:39');
+(5, 'banner_beranda', '[\"U7FfRNQFRn2EonMX_carousel-1.png\",\"eOz7QYP8VpC2k2pu_carousel-2.png\",\"FjluFeqLmNkWlzVX_carousel-3.png\"]', '2022-01-20 15:17:11', '2022-02-03 23:11:18'),
+(6, 'struktur_organisasi_sekolah', '7G3IzTQrRrdBxJLN_Contoh-struktur-organisasi-Sekolah.jpg', '2022-02-03 09:06:17', '2022-02-03 02:11:51'),
+(7, 'galeri_video_beranda', '[\"https:\\/\\/www.youtube.com\\/watch?v=iMTbh0WpH4I\",\"https:\\/\\/www.youtube.com\\/watch?v=FA6lZaJqOZs\",\"https:\\/\\/www.youtube.com\\/watch?v=EAnazitmm40\",\"https:\\/\\/www.youtube.com\\/watch?v=q9dtH0RU7BM\"]', '2022-02-03 09:41:44', '2022-02-03 02:55:10');
 
 -- --------------------------------------------------------
 
@@ -298,6 +300,7 @@ CREATE TABLE `program_keahlians` (
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `deskripsi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `yang_dipelajari_img` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `struktur_organisasi_img` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `galeri` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -307,13 +310,13 @@ CREATE TABLE `program_keahlians` (
 -- Dumping data for table `program_keahlians`
 --
 
-INSERT INTO `program_keahlians` (`id`, `judul`, `image`, `deskripsi`, `yang_dipelajari_img`, `galeri`, `created_at`, `updated_at`) VALUES
-(1, 'Multimedia', 'EevLphsviphwkD0GN3XCBVtqBGDy4DvZyjJxWOzj.jpeg', 'Jurusan multimedia kami belajar bagaimana cara membuat animasi, film, fotografi yang baik dan benar', 'ktXnGcMIRD6BcYmsd3T32uqVP4YhPHSm9mDX7Y0O.png', '{\"0\":\"FF1ad813NqaNNbCUfbKNWuVOWz20FZ5OHdUGgGFt.jpeg\",\"2\":\"CAn8CGkMM0zLs5rWfxL3P7JoGHPkboqXhKKkJrJg.jpeg\"}', '2022-01-29 08:02:02', '2022-01-30 07:53:15'),
-(2, 'Tata Busana', '2gGgAh6lrZiOrNjgNOEb4otOT2a73SRpRfcCkVz0.jpeg', 'Pada jurusan tata busana ini kami mempelajari mengenai bagaimana cara pembuatan busana yang benar, dan kami mempelajari banyak hal lainnya mengenai busana', '8kNCNHQUYRNNwcrl9iz8PWvcEBN1L9akka9J7cIT.png', '[\"OKHAnwOmbCmc1IHF9rDvmzDvUKEuHubMue1t8mxu.jpeg\",\"xDRVVFW9jJcnuvdKkNOZalQTfe95smjLBPHPWjU9.jpeg\"]', '2022-01-29 08:06:04', '2022-01-30 07:32:01'),
-(3, 'Teknik Kendaraan Ringan Otomotif', 'ioPcf7xkUZHD5dnE9l4Bn6d4vy08BPL0Yyq6aUqu.jpeg', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer', 'T1qjqq55XGrgQbiy1rjc72xFQTrAJ9mLyaLGMUOb.png', NULL, '2022-01-29 08:10:14', '2022-01-30 06:49:48'),
-(4, 'Desain Permodelan dan Informasi Bangunan', 'Yo6S5IaCQOUx0Njms3OQTxI3SiqYFY6sjayhstde.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '395fkcFiWBTrWXXRoufFRGKCsT7JVZYJvZWgfeJJ.png', NULL, '2022-01-30 06:19:26', '2022-01-30 06:50:00'),
-(5, 'Teknik Komputer dan Jaringan', 'I14fpQlYeBwFtdbhvEdMg4J68mifs2OR3puomOV1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'tNa9VpfBH27K0TWG3acHgfAbqjCIKJ4YdVh23GVZ.png', NULL, '2022-01-30 06:22:51', '2022-01-30 06:44:54'),
-(6, 'Rekayasa Perangkat Lunak', 'kHSvXoO6JBIg0KVqIw5Yw95Fns0JpyYIvHuEGieE.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'lWqrelF6BH9Gtt5JQKVjRRwAovLeFdne3WZEoMtP.png', '[\"dJYC5oUPDmbfPcmCr6sCm5VpikM6zYR6Hqjaw7UA.jpg\"]', '2022-01-30 06:23:50', '2022-01-30 07:31:38');
+INSERT INTO `program_keahlians` (`id`, `judul`, `image`, `deskripsi`, `yang_dipelajari_img`, `struktur_organisasi_img`, `galeri`, `created_at`, `updated_at`) VALUES
+(1, 'Multimedia', 'EevLphsviphwkD0GN3XCBVtqBGDy4DvZyjJxWOzj.jpeg', 'Jurusan multimedia kami belajar bagaimana cara membuat animasi, film, fotografi yang baik dan benar', 'ktXnGcMIRD6BcYmsd3T32uqVP4YhPHSm9mDX7Y0O.png', 'zgMBpiMgXliVCjOXq789vodgTjCrNOBgfZE8Taaw.png', '{\"0\":\"FF1ad813NqaNNbCUfbKNWuVOWz20FZ5OHdUGgGFt.jpeg\",\"2\":\"CAn8CGkMM0zLs5rWfxL3P7JoGHPkboqXhKKkJrJg.jpeg\"}', '2022-01-29 08:02:02', '2022-02-03 02:02:03'),
+(2, 'Tata Busana', '2gGgAh6lrZiOrNjgNOEb4otOT2a73SRpRfcCkVz0.jpeg', 'Pada jurusan tata busana ini kami mempelajari mengenai bagaimana cara pembuatan busana yang benar, dan kami mempelajari banyak hal lainnya mengenai busana', '8kNCNHQUYRNNwcrl9iz8PWvcEBN1L9akka9J7cIT.png', 'ZGe0l7LKzR9VjILQo546O2vhGDg1eyaulxlT6cvu.png', '[\"OKHAnwOmbCmc1IHF9rDvmzDvUKEuHubMue1t8mxu.jpeg\",\"xDRVVFW9jJcnuvdKkNOZalQTfe95smjLBPHPWjU9.jpeg\"]', '2022-01-29 08:06:04', '2022-02-03 02:03:32'),
+(3, 'Teknik Kendaraan Ringan Otomotif', 'ioPcf7xkUZHD5dnE9l4Bn6d4vy08BPL0Yyq6aUqu.jpeg', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer', 'T1qjqq55XGrgQbiy1rjc72xFQTrAJ9mLyaLGMUOb.png', 'erZMS0ugWeURmPhDy2kHoypjRQQn50eCZx9InFpQ.png', NULL, '2022-01-29 08:10:14', '2022-02-03 02:03:43'),
+(4, 'Desain Permodelan dan Informasi Bangunan', 'Yo6S5IaCQOUx0Njms3OQTxI3SiqYFY6sjayhstde.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '395fkcFiWBTrWXXRoufFRGKCsT7JVZYJvZWgfeJJ.png', 'pUoEwTbA6WMXugI8Km0B0WRNlqbaXaQzftGcVjBH.png', NULL, '2022-01-30 06:19:26', '2022-02-03 02:03:55'),
+(5, 'Teknik Komputer dan Jaringan', 'I14fpQlYeBwFtdbhvEdMg4J68mifs2OR3puomOV1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'tNa9VpfBH27K0TWG3acHgfAbqjCIKJ4YdVh23GVZ.png', 'nxBIsbxfKiuoDkOpDaG3JGd4ka6b14C2wc2yXhOB.png', NULL, '2022-01-30 06:22:51', '2022-02-03 02:04:35'),
+(6, 'Rekayasa Perangkat Lunak', 'kHSvXoO6JBIg0KVqIw5Yw95Fns0JpyYIvHuEGieE.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'lWqrelF6BH9Gtt5JQKVjRRwAovLeFdne3WZEoMtP.png', 'l3X0xCBlDMic7k4GU8WRMpxZYIKdCQQOgTMEpESi.png', '[\"dJYC5oUPDmbfPcmCr6sCm5VpikM6zYR6Hqjaw7UA.jpg\"]', '2022-01-30 06:23:50', '2022-02-03 02:04:46');
 
 -- --------------------------------------------------------
 
@@ -466,7 +469,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `beranda`
 --
 ALTER TABLE `beranda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ekstrakurikulers`
