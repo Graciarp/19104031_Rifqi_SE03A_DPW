@@ -9,6 +9,7 @@
     $sejarah=profilsekolahmodel::where('key', 'sejarah_singkat')->first();
     $visi=profilsekolahmodel::where('key', 'visi')->first();
     $misi=profilsekolahmodel::where('key', 'misi')->first();
+    
 @endphp
 
 <html>
@@ -27,7 +28,7 @@
     @include('layouts.js')
 
     <!-- title -->
-    <title> Profil SMK Negeri 1 Bukateja </title>
+    <title> Profil | SMK Negeri 1 Bukateja </title>
 </head>
 
 <body style="font-family: Poppins;">

@@ -1,6 +1,7 @@
 @php
     // import profilkolah
     use App\Models\profilSekolah as profilsekolahmodel;
+    use App\Models\beranda as berandaModel;
 
     // memanggil data sejarah singkat
     $profil_sekolah=profilsekolahmodel::where('key', 'profil_sekolah')->first();
@@ -9,6 +10,7 @@
     $sejarah=profilsekolahmodel::where('key', 'sejarah_singkat')->first();
     $visi=profilsekolahmodel::where('key', 'visi')->first();
     $misi=profilsekolahmodel::where('key', 'misi')->first();
+    $hubungi_kami = berandaModel::where('key', 'hubungi_kami') -> first();
 @endphp
 
 <html>
@@ -27,7 +29,7 @@
     @include('layouts.js')
 
     <!-- title -->
-    <title> Profil SMK Negeri 1 Bukateja </title>
+    <title> Hubungi Kami | SMK Negeri 1 Bukateja </title>
 </head>
 
 <body style="font-family: Poppins;">
@@ -69,24 +71,7 @@
             <br>
 
             <div class="container px-5">
-                <p>
-                    Bila Anda membutuhkan bantuan, silahkan hubungi kami melalui email atau telepon dibawah ini.
-                </p>
-
-                <ul>
-                    <li>
-                        <a href="mailto:admin@smkn1bukateja.sch.id" style="text-decoration: none;">Email : admin@smkn1bukateja.sch.id</a>
-                    </li>
-                    <li>
-                        <a href="tel:0286476110" style="text-decoration: none;">Telp/Fax. (0286)476110</a>
-                    </li>
-                </ul>
-
-                <p>
-                    Atau bisa kunjungi kami di alamat berikut :
-                </p>
-
-                Jalan Raya Purwandaru, Kelurahan Majasari Bukateja – Indonesia 53382 - <a target="_blank" href="https://goo.gl/maps/pcCncx2otmwunyn48">buka peta</a>
+                {!!($hubungi_kami->value)!!}
             </div>
 
             <br><br>

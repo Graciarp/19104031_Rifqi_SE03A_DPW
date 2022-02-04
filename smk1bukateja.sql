@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 04, 2022 at 07:11 AM
+-- Generation Time: Feb 04, 2022 at 07:24 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -46,7 +46,8 @@ INSERT INTO `beranda` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (4, 'misi', '<ul style=\"text-align: justify;\"> <li> Melaksanakan pendidikan dan latihan secara optimal dalam iklim pembelajaran yang kondusif berorientasi pada kompetensi pendidikan nasional. </li> <li> Menyiapkan tenaga terampil, professional sesuai kompetensi keahlian dan mampu bersaing di dunia kerja. </li> <li> Mengembangkan kultur sekolah sesuai dengan norma, kaidah, dan nilai budaya Indonesia dan berwawasan lingkungan sekolah. </li> </ul>', '2022-01-20 12:57:58', '2022-01-20 09:43:42'),
 (5, 'banner_beranda', '[\"U7FfRNQFRn2EonMX_carousel-1.png\",\"eOz7QYP8VpC2k2pu_carousel-2.png\",\"FjluFeqLmNkWlzVX_carousel-3.png\"]', '2022-01-20 15:17:11', '2022-02-03 23:11:18'),
 (6, 'struktur_organisasi_sekolah', '7G3IzTQrRrdBxJLN_Contoh-struktur-organisasi-Sekolah.jpg', '2022-02-03 09:06:17', '2022-02-03 02:11:51'),
-(7, 'galeri_video_beranda', '[\"https:\\/\\/www.youtube.com\\/watch?v=iMTbh0WpH4I\",\"https:\\/\\/www.youtube.com\\/watch?v=FA6lZaJqOZs\",\"https:\\/\\/www.youtube.com\\/watch?v=EAnazitmm40\",\"https:\\/\\/www.youtube.com\\/watch?v=q9dtH0RU7BM\"]', '2022-02-03 09:41:44', '2022-02-03 02:55:10');
+(7, 'galeri_video_beranda', '[\"https:\\/\\/www.youtube.com\\/watch?v=iMTbh0WpH4I\",\"https:\\/\\/www.youtube.com\\/watch?v=FA6lZaJqOZs\",\"https:\\/\\/www.youtube.com\\/watch?v=EAnazitmm40\",\"https:\\/\\/www.youtube.com\\/watch?v=q9dtH0RU7BM\"]', '2022-02-03 09:41:44', '2022-02-03 02:55:10'),
+(8, 'hubungi_kami', '<p>\r\n                    Bila Anda membutuhkan bantuan, silahkan hubungi kami melalui email atau telepon dibawah ini.\r\n                </p>\r\n\r\n                <ul>\r\n                    <li>\r\n                        <a href=\"mailto:admin@smkn1bukateja.sch.id\" style=\"text-decoration: none;\">Email : admin@smkn1bukateja.sch.id</a>\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"tel:0286476110\" style=\"text-decoration: none;\">Telp/Fax. (0286)476110</a>\r\n                    </li>\r\n                </ul>\r\n\r\n                <p>\r\n                    Atau bisa kunjungi kami di alamat berikut :\r\n                </p>\r\n\r\n                Jalan Raya Purwandaru, Kelurahan Majasari Bukateja – Indonesia 53382 - <a target=\"_blank\" href=\"https://goo.gl/maps/pcCncx2otmwunyn48\">buka peta</a>', '2022-02-04 06:21:29', '2022-02-04 06:21:29');
 
 -- --------------------------------------------------------
 
@@ -469,7 +470,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `beranda`
 --
 ALTER TABLE `beranda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ekstrakurikulers`
