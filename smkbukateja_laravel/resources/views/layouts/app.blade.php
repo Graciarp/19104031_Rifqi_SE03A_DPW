@@ -158,14 +158,14 @@
     </script>
     @endif
 
-    <script>
+    {{-- <script>
         tinymce.init({
             height: '500',
           selector: 'textarea',
           plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
           toolbar_mode: 'floating',
         });
-    </script>    
+    </script>     --}}
 </body>
 
 </html>

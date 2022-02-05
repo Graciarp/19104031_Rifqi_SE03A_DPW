@@ -5,7 +5,7 @@
 <meta property="og:image" content="{{url('new_design/bahan/carousel-3.png')}}" />
 
 <meta name="description" content="SMK Negeri 1 Bukateja merupakan salah satu Sekolah Menengah Kejuruan di Kecamatan Bukateja, Kabupaten Purbalingga, Jawa Tengah.">
-<meta name="keywords" content="SMKN 1 Bukateja, Bukateja, Purbalingga, Purwokerto, Multimedia, TKJ, RPL, SMK, SMK Favorit">
+<meta name="keywords" content="SMKN 1 Bukateja, Bukateja, Purbalingga, Purwokerto, Multimedia, TKJ, RPL, SMK, SMK Favorit, skansika">
 <meta name="author" content="SMKN 1 Bukateja">
 
 {{-- Set Status bar color scheme --}}
